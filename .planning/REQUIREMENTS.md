@@ -94,16 +94,54 @@
 
 ## Traceability
 
-(Populated during roadmap creation)
-
 | Requirement | Phase | Status |
 |-------------|-------|--------|
+| API-01 | Phase 1: Foundation & API | Pending |
+| API-02 | Phase 1: Foundation & API | Pending |
+| API-03 | Phase 1: Foundation & API | Pending |
+| API-04 | Phase 1: Foundation & API | Pending |
+| API-05 | Phase 1: Foundation & API | Pending |
+| API-06 | Phase 1: Foundation & API | Pending |
+| API-07 | Phase 1: Foundation & API | Pending |
+| CONV-01 | Phase 2: App Shell & Live Conversation | Pending |
+| CONV-02 | Phase 2: App Shell & Live Conversation | Pending |
+| CONV-03 | Phase 2: App Shell & Live Conversation | Pending |
+| CONV-04 | Phase 2: App Shell & Live Conversation | Pending |
+| CONV-05 | Phase 2: App Shell & Live Conversation | Pending |
+| UI-01 | Phase 2: App Shell & Live Conversation | Pending |
+| LAND-02 | Phase 2: App Shell & Live Conversation | Pending |
+| LAND-03 | Phase 2: App Shell & Live Conversation | Pending |
+| MAP-01 | Phase 3: Concept Map | Pending |
+| MAP-02 | Phase 3: Concept Map | Pending |
+| MAP-03 | Phase 3: Concept Map | Pending |
+| MAP-04 | Phase 3: Concept Map | Pending |
+| MAP-05 | Phase 3: Concept Map | Pending |
+| MAP-06 | Phase 3: Concept Map | Pending |
+| JOUR-01 | Phase 4: Learning Journal | Pending |
+| JOUR-02 | Phase 4: Learning Journal | Pending |
+| SESS-01 | Phase 5: Session Persistence | Pending |
+| SESS-02 | Phase 5: Session Persistence | Pending |
+| SESS-03 | Phase 5: Session Persistence | Pending |
+| SESS-04 | Phase 5: Session Persistence | Pending |
+| SESS-05 | Phase 5: Session Persistence | Pending |
+| SESS-06 | Phase 5: Session Persistence | Pending |
+| REPL-01 | Phase 6: Replay Mode | Pending |
+| REPL-02 | Phase 6: Replay Mode | Pending |
+| REPL-03 | Phase 6: Replay Mode | Pending |
+| REPL-04 | Phase 6: Replay Mode | Pending |
+| REPL-05 | Phase 6: Replay Mode | Pending |
+| LAND-01 | Phase 7: Landing Experience | Pending |
+| LAND-04 | Phase 7: Landing Experience | Pending |
+| LAND-05 | Phase 7: Landing Experience | Pending |
+| UI-02 | Phase 8: Mobile & Design Polish | Pending |
+| UI-03 | Phase 8: Mobile & Design Polish | Pending |
+| UI-04 | Phase 8: Mobile & Design Polish | Pending |
 
 **Coverage:**
-- v1 requirements: 33 total
-- Mapped to phases: 0
-- Unmapped: 33
+- v1 requirements: 40 total
+- Mapped to phases: 40
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-14*
-*Last updated: 2026-02-14 after initial definition*
+*Last updated: 2026-02-14 after roadmap creation*
