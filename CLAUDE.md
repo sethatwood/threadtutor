@@ -34,7 +34,7 @@ Three-panel layout: ConceptMap (left, React Flow) | ConversationPanel (center) |
 ## Key Design Decisions
 
 - Sonnet over Opus: faster, cheaper, sufficient for tutoring
-- max_tokens: 1024 (tutoring turns should be concise)
+- max_tokens: 2048 (structured JSON needs headroom for schema overhead beyond concise displayText)
 - Claude's JSON responses may be wrapped in markdown code fences -- strip those when parsing
 - Confidence checks use three-level assessment: "tracking", "partial", "confused"
 - Concepts form a directed graph: first concept has `parentId: null` (root), subsequent concepts reference existing parents
