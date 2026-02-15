@@ -28,10 +28,10 @@ export function ReplayControls({
   toggleAutoPlay,
 }: ReplayControlsProps) {
   const buttonBase =
-    "rounded-md px-3 py-1.5 text-sm text-zinc-400 hover:bg-zinc-800 disabled:opacity-40 disabled:cursor-not-allowed";
+    "rounded-md min-h-[44px] px-4 py-2 md:px-3 md:py-1.5 text-sm text-zinc-400 hover:bg-zinc-800 disabled:opacity-40 disabled:cursor-not-allowed";
 
   return (
-    <div className="border-t border-zinc-800 px-6 py-3 flex items-center justify-center gap-4">
+    <div className="border-t border-zinc-800 px-4 py-2 md:px-6 md:py-3 flex items-center justify-center gap-3 md:gap-4">
       <button
         type="button"
         onClick={back}

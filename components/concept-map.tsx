@@ -100,6 +100,7 @@ function ConceptMapInner({ turns, onConceptClick }: ConceptMapProps) {
       nodesDraggable={false}
       nodesConnectable={false}
       elementsSelectable={false}
+      preventScrolling={false}
       colorMode="dark"
       fitView
       fitViewOptions={{ padding: 0.3 }}
@@ -112,7 +113,7 @@ function ConceptMapInner({ turns, onConceptClick }: ConceptMapProps) {
           type="button"
           onClick={handleFitAll}
           title="Fit all nodes"
-          className="rounded-md bg-zinc-800 border border-zinc-700 p-1.5 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-700 transition-colors"
+          className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md bg-zinc-800 border border-zinc-700 p-2 md:p-1.5 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-700 transition-colors"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

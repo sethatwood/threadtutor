@@ -106,7 +106,7 @@ export function ConversationShell({
           <button
             type="button"
             onClick={handleExport}
-            className="rounded-md px-3 py-1.5 text-sm text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200 transition-colors"
+            className="min-h-[44px] rounded-md px-3 py-1.5 text-sm text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200 transition-colors"
           >
             Export
           </button>
@@ -115,7 +115,7 @@ export function ConversationShell({
           <button
             type="button"
             onClick={onBack}
-            className="rounded-md px-3 py-1.5 text-sm text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200 transition-colors"
+            className="min-h-[44px] rounded-md px-3 py-1.5 text-sm text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200 transition-colors"
           >
             New topic
           </button>
