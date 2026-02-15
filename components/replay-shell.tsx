@@ -2,6 +2,7 @@
 
 import { useCallback } from "react";
 import { useReplayState } from "@/lib/use-replay-state";
+import { AppHeader } from "@/components/app-header";
 import { ConceptMap } from "@/components/concept-map";
 import { ReplayConversation } from "@/components/replay-conversation";
 import { LearningJournal } from "@/components/learning-journal";
@@ -32,30 +33,22 @@ export function ReplayShell({ session, onBack }: ReplayShellProps) {
   return (
     <div className="flex h-screen flex-col">
       {/* Header */}
-      <header className="flex items-center justify-between border-b border-zinc-800 px-6 py-3">
-        <div className="flex items-center gap-3">
-          <span className="text-base font-semibold text-zinc-100">
-            ThreadTutor
-          </span>
-          <span className="text-zinc-600">/</span>
-          <span className="text-sm text-zinc-400">{session.topic}</span>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <span className="text-xs text-indigo-400 border border-indigo-500/30 rounded-full px-2.5 py-0.5">
-            Replay
-          </span>
-          {onBack && (
-            <button
-              type="button"
-              onClick={onBack}
-              className="rounded-md px-3 py-1.5 text-sm text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200 transition-colors"
-            >
-              Exit
-            </button>
-          )}
-        </div>
-      </header>
+      <AppHeader topic={session.topic} mode="replay">
+        <button
+          type="button"
+          onClick={onBack}
+          className="rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-indigo-500 transition-colors"
+        >
+          Try it live
+        </button>
+        <button
+          type="button"
+          onClick={onBack}
+          className="rounded-md px-3 py-1.5 text-sm text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200 transition-colors"
+        >
+          Exit
+        </button>
+      </AppHeader>
 
       {/* Three-panel body */}
       <div className="flex flex-1 overflow-hidden">

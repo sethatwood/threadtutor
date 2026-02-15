@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef } from "react";
 import { useConversation } from "@/lib/use-conversation";
 import { saveSession, downloadSessionAsJson } from "@/lib/session-storage";
+import { AppHeader } from "@/components/app-header";
 import { ConversationPanel } from "@/components/conversation-panel";
 import { ConceptMap } from "@/components/concept-map";
 import { LearningJournal } from "@/components/learning-journal";
@@ -100,36 +101,26 @@ export function ConversationShell({
   return (
     <div className="flex h-screen flex-col">
       {/* Header */}
-      <header className="flex items-center justify-between border-b border-zinc-800 px-6 py-3">
-        <div className="flex items-center gap-3">
-          <span className="text-base font-semibold text-zinc-100">
-            ThreadTutor
-          </span>
-          <span className="text-zinc-600">/</span>
-          <span className="text-sm text-zinc-400">{topic}</span>
-        </div>
-
-        <div className="flex items-center gap-2">
-          {state.turns.length > 0 && (
-            <button
-              type="button"
-              onClick={handleExport}
-              className="rounded-md px-3 py-1.5 text-sm text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200 transition-colors"
-            >
-              Export
-            </button>
-          )}
-          {onBack && (
-            <button
-              type="button"
-              onClick={onBack}
-              className="rounded-md px-3 py-1.5 text-sm text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200 transition-colors"
-            >
-              New topic
-            </button>
-          )}
-        </div>
-      </header>
+      <AppHeader topic={topic} mode="live">
+        {state.turns.length > 0 && (
+          <button
+            type="button"
+            onClick={handleExport}
+            className="rounded-md px-3 py-1.5 text-sm text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200 transition-colors"
+          >
+            Export
+          </button>
+        )}
+        {onBack && (
+          <button
+            type="button"
+            onClick={onBack}
+            className="rounded-md px-3 py-1.5 text-sm text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200 transition-colors"
+          >
+            New topic
+          </button>
+        )}
+      </AppHeader>
 
       {/* Three-panel body */}
       <div className="flex flex-1 overflow-hidden">
