@@ -18,7 +18,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 4: Learning Journal** - Right panel displaying running one-sentence summaries from each teaching turn
 - [x] **Phase 5: Session Persistence** - localStorage save/load/export so sessions survive refresh and can be shared as JSON
 - [x] **Phase 6: Replay Mode** - Pre-recorded demo session with step-through controls for visitors without API keys
-- [ ] **Phase 7: Landing Experience** - Visitor flow from replay demo to live mode with header branding and mode indicators
+- [x] **Phase 7: Landing Experience** - Visitor flow from replay demo to live mode with header branding and mode indicators
 - [ ] **Phase 8: Mobile & Design Polish** - Responsive mobile layout and design system enforcement for production readiness
 
 ## Phase Details
@@ -155,5 +155,5 @@ Note: Phases 3 and 4 both depend on Phase 2 and can execute in either order. Pha
 | 4. Learning Journal | 1/1 | Complete | 2026-02-15 |
 | 5. Session Persistence | 2/2 | Complete | 2026-02-15 |
 | 6. Replay Mode | 2/2 | Complete | 2026-02-15 |
-| 7. Landing Experience | 0/1 | Not started | - |
+| 7. Landing Experience | 1/1 | Complete | 2026-02-15 |
 | 8. Mobile & Design Polish | 0/TBD | Not started | - |
