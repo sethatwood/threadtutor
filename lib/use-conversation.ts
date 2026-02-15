@@ -33,7 +33,8 @@ type ConversationAction =
   | { type: "RECEIVE_RESPONSE"; payload: TurnResponse }
   | { type: "ADD_USER_TURN"; payload: string }
   | { type: "SET_ERROR"; payload: string }
-  | { type: "CLEAR_ERROR" };
+  | { type: "CLEAR_ERROR" }
+  | { type: "LOAD_SESSION"; payload: { turns: Turn[]; turnNumber: number } };
 
 // ---------------------------------------------------------------------------
 // Reducer
@@ -89,6 +90,16 @@ function conversationReducer(
 
     case "CLEAR_ERROR":
       return { ...state, error: null };
+
+    case "LOAD_SESSION":
+      return {
+        ...state,
+        turns: action.payload.turns,
+        turnNumber: action.payload.turnNumber,
+        isLoading: false,
+        error: null,
+        pendingConfidenceCheck: false,
+      };
 
     default:
       return state;

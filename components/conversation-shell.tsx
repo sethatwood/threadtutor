@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef } from "react";
 import { useConversation } from "@/lib/use-conversation";
+import { saveSession } from "@/lib/session-storage";
 import { ConversationPanel } from "@/components/conversation-panel";
 import { ConceptMap } from "@/components/concept-map";
 import { LearningJournal } from "@/components/learning-journal";
@@ -20,6 +21,12 @@ export function ConversationShell({
   const { state, sendMessage, clearError } = useConversation(topic, apiKey);
 
   // ---------------------------------------------------------------------------
+  // Session identity: stable ID and creation timestamp for this conversation
+  // ---------------------------------------------------------------------------
+  const sessionIdRef = useRef(crypto.randomUUID());
+  const createdAtRef = useRef(new Date().toISOString());
+
+  // ---------------------------------------------------------------------------
   // Opening turn: send the first message to kick off the conversation
   // ---------------------------------------------------------------------------
   const didSendOpening = useRef(false);
@@ -28,6 +35,29 @@ export function ConversationShell({
     didSendOpening.current = true;
     sendMessage(`I'd like to learn about ${topic}`);
   }, [topic, sendMessage]);
+
+  // ---------------------------------------------------------------------------
+  // Auto-save: persist session to localStorage after every turn change
+  // ---------------------------------------------------------------------------
+  useEffect(() => {
+    if (state.turns.length === 0) return;
+    const session = {
+      id: sessionIdRef.current,
+      topic,
+      createdAt: createdAtRef.current,
+      turns: state.turns,
+    };
+    saveSession(session);
+
+    // In dev mode, also write to disk for session file generation
+    if (process.env.NODE_ENV === "development") {
+      fetch("/api/sessions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(session),
+      });
+    }
+  }, [state.turns, topic]);
 
   // ---------------------------------------------------------------------------
   // Click-to-scroll: scroll conversation panel to the turn where a concept
