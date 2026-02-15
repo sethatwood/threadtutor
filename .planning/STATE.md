@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-14)
 
 **Core value:** The system prompt is the product. A well-prompted Claude that teaches through Socratic questioning, with a UI built around learning rather than chatting.
-**Current focus:** Phase 5 complete, ready for Phase 6: Replay Mode
+**Current focus:** Phase 6 in progress: Replay Mode
 
 ## Current Position
 
-Phase: 5 of 8 (Session Persistence) -- COMPLETE
-Plan: 2 of 2 in current phase -- COMPLETE
-Status: Phase 05 complete, ready for Phase 06
-Last activity: 2026-02-15 -- Completed 05-02-PLAN.md (session list UI and integration)
+Phase: 6 of 8 (Replay Mode)
+Plan: 1 of 2 in current phase -- COMPLETE
+Status: 06-01 complete, ready for 06-02
+Last activity: 2026-02-15 -- Completed 06-01-PLAN.md (replay infrastructure)
 
-Progress: [██████░░░░] ~62%
+Progress: [███████░░░] ~69%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
-- Average duration: 2.9min
-- Total execution time: 0.48 hours
+- Total plans completed: 11
+- Average duration: 2.8min
+- Total execution time: 0.52 hours
 
 **By Phase:**
 
@@ -32,9 +32,10 @@ Progress: [██████░░░░] ~62%
 | 03-concept-map | 2/2 | 5min | 2.5min |
 | 04-learning-journal | 1/1 | 2min | 2.0min |
 | 05-session-persistence | 2/2 | 5min | 2.5min |
+| 06-replay-mode | 1/2 | 2min | 2.0min |
 
 **Recent Trend:**
-- Last 5 plans: 03-01 (3min), 03-02 (2min), 04-01 (2min), 05-01 (2min), 05-02 (3min)
+- Last 5 plans: 03-02 (2min), 04-01 (2min), 05-01 (2min), 05-02 (3min), 06-01 (2min)
 - Trend: stable, consistently fast
 
 *Updated after each plan completion*
@@ -79,6 +80,9 @@ Recent decisions affecting current work:
 - [05-02]: restoreSession callback exposed from useConversation hook rather than raw dispatch for cleaner API
 - [05-02]: Stale entry cleanup: if loadSession returns null, the index entry is auto-removed via deleteSession
 - [05-02]: Export button only visible when turns > 0 to avoid empty export
+- [06-01]: Dan Abramov useInterval pattern for auto-play timer (ref-based callback, null delay pauses)
+- [06-01]: ReplayConversation always renders confidence checks as assessed (isPending never true)
+- [06-01]: Back button pauses auto-play (manual navigation implies user wants control)
 
 ### Pending Todos
 
@@ -91,6 +95,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-15T08:51:30Z
-Stopped at: Completed 05-02-PLAN.md (session list UI and integration)
+Last session: 2026-02-15T17:08:12Z
+Stopped at: Completed 06-01-PLAN.md (replay infrastructure)
 Resume file: None
