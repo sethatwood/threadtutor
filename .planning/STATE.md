@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-14)
 
 **Core value:** The system prompt is the product. A well-prompted Claude that teaches through Socratic questioning, with a UI built around learning rather than chatting.
-**Current focus:** Phase 6 in progress: Replay Mode
+**Current focus:** Phase 6 complete. Ready for Phase 7.
 
 ## Current Position
 
-Phase: 6 of 8 (Replay Mode)
-Plan: 1 of 2 in current phase -- COMPLETE
-Status: 06-01 complete, ready for 06-02
-Last activity: 2026-02-15 -- Completed 06-01-PLAN.md (replay infrastructure)
+Phase: 6 of 8 (Replay Mode) -- COMPLETE
+Plan: 2 of 2 in current phase -- COMPLETE
+Status: Phase 06-replay-mode complete, ready for phase 07
+Last activity: 2026-02-15 -- Completed 06-02-PLAN.md (demo data and replay integration)
 
-Progress: [███████░░░] ~69%
+Progress: [████████░░] ~77%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 11
-- Average duration: 2.8min
-- Total execution time: 0.52 hours
+- Total plans completed: 12
+- Average duration: 2.7min
+- Total execution time: 0.55 hours
 
 **By Phase:**
 
@@ -32,10 +32,10 @@ Progress: [███████░░░] ~69%
 | 03-concept-map | 2/2 | 5min | 2.5min |
 | 04-learning-journal | 1/1 | 2min | 2.0min |
 | 05-session-persistence | 2/2 | 5min | 2.5min |
-| 06-replay-mode | 1/2 | 2min | 2.0min |
+| 06-replay-mode | 2/2 | 4min | 2.0min |
 
 **Recent Trend:**
-- Last 5 plans: 03-02 (2min), 04-01 (2min), 05-01 (2min), 05-02 (3min), 06-01 (2min)
+- Last 5 plans: 04-01 (2min), 05-01 (2min), 05-02 (3min), 06-01 (2min), 06-02 (2min)
 - Trend: stable, consistently fast
 
 *Updated after each plan completion*
@@ -83,6 +83,9 @@ Recent decisions affecting current work:
 - [06-01]: Dan Abramov useInterval pattern for auto-play timer (ref-based callback, null delay pauses)
 - [06-01]: ReplayConversation always renders confidence checks as assessed (isPending never true)
 - [06-01]: Back button pauses auto-play (manual navigation implies user wants control)
+- [06-02]: Auto-load demo for keyless visitors via useEffect after apiKeyLoaded confirms no stored key
+- [06-02]: Watch demo button available to all users (not just keyless) for discoverability
+- [06-02]: Demo fetch reusable via useCallback shared between auto-load effect and button click
 
 ### Pending Todos
 
@@ -95,6 +98,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-15T17:08:12Z
-Stopped at: Completed 06-01-PLAN.md (replay infrastructure)
+Last session: 2026-02-15T17:13:04Z
+Stopped at: Completed 06-02-PLAN.md (demo data and replay integration)
 Resume file: None
