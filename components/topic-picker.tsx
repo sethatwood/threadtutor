@@ -1,21 +1,15 @@
 "use client";
 
-import { useState, useEffect, useCallback, type KeyboardEvent } from "react";
+import { useState, useEffect, useCallback, useRef, type KeyboardEvent } from "react";
 import { getApiKey, setApiKey } from "@/lib/api-key";
 import { ConversationShell } from "@/components/conversation-shell";
 import { ReplayShell } from "@/components/replay-shell";
 import { SessionList } from "@/components/session-list";
+import { pickRandomTopics } from "@/lib/topics";
 import type { Session } from "@/lib/types";
 
-const EXAMPLE_TOPICS = [
-  "Bitcoin mining",
-  "Photosynthesis",
-  "How compilers work",
-  "The French Revolution",
-  "Quantum entanglement",
-];
-
 export function TopicPicker() {
+  const exampleTopics = useRef(pickRandomTopics(5));
   const [topic, setTopic] = useState("");
   const [apiKey, setApiKeyState] = useState("");
   const [apiKeyLoaded, setApiKeyLoaded] = useState(false);
@@ -209,7 +203,7 @@ export function TopicPicker() {
 
           {/* Example topic chips */}
           <div className="flex flex-wrap justify-center gap-2">
-            {EXAMPLE_TOPICS.map((t) => (
+            {exampleTopics.current.map((t) => (
               <button
                 key={t}
                 type="button"
