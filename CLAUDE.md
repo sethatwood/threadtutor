@@ -8,7 +8,8 @@ ThreadTutor is a Next.js app demonstrating AI-assisted Socratic learning. Claude
 
 ## Tech Stack
 
-- Next.js 14+ (App Router), TypeScript, Tailwind CSS
+- Next.js 16 (App Router), TypeScript, Tailwind CSS 4
+- Zod 4 (required by @anthropic-ai/sdk's zodOutputFormat helper for toJSONSchema)
 - React Flow (concept map visualization) with dagre layout
 - Anthropic SDK (@anthropic-ai/sdk), model: claude-sonnet-4-5-20250929
 - Deployed on Vercel
@@ -35,7 +36,7 @@ Three-panel layout: ConceptMap (left, React Flow) | ConversationPanel (center) |
 
 - Sonnet over Opus: faster, cheaper, sufficient for tutoring
 - max_tokens: 2048 (structured JSON needs headroom for schema overhead beyond concise displayText)
-- Claude's JSON responses may be wrapped in markdown code fences -- strip those when parsing
+- Structured outputs (output_config.format with zodOutputFormat) guarantee valid JSON; no code fence stripping needed
 - Confidence checks use three-level assessment: "tracking", "partial", "confused"
 - Concepts form a directed graph: first concept has `parentId: null` (root), subsequent concepts reference existing parents
 - No em dashes anywhere (stylistic choice maintained across the project)
