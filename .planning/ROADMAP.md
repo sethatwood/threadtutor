@@ -12,7 +12,7 @@ ThreadTutor delivers an AI-assisted Socratic learning app where Claude teaches a
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation & API** - System prompt, structured outputs, and API route that reliably returns Socratic teaching JSON
+- [x] **Phase 1: Foundation & API** - System prompt, structured outputs, and API route that reliably returns Socratic teaching JSON
 - [ ] **Phase 2: App Shell & Live Conversation** - Three-panel layout with working conversation panel, topic picker, and API key input
 - [ ] **Phase 3: Concept Map** - React Flow directed graph that builds progressively as concepts are introduced
 - [ ] **Phase 4: Learning Journal** - Right panel displaying running one-sentence summaries from each teaching turn
@@ -36,8 +36,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md -- Project setup, Zod schemas, and system prompt
-- [ ] 01-02-PLAN.md -- API route with BYOK, structured outputs, and error handling
+- [x] 01-01-PLAN.md -- Project setup, Zod schemas, and system prompt
+- [x] 01-02-PLAN.md -- API route with BYOK, structured outputs, and error handling
 
 ### Phase 2: App Shell & Live Conversation
 **Goal**: User can open the app, enter an API key and topic, and have a live Socratic conversation with Claude in a three-panel desktop layout
@@ -148,7 +148,7 @@ Note: Phases 3 and 4 both depend on Phase 2 and can execute in either order. Pha
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & API | 0/2 | Planned | - |
+| 1. Foundation & API | 2/2 | Complete | 2026-02-15 |
 | 2. App Shell & Live Conversation | 0/TBD | Not started | - |
 | 3. Concept Map | 0/TBD | Not started | - |
 | 4. Learning Journal | 0/TBD | Not started | - |
