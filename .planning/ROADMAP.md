@@ -65,11 +65,11 @@ Plans:
   2. New nodes animate in subtly as each teaching turn introduces concepts
   3. Edges connect child concepts to their parent concepts, and orphaned nodes (invalid parentId) are handled gracefully rather than breaking the graph
   4. Hovering a concept node expands it to show the one-sentence concept description
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
+- [ ] 03-01-PLAN.md -- Dependencies, graph layout utility, custom node component, and CSS animations
+- [ ] 03-02-PLAN.md -- ConceptMap component, state lifting, click-to-scroll wiring, and fit-all button
 
 ### Phase 4: Learning Journal
 **Goal**: User has a running learning journal that grows with each teaching turn, completing the three-panel experience
@@ -151,7 +151,7 @@ Note: Phases 3 and 4 both depend on Phase 2 and can execute in either order. Pha
 |-------|----------------|--------|-----------|
 | 1. Foundation & API | 2/2 | Complete | 2026-02-15 |
 | 2. App Shell & Live Conversation | 3/3 | Complete | 2026-02-15 |
-| 3. Concept Map | 0/TBD | Not started | - |
+| 3. Concept Map | 0/2 | Not started | - |
 | 4. Learning Journal | 0/TBD | Not started | - |
 | 5. Session Persistence | 0/TBD | Not started | - |
 | 6. Replay Mode | 0/TBD | Not started | - |
