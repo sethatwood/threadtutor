@@ -125,7 +125,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 07-01-PLAN.md -- Shared AppHeader component with branding, tagline, mode badges, and "Try it live" CTA
+- [x] 07-01-PLAN.md -- Shared AppHeader component with branding, tagline, mode badges, and "Try it live" CTA
 
 ### Phase 8: Mobile & Design Polish
 **Goal**: The app is production-ready with responsive mobile layout and consistent, clean educational design
@@ -135,10 +135,11 @@ Plans:
   1. On mobile screens, the layout stacks vertically with conversation on top, concept map below, and journal collapsible
   2. The visual design is clean, minimal, and educational -- muted colors, good typography, generous whitespace (Notion-like, not Discord-like)
   3. No em dashes appear anywhere in the rendered application
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 08-01: TBD
+- [ ] 08-01-PLAN.md -- Responsive mobile layout with stacked panels, compact header, collapsible journal, and touch targets
+- [ ] 08-02-PLAN.md -- Font stack fix, typography/spacing polish, and em dash sanitization
 
 ## Progress
 
@@ -156,4 +157,4 @@ Note: Phases 3 and 4 both depend on Phase 2 and can execute in either order. Pha
 | 5. Session Persistence | 2/2 | Complete | 2026-02-15 |
 | 6. Replay Mode | 2/2 | Complete | 2026-02-15 |
 | 7. Landing Experience | 1/1 | Complete | 2026-02-15 |
-| 8. Mobile & Design Polish | 0/TBD | Not started | - |
+| 8. Mobile & Design Polish | 0/2 | Not started | - |
