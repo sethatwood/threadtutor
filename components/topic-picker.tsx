@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect, type KeyboardEvent } from "react";
+import { useState, useEffect, useCallback, type KeyboardEvent } from "react";
 import { getApiKey, setApiKey } from "@/lib/api-key";
 import { ConversationShell } from "@/components/conversation-shell";
+import { ReplayShell } from "@/components/replay-shell";
 import { SessionList } from "@/components/session-list";
 import type { Session } from "@/lib/types";
 
@@ -21,6 +22,27 @@ export function TopicPicker() {
   const [started, setStarted] = useState(false);
   const [showApiKeyInput, setShowApiKeyInput] = useState(false);
   const [loadedSession, setLoadedSession] = useState<Session | null>(null);
+  const [demoSession, setDemoSession] = useState<Session | null>(null);
+  const [demoLoading, setDemoLoading] = useState(true);
+  const [demoError, setDemoError] = useState<string | null>(null);
+
+  // ---------------------------------------------------------------------------
+  // Fetch demo.json helper
+  // ---------------------------------------------------------------------------
+  const fetchDemo = useCallback(async () => {
+    try {
+      setDemoLoading(true);
+      setDemoError(null);
+      const res = await fetch("/demo.json");
+      if (!res.ok) throw new Error("Failed to load demo");
+      const session: Session = await res.json();
+      setDemoSession(session);
+    } catch (err) {
+      setDemoError(err instanceof Error ? err.message : "Failed to load demo");
+    } finally {
+      setDemoLoading(false);
+    }
+  }, []);
 
   // ---------------------------------------------------------------------------
   // On mount: read API key from localStorage
@@ -32,6 +54,19 @@ export function TopicPicker() {
     }
     setApiKeyLoaded(true);
   }, []);
+
+  // ---------------------------------------------------------------------------
+  // Auto-load demo for visitors without an API key
+  // ---------------------------------------------------------------------------
+  useEffect(() => {
+    if (!apiKeyLoaded) return;
+    if (apiKey) {
+      // User has an API key; skip auto-load
+      setDemoLoading(false);
+      return;
+    }
+    fetchDemo();
+  }, [apiKeyLoaded, apiKey, fetchDemo]);
 
   // ---------------------------------------------------------------------------
   // Handlers
@@ -99,10 +134,32 @@ export function TopicPicker() {
   }
 
   // ---------------------------------------------------------------------------
+  // Render: demo replay (for visitors without API key, or after clicking
+  // "Watch demo")
+  // ---------------------------------------------------------------------------
+  if (demoSession && !started && !loadedSession) {
+    return (
+      <ReplayShell
+        session={demoSession}
+        onBack={() => setDemoSession(null)}
+      />
+    );
+  }
+
+  // ---------------------------------------------------------------------------
   // Render: topic picker (before started)
   // ---------------------------------------------------------------------------
   // Wait for localStorage read before rendering to avoid flash
   if (!apiKeyLoaded) return null;
+
+  // Loading demo for keyless visitors
+  if (demoLoading && !apiKey) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <p className="text-sm text-zinc-500">Loading demo...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="flex min-h-screen items-center justify-center">
@@ -150,17 +207,37 @@ export function TopicPicker() {
 
           {/* Start learning button (hidden once API key input is shown) */}
           {!showApiKeyInput && (
-            <button
-              type="button"
-              onClick={handleStartLearning}
-              disabled={!topic.trim()}
-              className="w-full rounded-lg bg-indigo-600 px-4 py-3 text-base font-medium text-white
-                         hover:bg-indigo-500
-                         disabled:cursor-not-allowed disabled:opacity-40
-                         transition-colors"
-            >
-              Start learning
-            </button>
+            <>
+              <button
+                type="button"
+                onClick={handleStartLearning}
+                disabled={!topic.trim()}
+                className="w-full rounded-lg bg-indigo-600 px-4 py-3 text-base font-medium text-white
+                           hover:bg-indigo-500
+                           disabled:cursor-not-allowed disabled:opacity-40
+                           transition-colors"
+              >
+                Start learning
+              </button>
+
+              {/* Watch demo button */}
+              {!demoError && (
+                <button
+                  type="button"
+                  onClick={fetchDemo}
+                  disabled={demoLoading}
+                  className="w-full rounded-lg border border-zinc-700 bg-zinc-800/60 px-4 py-3 text-base font-medium text-zinc-300
+                             hover:border-indigo-500/50 hover:bg-indigo-500/10 hover:text-indigo-300
+                             disabled:cursor-not-allowed disabled:opacity-40
+                             transition-colors"
+                >
+                  <span>Watch demo</span>
+                  <span className="mt-0.5 block text-xs font-normal text-zinc-500">
+                    See how ThreadTutor works
+                  </span>
+                </button>
+              )}
+            </>
           )}
 
           {/* Past sessions list */}
