@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-02-14)
 
 ## Current Position
 
-Phase: 3 of 8 (Concept Map)
-Plan: 1 of 2 in current phase
-Status: Plan 03-01 complete, continuing to 03-02
-Last activity: 2026-02-15 -- Completed 03-01-PLAN.md (concept map building blocks: graph layout, node component, CSS)
+Phase: 3 of 8 (Concept Map) -- COMPLETE
+Plan: 2 of 2 in current phase -- COMPLETE
+Status: Phase 03 complete, ready for Phase 04
+Last activity: 2026-02-15 -- Completed 03-02-PLAN.md (concept map integration with state lifting)
 
-Progress: [████░░░░░░] ~31%
+Progress: [████░░░░░░] ~38%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
-- Average duration: 3.3min
-- Total execution time: 0.33 hours
+- Total plans completed: 7
+- Average duration: 3.1min
+- Total execution time: 0.37 hours
 
 **By Phase:**
 
@@ -29,10 +29,10 @@ Progress: [████░░░░░░] ~31%
 |-------|-------|-------|----------|
 | 01-foundation-api | 2/2 | 9min | 4.5min |
 | 02-app-shell-live-conversation | 3/3 | 8min | 2.7min |
-| 03-concept-map | 1/2 | 3min | 3min |
+| 03-concept-map | 2/2 | 5min | 2.5min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (5min), 02-01 (3min), 02-02 (2min), 02-03 (3min), 03-01 (3min)
+- Last 5 plans: 02-01 (3min), 02-02 (2min), 02-03 (3min), 03-01 (3min), 03-02 (2min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -64,6 +64,9 @@ Recent decisions affecting current work:
 - [03-01]: ConceptNodeData uses type alias with index signature for React Flow Record<string, unknown> compatibility
 - [03-01]: Top-to-bottom (TB) default layout direction for concept graph
 - [03-01]: Bezier (default) edge type for smooth curved connections
+- [03-02]: Auto-fit viewport on new concepts via setTimeout(50ms) + fitView with 300ms duration
+- [03-02]: ConversationPanel receives state as inline type (self-documenting prop interface)
+- [03-02]: Opening turn auto-send co-located with useConversation in ConversationShell
 
 ### Pending Todos
 
@@ -76,6 +79,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-15T07:02:07Z
-Stopped at: Completed 03-01-PLAN.md (concept map building blocks)
+Last session: 2026-02-15T07:07:06Z
+Stopped at: Completed 03-02-PLAN.md (concept map integration)
 Resume file: None
