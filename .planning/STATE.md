@@ -9,29 +9,30 @@ See: .planning/PROJECT.md (updated 2026-02-14)
 
 ## Current Position
 
-Phase: 1 of 8 (Foundation & API) -- COMPLETE
-Plan: 2 of 2 in current phase
-Status: Phase complete
-Last activity: 2026-02-15 -- Completed 01-02-PLAN.md (API route with BYOK, structured outputs, error handling)
+Phase: 2 of 8 (App Shell & Live Conversation)
+Plan: 1 of 3 in current phase
+Status: In progress
+Last activity: 2026-02-15 -- Completed 02-01-PLAN.md (dependencies, API key helpers, conversation state machine)
 
-Progress: [██░░░░░░░░] ~10%
+Progress: [███░░░░░░░] ~15%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
-- Average duration: 4.5min
-- Total execution time: 0.15 hours
+- Total plans completed: 3
+- Average duration: 4min
+- Total execution time: 0.20 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation-api | 2/2 | 9min | 4.5min |
+| 02-app-shell-live-conversation | 1/3 | 3min | 3min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (4min), 01-02 (5min)
-- Trend: stable
+- Last 5 plans: 01-01 (4min), 01-02 (5min), 02-01 (3min)
+- Trend: improving
 
 *Updated after each plan completion*
 
@@ -50,6 +51,9 @@ Recent decisions affecting current work:
 - [01-01]: ConceptRef minimal interface in system-prompt.ts keeps prompt builder decoupled from Zod
 - [01-02]: Zod upgraded from v3.25 to v4.3 for toJSONSchema compatibility with Anthropic SDK helpers
 - [01-02]: Using messages.create() with output_config (not messages.parse()) for manual stop_reason validation
+- [02-01]: type-only import for MessageParam avoids pulling Anthropic SDK into client bundle
+- [02-01]: useRef + useEffect pattern for stale closure avoidance in memoized callbacks
+- [02-01]: Tailwind v4 plugin registration via @plugin directive in CSS (not tailwind.config.js)
 
 ### Pending Todos
 
@@ -62,6 +66,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-15T02:50:46Z
-Stopped at: Completed 01-02-PLAN.md (Phase 1 complete)
+Last session: 2026-02-15T05:34:12Z
+Stopped at: Completed 02-01-PLAN.md (non-visual foundations for Phase 2)
 Resume file: None
