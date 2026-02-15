@@ -8,31 +8,30 @@ import {
   type KeyboardEvent,
   type ChangeEvent,
 } from "react";
-import { useConversation } from "@/lib/use-conversation";
 import { Message } from "@/components/message";
 import { ConfidenceCheckCard } from "@/components/confidence-check";
 import { SkeletonMessage } from "@/components/skeleton-message";
+import type { Turn } from "@/lib/types";
 
 interface ConversationPanelProps {
-  topic: string;
-  apiKey: string;
+  state: {
+    turns: Turn[];
+    isLoading: boolean;
+    error: string | null;
+    pendingConfidenceCheck: boolean;
+  };
+  sendMessage: (text: string) => Promise<void>;
+  clearError: () => void;
 }
 
-export function ConversationPanel({ topic, apiKey }: ConversationPanelProps) {
-  const { state, sendMessage, clearError } = useConversation(topic, apiKey);
+export function ConversationPanel({
+  state,
+  sendMessage,
+  clearError,
+}: ConversationPanelProps) {
   const [input, setInput] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const didSendOpening = useRef(false);
-
-  // ---------------------------------------------------------------------------
-  // Opening turn: send the first message to kick off the conversation
-  // ---------------------------------------------------------------------------
-  useEffect(() => {
-    if (didSendOpening.current) return;
-    didSendOpening.current = true;
-    sendMessage(`I'd like to learn about ${topic}`);
-  }, [topic, sendMessage]);
 
   // ---------------------------------------------------------------------------
   // Auto-scroll to bottom when messages change or loading state changes

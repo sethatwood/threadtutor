@@ -1,7 +1,9 @@
 "use client";
 
+import { useCallback, useEffect, useRef } from "react";
+import { useConversation } from "@/lib/use-conversation";
 import { ConversationPanel } from "@/components/conversation-panel";
-import { ConceptMapPlaceholder } from "@/components/concept-map-placeholder";
+import { ConceptMap } from "@/components/concept-map";
 import { JournalPlaceholder } from "@/components/journal-placeholder";
 
 interface ConversationShellProps {
@@ -15,6 +17,27 @@ export function ConversationShell({
   apiKey,
   onBack,
 }: ConversationShellProps) {
+  const { state, sendMessage, clearError } = useConversation(topic, apiKey);
+
+  // ---------------------------------------------------------------------------
+  // Opening turn: send the first message to kick off the conversation
+  // ---------------------------------------------------------------------------
+  const didSendOpening = useRef(false);
+  useEffect(() => {
+    if (didSendOpening.current) return;
+    didSendOpening.current = true;
+    sendMessage(`I'd like to learn about ${topic}`);
+  }, [topic, sendMessage]);
+
+  // ---------------------------------------------------------------------------
+  // Click-to-scroll: scroll conversation panel to the turn where a concept
+  // was introduced when user clicks a node in the concept map
+  // ---------------------------------------------------------------------------
+  const handleConceptClick = useCallback((turnNumber: number) => {
+    const el = document.querySelector(`[data-turn-number="${turnNumber}"]`);
+    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
+
   return (
     <div className="flex h-screen flex-col">
       {/* Header */}
@@ -42,12 +65,19 @@ export function ConversationShell({
       <div className="flex flex-1 overflow-hidden">
         {/* Left panel: Concept Map */}
         <div className="w-1/4 border-r border-zinc-800">
-          <ConceptMapPlaceholder />
+          <ConceptMap
+            turns={state.turns}
+            onConceptClick={handleConceptClick}
+          />
         </div>
 
         {/* Center panel: Conversation */}
         <div className="flex w-1/2 flex-col">
-          <ConversationPanel topic={topic} apiKey={apiKey} />
+          <ConversationPanel
+            state={state}
+            sendMessage={sendMessage}
+            clearError={clearError}
+          />
         </div>
 
         {/* Right panel: Learning Journal */}
