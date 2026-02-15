@@ -1,12 +1,12 @@
 {
-  "id": "demo-bitcoin-pow",
-  "topic": "Bitcoin proof-of-work",
+  "id": "demo-em-spectrum",
+  "topic": "The electromagnetic spectrum",
   "createdAt": "2026-02-15T00:00:00.000Z",
   "turns": [
     {
       "turnNumber": 1,
       "role": "user",
-      "displayText": "I'd like to learn about Bitcoin proof-of-work.",
+      "displayText": "I'd like to learn about the electromagnetic spectrum.",
       "concepts": [],
       "confidenceCheck": null,
       "journalEntry": null
@@ -14,22 +14,22 @@
     {
       "turnNumber": 2,
       "role": "assistant",
-      "displayText": "Great topic! Before we dive in, I'm curious what you already know about Bitcoin. When you hear \"Bitcoin,\" what comes to mind first? And do you have a sense of what problem it was originally designed to solve?",
+      "displayText": "Wonderful topic! The electromagnetic spectrum touches everything from the light you see to the Wi-Fi signal reaching your phone right now. Before we dig in, I'm curious: when you hear \"electromagnetic spectrum,\" what comes to mind? Do you have a sense of what connects things like visible light, radio waves, and X-rays?",
       "concepts": [
         {
-          "id": "bitcoin",
-          "label": "Bitcoin",
+          "id": "electromagnetic-spectrum",
+          "label": "Electromagnetic Spectrum",
           "parentId": null,
-          "description": "A decentralized digital currency that operates without a central authority"
+          "description": "The full range of electromagnetic radiation, organized by frequency and wavelength"
         }
       ],
       "confidenceCheck": null,
-      "journalEntry": "Starting point: exploring what the learner already associates with Bitcoin before introducing technical mechanics."
+      "journalEntry": "Opening the session by gauging the learner's existing mental model of the electromagnetic spectrum."
     },
     {
       "turnNumber": 3,
       "role": "user",
-      "displayText": "I know it's a digital currency and people \"mine\" it with computers, but I don't really understand what mining actually does.",
+      "displayText": "I know visible light is part of it, and I've heard of radio waves and X-rays. But honestly, they all seem so different from each other. I'm not sure what actually connects them.",
       "concepts": [],
       "confidenceCheck": null,
       "journalEntry": null
@@ -37,22 +37,22 @@
     {
       "turnNumber": 4,
       "role": "assistant",
-      "displayText": "That's a solid starting point. You're right that mining involves computers doing work. The key idea is called **proof-of-work**, and it exists to answer a fundamental question: if there's no bank or central authority, how does everyone agree that a transaction is valid? Why do you think simply broadcasting \"I'm sending 5 Bitcoin to Alice\" to the network wouldn't be enough on its own?",
+      "displayText": "That's actually the most important insight we'll build toward: they're all the *same thing*. Every one of them is an **electromagnetic wave**, a ripple of energy created by electric and magnetic fields oscillating together as they travel through space. The only difference between radio waves, visible light, and X-rays is how fast those fields oscillate. Think of it like sound: a deep bass note and a high-pitched whistle are both sound waves, just at different frequencies. What do you think \"frequency\" means in this context?",
       "concepts": [
         {
-          "id": "proof-of-work",
-          "label": "Proof of Work",
-          "parentId": "bitcoin",
-          "description": "A mechanism requiring computational effort to validate transactions and secure the network"
+          "id": "electromagnetic-waves",
+          "label": "Electromagnetic Waves",
+          "parentId": "electromagnetic-spectrum",
+          "description": "Waves of oscillating electric and magnetic fields that travel through space at the speed of light"
         }
       ],
       "confidenceCheck": null,
-      "journalEntry": "Introduced proof-of-work as the answer to the trust problem in decentralized systems. Learner recognizes mining but not its purpose."
+      "journalEntry": "Introduced the core unifying idea: all types of electromagnetic radiation are the same phenomenon (oscillating electric and magnetic fields) at different frequencies."
     },
     {
       "turnNumber": 5,
       "role": "user",
-      "displayText": "I guess someone could just lie and say they have Bitcoin they don't actually have? Or spend the same Bitcoin twice?",
+      "displayText": "I think frequency is how many times the wave oscillates per second? Like how many peaks pass a point each second?",
       "concepts": [],
       "confidenceCheck": null,
       "journalEntry": null
@@ -60,26 +60,38 @@
     {
       "turnNumber": 6,
       "role": "assistant",
-      "displayText": "Exactly right. That second scenario you described (spending the same Bitcoin twice) is actually a well-known problem called double-spending. Proof-of-work prevents this using something called a **hash function**. A hash function takes any input and produces a fixed-length output that looks like random characters. The critical property is that even a tiny change in input produces a completely different output. Can you think of why that property would be useful for detecting whether someone tampered with transaction data?",
+      "displayText": "Exactly right. **Frequency** is the number of wave cycles per second, measured in hertz (Hz). And frequency has a partner: **wavelength**, which is the physical distance between one wave peak and the next. Here's the key relationship: all electromagnetic waves travel at exactly the same speed, the **speed of light** (about 300 million meters per second). Since the speed is constant, frequency and wavelength are locked in an inverse relationship. If you know a wave has a very high frequency, what can you tell me about its wavelength?",
       "concepts": [
         {
-          "id": "hash-functions",
-          "label": "Hash Functions",
-          "parentId": "proof-of-work",
-          "description": "Cryptographic functions that map any input to a fixed-length output, where small input changes produce entirely different results"
+          "id": "frequency",
+          "label": "Frequency",
+          "parentId": "electromagnetic-waves",
+          "description": "The number of wave oscillations per second, measured in hertz (Hz), which determines a wave's position on the spectrum"
+        },
+        {
+          "id": "wavelength",
+          "label": "Wavelength",
+          "parentId": "electromagnetic-waves",
+          "description": "The physical distance between consecutive wave peaks, inversely related to frequency"
+        },
+        {
+          "id": "speed-of-light",
+          "label": "Speed of Light",
+          "parentId": "electromagnetic-waves",
+          "description": "The constant speed (about 300 million m/s) at which all electromagnetic waves travel through a vacuum"
         }
       ],
       "confidenceCheck": {
-        "question": "If I hash the text 'Send 5 BTC to Alice' and get abc123, what happens to the hash if someone changes it to 'Send 50 BTC to Alice'?",
+        "question": "If all EM waves travel at the same speed and frequency is how fast the wave oscillates, what must be true about the wavelength of a high-frequency wave?",
         "assessment": "tracking",
-        "feedback": "Spot on. The hash would be completely different, not just slightly changed. That's what makes hash functions so powerful for detecting tampering."
+        "feedback": "Perfect. Since speed is fixed, a higher frequency means a shorter wavelength. They're two sides of the same coin, and this relationship is the key to understanding the entire spectrum."
       },
-      "journalEntry": "Introduced hash functions as the cryptographic foundation of proof-of-work. Learner independently identified the double-spending problem."
+      "journalEntry": "Introduced frequency, wavelength, and the speed of light. Established the inverse relationship between frequency and wavelength as a foundational concept."
     },
     {
       "turnNumber": 7,
       "role": "user",
-      "displayText": "The hash would change completely, right? So you'd immediately know something was altered because the hash wouldn't match anymore.",
+      "displayText": "It must have a short wavelength, right? If the wave is oscillating really fast but moving at the same speed, the peaks have to be squished closer together.",
       "concepts": [],
       "confidenceCheck": null,
       "journalEntry": null
@@ -87,28 +99,28 @@
     {
       "turnNumber": 8,
       "role": "assistant",
-      "displayText": "Exactly. Now here's where mining gets interesting. In proof-of-work, miners aren't just hashing transaction data once. The network sets a **difficulty target**, which is a number the hash result must be less than. Miners have to keep trying different inputs until they find a hash below that target. The lower the target number, the harder it is to find a valid hash. Think of it like a lottery where you keep rolling dice until you get a specific combination. Why would the network want to make this process intentionally difficult?",
+      "displayText": "That's a great way to picture it. Now let's use that to map out the spectrum. At one end, you have **radio waves** with very low frequencies (thousands to billions of Hz) and long wavelengths, some stretching to kilometers. At the other end sits **visible light**, with frequencies roughly a million billion times higher and wavelengths so tiny they're measured in nanometers (billionths of a meter). Yet both are the same kind of wave, just oscillating at vastly different rates. Here's a thought experiment: if radio waves and visible light are just two regions on a continuous spectrum, what do you think exists in between them?",
       "concepts": [
         {
-          "id": "mining-difficulty",
-          "label": "Mining Difficulty",
-          "parentId": "proof-of-work",
-          "description": "An adjustable parameter that controls how hard it is to find a valid hash, keeping block times consistent"
+          "id": "radio-waves",
+          "label": "Radio Waves",
+          "parentId": "electromagnetic-spectrum",
+          "description": "The lowest-frequency region of the EM spectrum, with wavelengths from meters to kilometers, used in broadcasting and communication"
         },
         {
-          "id": "target-value",
-          "label": "Target Value",
-          "parentId": "mining-difficulty",
-          "description": "A threshold number that a valid block hash must fall below to be accepted by the network"
+          "id": "visible-light",
+          "label": "Visible Light",
+          "parentId": "electromagnetic-spectrum",
+          "description": "The narrow band of EM frequencies that human eyes can detect, spanning red (lower frequency) to violet (higher frequency)"
         }
       ],
       "confidenceCheck": null,
-      "journalEntry": "Covered mining difficulty and the target value concept. Learner correctly grasps the tamper-detection property of hashes and is ready for the iterative mining process."
+      "journalEntry": "Placed radio waves and visible light on the spectrum to illustrate the vast frequency range. Learner demonstrated strong intuition about the inverse frequency-wavelength relationship."
     },
     {
       "turnNumber": 9,
       "role": "user",
-      "displayText": "Maybe to slow things down so the network has time to agree? Also, I've heard the word \"nonce\" related to mining. What is that?",
+      "displayText": "There must be other types in between, right? I think microwaves are somewhere in there. And infrared, maybe? Like the heat you can feel from a fire?",
       "concepts": [],
       "confidenceCheck": null,
       "journalEntry": null
@@ -116,28 +128,28 @@
     {
       "turnNumber": 10,
       "role": "assistant",
-      "displayText": "Good intuition on the slowing down. And great question about the nonce. A **nonce** (\"number used once\") is the variable miners keep changing to get a different hash output. Each attempt, the miner takes the **block header** (which contains transaction data, a timestamp, and a reference to the previous block), plugs in a new nonce value, and hashes the whole thing. If the resulting hash is below the target, they win. If not, they increment the nonce and try again, billions of times per second. What does the fact that each block references the previous block suggest about the overall structure?",
+      "displayText": "Exactly! Moving up in frequency from radio waves, you hit **microwaves** (yes, the same ones in your kitchen). They work by oscillating at a frequency that makes water molecules vibrate, which generates heat. Keep going higher and you reach **infrared**, which is the warmth you feel radiating from a fire or a hot sidewalk. Your own body emits infrared radiation right now! Then comes visible light. Notice how each \"type\" is really just a human label for a frequency range on one continuous spectrum. The boundaries aren't sharp lines in nature. So what do you think comes after visible light, on the higher-frequency side?",
       "concepts": [
         {
-          "id": "nonce",
-          "label": "Nonce",
-          "parentId": "hash-functions",
-          "description": "A number miners repeatedly change to produce different hash outputs when searching for a valid block hash"
+          "id": "microwaves",
+          "label": "Microwaves",
+          "parentId": "electromagnetic-spectrum",
+          "description": "EM waves between radio and infrared frequencies, used in cooking (by vibrating water molecules) and communications"
         },
         {
-          "id": "block-header",
-          "label": "Block Header",
-          "parentId": "bitcoin",
-          "description": "The metadata section of a block containing the previous block reference, timestamp, nonce, and transaction summary"
+          "id": "infrared",
+          "label": "Infrared",
+          "parentId": "electromagnetic-spectrum",
+          "description": "EM radiation just below visible light in frequency, perceived as heat and emitted by warm objects"
         }
       ],
       "confidenceCheck": null,
-      "journalEntry": "Introduced the nonce as the variable in the mining loop and the block header as the data being hashed. Learner is connecting difficulty to network coordination."
+      "journalEntry": "Filled in microwaves and infrared between radio waves and visible light. Learner independently connected infrared to heat radiation, showing good real-world intuition."
     },
     {
       "turnNumber": 11,
       "role": "user",
-      "displayText": "It sounds like they form a chain. Each block points back to the one before it, so you can't change an old block without breaking all the ones after it.",
+      "displayText": "Ultraviolet, I think? That's what causes sunburns. And then X-rays and gamma rays after that? I'm starting to see the pattern now. It's all one continuous thing, just labeled by frequency ranges.",
       "concepts": [],
       "confidenceCheck": null,
       "journalEntry": null
@@ -145,32 +157,38 @@
     {
       "turnNumber": 12,
       "role": "assistant",
-      "displayText": "That's a really clear way to put it, and it leads directly to how the network reaches **consensus** (agreement). Since blocks form a chain, the network follows a rule: always trust the **longest chain**, because it represents the most cumulative computational work. An attacker trying to rewrite history would need to redo all that work faster than the entire rest of the network combined. Why do you think the longest chain specifically is the one everyone trusts?",
+      "displayText": "You've got it. **Ultraviolet** (UV) sits just above visible light and carries enough energy to damage skin cells, which is why you get sunburns. Higher still are **X-rays**, which can penetrate soft tissue (that's why doctors use them to image bones). At the very top are **gamma rays**, with the highest frequencies and shortest wavelengths, produced by nuclear reactions and certain astronomical events. Notice a pattern emerging? As frequency goes up, the waves seem to interact with matter more aggressively. Why do you think higher-frequency waves can penetrate or damage materials that lower-frequency waves can't?",
       "concepts": [
         {
-          "id": "consensus",
-          "label": "Consensus",
-          "parentId": "bitcoin",
-          "description": "The process by which all nodes in the network agree on which transactions are valid and in what order"
+          "id": "ultraviolet",
+          "label": "Ultraviolet",
+          "parentId": "electromagnetic-spectrum",
+          "description": "EM radiation just above visible light in frequency, energetic enough to damage DNA and cause sunburn"
         },
         {
-          "id": "longest-chain",
-          "label": "Longest Chain Rule",
-          "parentId": "consensus",
-          "description": "The principle that the valid blockchain is whichever chain has the most accumulated proof-of-work"
+          "id": "x-rays",
+          "label": "X-rays",
+          "parentId": "electromagnetic-spectrum",
+          "description": "High-frequency EM waves that can penetrate soft tissue, widely used in medical imaging"
+        },
+        {
+          "id": "gamma-rays",
+          "label": "Gamma Rays",
+          "parentId": "electromagnetic-spectrum",
+          "description": "The highest-frequency EM radiation, produced by nuclear reactions and capable of penetrating most materials"
         }
       ],
       "confidenceCheck": {
-        "question": "If an attacker wanted to change a transaction from 10 blocks ago, what would they need to do to make the network accept their version?",
-        "assessment": "partial",
-        "feedback": "You're on the right track connecting it to computational work. To be more precise, the attacker would need to redo the proof-of-work for that block AND all 10 blocks after it, then keep mining faster than everyone else to make their chain the longest. That's what makes it practically impossible."
+        "question": "We've now covered the full spectrum from radio to gamma. Can you explain in your own words why all of these are considered the same fundamental phenomenon?",
+        "assessment": "tracking",
+        "feedback": "Excellent. They are all electromagnetic waves: oscillating electric and magnetic fields traveling at the speed of light. The only variable is frequency. That single parameter determines everything, including wavelength, energy, and how the wave interacts with matter."
       },
-      "journalEntry": "Introduced consensus and the longest chain rule. Learner independently articulated the chain-linking property of blocks, showing strong conceptual understanding."
+      "journalEntry": "Completed the full spectrum layout from radio to gamma rays. Learner articulated the unifying principle independently, which is a strong milestone in understanding."
     },
     {
       "turnNumber": 13,
       "role": "user",
-      "displayText": "They'd have to redo all the mining work for the changed block and every block after it, which would take an enormous amount of computing power.",
+      "displayText": "They're all the same kind of wave, just at different frequencies. I think the higher-frequency ones might carry more energy? That would explain why gamma rays are dangerous but radio waves pass right through us harmlessly.",
       "concepts": [],
       "confidenceCheck": null,
       "journalEntry": null
@@ -178,28 +196,28 @@
     {
       "turnNumber": 14,
       "role": "assistant",
-      "displayText": "That's the core security guarantee. Now, you might wonder why miners bother doing all this work in the first place. The answer is incentives. When a miner successfully finds a valid hash and adds a block, they receive a **block reward** (newly created Bitcoin) plus transaction fees. This creates an economic system: honest mining is profitable, while attacking the network would cost more than you'd gain. The combination of **double-spending** prevention and economic incentives is what makes the whole system work. What do you think happens to the block reward over time?",
+      "displayText": "That's exactly right, and you've just touched on one of the most important ideas in modern physics. The energy of electromagnetic radiation is directly proportional to its frequency: **E = hf**, where h is Planck's constant and f is the frequency. This means each **photon** (a single particle of light) carries more energy at higher frequencies. A radio photon barely nudges an atom, while a gamma-ray photon can knock electrons out of their orbits entirely. This is the concept of **ionizing radiation**: radiation with enough energy per photon to strip electrons from atoms, which can damage living cells. Where on the spectrum do you think the dividing line between ionizing and non-ionizing radiation falls?",
       "concepts": [
         {
-          "id": "double-spending",
-          "label": "Double Spending",
-          "parentId": "consensus",
-          "description": "The problem of spending the same digital currency twice, which proof-of-work and the blockchain prevent"
+          "id": "photon-energy",
+          "label": "Photon Energy",
+          "parentId": "frequency",
+          "description": "The energy carried by a single photon, directly proportional to its frequency (E = hf), linking wave frequency to particle energy"
         },
         {
-          "id": "block-reward",
-          "label": "Block Reward",
-          "parentId": "mining-difficulty",
-          "description": "New Bitcoin awarded to the miner who successfully adds a block, providing economic incentive for honest participation"
+          "id": "ionizing-radiation",
+          "label": "Ionizing Radiation",
+          "parentId": "photon-energy",
+          "description": "EM radiation with enough energy per photon to remove electrons from atoms, potentially damaging biological tissue"
         }
       ],
       "confidenceCheck": null,
-      "journalEntry": "Connected consensus security to economic incentives. Covered double-spending prevention as a concrete outcome. Learner demonstrates strong grasp of the attack-cost argument."
+      "journalEntry": "Introduced photon energy (E = hf) and ionizing radiation. Learner independently connected higher frequency to greater energy and biological danger, showing strong conceptual reasoning."
     },
     {
       "turnNumber": 15,
       "role": "user",
-      "displayText": "I think the reward decreases over time? I've also been wondering about the energy consumption side of things. All that computation must use a lot of electricity.",
+      "displayText": "Probably somewhere around ultraviolet? Since UV causes sunburns, that's where it starts getting energetic enough to do real damage. Everything below that, like visible light and radio, would be non-ionizing.",
       "concepts": [],
       "confidenceCheck": null,
       "journalEntry": null
@@ -207,27 +225,27 @@
     {
       "turnNumber": 16,
       "role": "assistant",
-      "displayText": "You're right that the reward halves roughly every four years (called the \"halving\"). And you've raised one of the biggest debates in cryptocurrency. The **energy consumption** of proof-of-work is substantial because all those hash computations require real electricity. This has led some newer blockchains to explore **proof-of-stake**, where validators put up cryptocurrency as collateral instead of doing computational work. The tradeoff is that proof-of-stake is far more energy efficient, but some argue it changes the security model in important ways. What do you think are the tradeoffs between proving you did computational work versus proving you have something at stake?",
+      "displayText": "Spot on. The boundary sits in the UV range, which is why sunscreen matters but reading lamps don't worry us. This also connects to a beautiful idea: **absorption and emission**. Every material absorbs and emits EM radiation at specific frequencies determined by its atomic structure. That's why your microwave heats food (water absorbs those frequencies) but not a dry ceramic plate, and why certain gases in the atmosphere absorb infrared from the sun, creating the **greenhouse effect**. The entire electromagnetic spectrum, from radio to gamma, is really one unified phenomenon governing how energy moves through the universe. You've built a solid map of it today. What part surprised you the most?",
       "concepts": [
         {
-          "id": "energy-consumption",
-          "label": "Energy Consumption",
-          "parentId": "proof-of-work",
-          "description": "The significant electricity usage required by proof-of-work mining, often compared to small countries"
+          "id": "absorption-emission",
+          "label": "Absorption and Emission",
+          "parentId": "electromagnetic-spectrum",
+          "description": "The process by which matter absorbs and emits EM radiation at specific frequencies determined by atomic structure"
         },
         {
-          "id": "proof-of-stake",
-          "label": "Proof of Stake",
-          "parentId": "consensus",
-          "description": "An alternative consensus mechanism where validators lock up cryptocurrency as collateral rather than performing computational work"
+          "id": "greenhouse-effect",
+          "label": "Greenhouse Effect",
+          "parentId": "absorption-emission",
+          "description": "Atmospheric warming caused by certain gases absorbing and re-emitting infrared radiation from Earth's surface"
         }
       ],
       "confidenceCheck": {
-        "question": "Why might someone argue that proof-of-work's energy usage is actually a feature rather than a bug?",
+        "question": "Why does a microwave oven heat food but not a dry ceramic plate?",
         "assessment": "tracking",
-        "feedback": "That's a thoughtful perspective. The energy cost is precisely what makes attacking the network prohibitively expensive. It converts real-world resources into network security, which proof-of-stake approaches differently by using financial penalties instead."
+        "feedback": "Great reasoning. Water molecules absorb microwave-frequency radiation efficiently, which makes them vibrate and generate heat. Dry ceramics don't absorb at that frequency, so they stay cool. This is absorption and emission in action."
       },
-      "journalEntry": "Explored the energy consumption debate and introduced proof-of-stake as an alternative. Learner brought up energy concerns independently, showing awareness of real-world implications beyond the technical mechanics."
+      "journalEntry": "Introduced absorption and emission as the mechanism connecting EM radiation to matter. Connected to practical examples (microwave ovens, greenhouse effect). Learner correctly identified the UV boundary for ionizing radiation."
     }
   ]
 }
