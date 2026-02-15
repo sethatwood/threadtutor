@@ -93,11 +93,11 @@ Plans:
   3. User can export any session as a downloadable JSON file
   4. A past sessions list shows previously saved sessions and the user can load any of them
   5. In development mode, sessions are also written to /public/sessions/ on disk for demo generation
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 05-01: TBD
-- [ ] 05-02: TBD
+- [ ] 05-01-PLAN.md -- Session storage module, dev-mode API route, auto-save integration
+- [ ] 05-02-PLAN.md -- Session list UI, topic picker integration, export button
 
 ### Phase 6: Replay Mode
 **Goal**: Visitors without API keys can step through a pre-recorded demo session and watch the concept map build progressively
