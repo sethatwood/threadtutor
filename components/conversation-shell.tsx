@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef } from "react";
 import { useConversation } from "@/lib/use-conversation";
 import { ConversationPanel } from "@/components/conversation-panel";
 import { ConceptMap } from "@/components/concept-map";
-import { JournalPlaceholder } from "@/components/journal-placeholder";
+import { LearningJournal } from "@/components/learning-journal";
 
 interface ConversationShellProps {
   topic: string;
@@ -82,7 +82,7 @@ export function ConversationShell({
 
         {/* Right panel: Learning Journal */}
         <div className="w-1/4 border-l border-zinc-800">
-          <JournalPlaceholder />
+          <LearningJournal turns={state.turns} />
         </div>
       </div>
     </div>
