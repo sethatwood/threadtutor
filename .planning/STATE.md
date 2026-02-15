@@ -11,7 +11,7 @@ See: .planning/PROJECT.md (updated 2026-02-15)
 
 Phase: v1.0 complete (8 phases, 15 plans)
 Status: Milestone v1.0 MVP shipped 2026-02-15
-Last activity: 2026-02-15 -- Milestone v1.0 archived
+Last activity: 2026-02-15 -- Quick task 1: fullscreen concept map toggle
 
 Progress: [██████████] 100% (v1.0)
 
@@ -50,5 +50,5 @@ None active. All v1.0 blockers resolved.
 ## Session Continuity
 
 Last session: 2026-02-15
-Stopped at: Milestone v1.0 MVP archived
+Stopped at: Completed quick-1 plan: fullscreen concept map toggle
 Resume file: None
