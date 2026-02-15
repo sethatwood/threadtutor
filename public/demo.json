@@ -1,0 +1,233 @@
+{
+  "id": "demo-bitcoin-pow",
+  "topic": "Bitcoin proof-of-work",
+  "createdAt": "2026-02-15T00:00:00.000Z",
+  "turns": [
+    {
+      "turnNumber": 1,
+      "role": "user",
+      "displayText": "I'd like to learn about Bitcoin proof-of-work.",
+      "concepts": [],
+      "confidenceCheck": null,
+      "journalEntry": null
+    },
+    {
+      "turnNumber": 2,
+      "role": "assistant",
+      "displayText": "Great topic! Before we dive in, I'm curious what you already know about Bitcoin. When you hear \"Bitcoin,\" what comes to mind first? And do you have a sense of what problem it was originally designed to solve?",
+      "concepts": [
+        {
+          "id": "bitcoin",
+          "label": "Bitcoin",
+          "parentId": null,
+          "description": "A decentralized digital currency that operates without a central authority"
+        }
+      ],
+      "confidenceCheck": null,
+      "journalEntry": "Starting point: exploring what the learner already associates with Bitcoin before introducing technical mechanics."
+    },
+    {
+      "turnNumber": 3,
+      "role": "user",
+      "displayText": "I know it's a digital currency and people \"mine\" it with computers, but I don't really understand what mining actually does.",
+      "concepts": [],
+      "confidenceCheck": null,
+      "journalEntry": null
+    },
+    {
+      "turnNumber": 4,
+      "role": "assistant",
+      "displayText": "That's a solid starting point. You're right that mining involves computers doing work. The key idea is called **proof-of-work**, and it exists to answer a fundamental question: if there's no bank or central authority, how does everyone agree that a transaction is valid? Why do you think simply broadcasting \"I'm sending 5 Bitcoin to Alice\" to the network wouldn't be enough on its own?",
+      "concepts": [
+        {
+          "id": "proof-of-work",
+          "label": "Proof of Work",
+          "parentId": "bitcoin",
+          "description": "A mechanism requiring computational effort to validate transactions and secure the network"
+        }
+      ],
+      "confidenceCheck": null,
+      "journalEntry": "Introduced proof-of-work as the answer to the trust problem in decentralized systems. Learner recognizes mining but not its purpose."
+    },
+    {
+      "turnNumber": 5,
+      "role": "user",
+      "displayText": "I guess someone could just lie and say they have Bitcoin they don't actually have? Or spend the same Bitcoin twice?",
+      "concepts": [],
+      "confidenceCheck": null,
+      "journalEntry": null
+    },
+    {
+      "turnNumber": 6,
+      "role": "assistant",
+      "displayText": "Exactly right. That second scenario you described (spending the same Bitcoin twice) is actually a well-known problem called double-spending. Proof-of-work prevents this using something called a **hash function**. A hash function takes any input and produces a fixed-length output that looks like random characters. The critical property is that even a tiny change in input produces a completely different output. Can you think of why that property would be useful for detecting whether someone tampered with transaction data?",
+      "concepts": [
+        {
+          "id": "hash-functions",
+          "label": "Hash Functions",
+          "parentId": "proof-of-work",
+          "description": "Cryptographic functions that map any input to a fixed-length output, where small input changes produce entirely different results"
+        }
+      ],
+      "confidenceCheck": {
+        "question": "If I hash the text 'Send 5 BTC to Alice' and get abc123, what happens to the hash if someone changes it to 'Send 50 BTC to Alice'?",
+        "assessment": "tracking",
+        "feedback": "Spot on. The hash would be completely different, not just slightly changed. That's what makes hash functions so powerful for detecting tampering."
+      },
+      "journalEntry": "Introduced hash functions as the cryptographic foundation of proof-of-work. Learner independently identified the double-spending problem."
+    },
+    {
+      "turnNumber": 7,
+      "role": "user",
+      "displayText": "The hash would change completely, right? So you'd immediately know something was altered because the hash wouldn't match anymore.",
+      "concepts": [],
+      "confidenceCheck": null,
+      "journalEntry": null
+    },
+    {
+      "turnNumber": 8,
+      "role": "assistant",
+      "displayText": "Exactly. Now here's where mining gets interesting. In proof-of-work, miners aren't just hashing transaction data once. The network sets a **difficulty target**, which is a number the hash result must be less than. Miners have to keep trying different inputs until they find a hash below that target. The lower the target number, the harder it is to find a valid hash. Think of it like a lottery where you keep rolling dice until you get a specific combination. Why would the network want to make this process intentionally difficult?",
+      "concepts": [
+        {
+          "id": "mining-difficulty",
+          "label": "Mining Difficulty",
+          "parentId": "proof-of-work",
+          "description": "An adjustable parameter that controls how hard it is to find a valid hash, keeping block times consistent"
+        },
+        {
+          "id": "target-value",
+          "label": "Target Value",
+          "parentId": "mining-difficulty",
+          "description": "A threshold number that a valid block hash must fall below to be accepted by the network"
+        }
+      ],
+      "confidenceCheck": null,
+      "journalEntry": "Covered mining difficulty and the target value concept. Learner correctly grasps the tamper-detection property of hashes and is ready for the iterative mining process."
+    },
+    {
+      "turnNumber": 9,
+      "role": "user",
+      "displayText": "Maybe to slow things down so the network has time to agree? Also, I've heard the word \"nonce\" related to mining. What is that?",
+      "concepts": [],
+      "confidenceCheck": null,
+      "journalEntry": null
+    },
+    {
+      "turnNumber": 10,
+      "role": "assistant",
+      "displayText": "Good intuition on the slowing down. And great question about the nonce. A **nonce** (\"number used once\") is the variable miners keep changing to get a different hash output. Each attempt, the miner takes the **block header** (which contains transaction data, a timestamp, and a reference to the previous block), plugs in a new nonce value, and hashes the whole thing. If the resulting hash is below the target, they win. If not, they increment the nonce and try again, billions of times per second. What does the fact that each block references the previous block suggest about the overall structure?",
+      "concepts": [
+        {
+          "id": "nonce",
+          "label": "Nonce",
+          "parentId": "hash-functions",
+          "description": "A number miners repeatedly change to produce different hash outputs when searching for a valid block hash"
+        },
+        {
+          "id": "block-header",
+          "label": "Block Header",
+          "parentId": "bitcoin",
+          "description": "The metadata section of a block containing the previous block reference, timestamp, nonce, and transaction summary"
+        }
+      ],
+      "confidenceCheck": null,
+      "journalEntry": "Introduced the nonce as the variable in the mining loop and the block header as the data being hashed. Learner is connecting difficulty to network coordination."
+    },
+    {
+      "turnNumber": 11,
+      "role": "user",
+      "displayText": "It sounds like they form a chain. Each block points back to the one before it, so you can't change an old block without breaking all the ones after it.",
+      "concepts": [],
+      "confidenceCheck": null,
+      "journalEntry": null
+    },
+    {
+      "turnNumber": 12,
+      "role": "assistant",
+      "displayText": "That's a really clear way to put it, and it leads directly to how the network reaches **consensus** (agreement). Since blocks form a chain, the network follows a rule: always trust the **longest chain**, because it represents the most cumulative computational work. An attacker trying to rewrite history would need to redo all that work faster than the entire rest of the network combined. Why do you think the longest chain specifically is the one everyone trusts?",
+      "concepts": [
+        {
+          "id": "consensus",
+          "label": "Consensus",
+          "parentId": "bitcoin",
+          "description": "The process by which all nodes in the network agree on which transactions are valid and in what order"
+        },
+        {
+          "id": "longest-chain",
+          "label": "Longest Chain Rule",
+          "parentId": "consensus",
+          "description": "The principle that the valid blockchain is whichever chain has the most accumulated proof-of-work"
+        }
+      ],
+      "confidenceCheck": {
+        "question": "If an attacker wanted to change a transaction from 10 blocks ago, what would they need to do to make the network accept their version?",
+        "assessment": "partial",
+        "feedback": "You're on the right track connecting it to computational work. To be more precise, the attacker would need to redo the proof-of-work for that block AND all 10 blocks after it, then keep mining faster than everyone else to make their chain the longest. That's what makes it practically impossible."
+      },
+      "journalEntry": "Introduced consensus and the longest chain rule. Learner independently articulated the chain-linking property of blocks, showing strong conceptual understanding."
+    },
+    {
+      "turnNumber": 13,
+      "role": "user",
+      "displayText": "They'd have to redo all the mining work for the changed block and every block after it, which would take an enormous amount of computing power.",
+      "concepts": [],
+      "confidenceCheck": null,
+      "journalEntry": null
+    },
+    {
+      "turnNumber": 14,
+      "role": "assistant",
+      "displayText": "That's the core security guarantee. Now, you might wonder why miners bother doing all this work in the first place. The answer is incentives. When a miner successfully finds a valid hash and adds a block, they receive a **block reward** (newly created Bitcoin) plus transaction fees. This creates an economic system: honest mining is profitable, while attacking the network would cost more than you'd gain. The combination of **double-spending** prevention and economic incentives is what makes the whole system work. What do you think happens to the block reward over time?",
+      "concepts": [
+        {
+          "id": "double-spending",
+          "label": "Double Spending",
+          "parentId": "consensus",
+          "description": "The problem of spending the same digital currency twice, which proof-of-work and the blockchain prevent"
+        },
+        {
+          "id": "block-reward",
+          "label": "Block Reward",
+          "parentId": "mining-difficulty",
+          "description": "New Bitcoin awarded to the miner who successfully adds a block, providing economic incentive for honest participation"
+        }
+      ],
+      "confidenceCheck": null,
+      "journalEntry": "Connected consensus security to economic incentives. Covered double-spending prevention as a concrete outcome. Learner demonstrates strong grasp of the attack-cost argument."
+    },
+    {
+      "turnNumber": 15,
+      "role": "user",
+      "displayText": "I think the reward decreases over time? I've also been wondering about the energy consumption side of things. All that computation must use a lot of electricity.",
+      "concepts": [],
+      "confidenceCheck": null,
+      "journalEntry": null
+    },
+    {
+      "turnNumber": 16,
+      "role": "assistant",
+      "displayText": "You're right that the reward halves roughly every four years (called the \"halving\"). And you've raised one of the biggest debates in cryptocurrency. The **energy consumption** of proof-of-work is substantial because all those hash computations require real electricity. This has led some newer blockchains to explore **proof-of-stake**, where validators put up cryptocurrency as collateral instead of doing computational work. The tradeoff is that proof-of-stake is far more energy efficient, but some argue it changes the security model in important ways. What do you think are the tradeoffs between proving you did computational work versus proving you have something at stake?",
+      "concepts": [
+        {
+          "id": "energy-consumption",
+          "label": "Energy Consumption",
+          "parentId": "proof-of-work",
+          "description": "The significant electricity usage required by proof-of-work mining, often compared to small countries"
+        },
+        {
+          "id": "proof-of-stake",
+          "label": "Proof of Stake",
+          "parentId": "consensus",
+          "description": "An alternative consensus mechanism where validators lock up cryptocurrency as collateral rather than performing computational work"
+        }
+      ],
+      "confidenceCheck": {
+        "question": "Why might someone argue that proof-of-work's energy usage is actually a feature rather than a bug?",
+        "assessment": "tracking",
+        "feedback": "That's a thoughtful perspective. The energy cost is precisely what makes attacking the network prohibitively expensive. It converts real-world resources into network security, which proof-of-stake approaches differently by using financial penalties instead."
+      },
+      "journalEntry": "Explored the energy consumption debate and introduced proof-of-stake as an alternative. Learner brought up energy concerns independently, showing awareness of real-world implications beyond the technical mechanics."
+    }
+  ]
+}
