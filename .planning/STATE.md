@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-14)
 
 **Core value:** The system prompt is the product. A well-prompted Claude that teaches through Socratic questioning, with a UI built around learning rather than chatting.
-**Current focus:** Phase 3: Concept Map
+**Current focus:** Phase 4: Learning Journal
 
 ## Current Position
 
-Phase: 3 of 8 (Concept Map) -- COMPLETE
-Plan: 2 of 2 in current phase -- COMPLETE
-Status: Phase 03 complete, ready for Phase 04
-Last activity: 2026-02-15 -- Completed 03-02-PLAN.md (concept map integration with state lifting)
+Phase: 4 of 8 (Learning Journal) -- COMPLETE
+Plan: 1 of 1 in current phase -- COMPLETE
+Status: Phase 04 complete, ready for Phase 05
+Last activity: 2026-02-15 -- Completed 04-01-PLAN.md (learning journal component)
 
-Progress: [████░░░░░░] ~38%
+Progress: [█████░░░░░] ~50%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
-- Average duration: 3.1min
-- Total execution time: 0.37 hours
+- Total plans completed: 8
+- Average duration: 3.0min
+- Total execution time: 0.40 hours
 
 **By Phase:**
 
@@ -30,10 +30,11 @@ Progress: [████░░░░░░] ~38%
 | 01-foundation-api | 2/2 | 9min | 4.5min |
 | 02-app-shell-live-conversation | 3/3 | 8min | 2.7min |
 | 03-concept-map | 2/2 | 5min | 2.5min |
+| 04-learning-journal | 1/1 | 2min | 2.0min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (3min), 02-02 (2min), 02-03 (3min), 03-01 (3min), 03-02 (2min)
-- Trend: stable
+- Last 5 plans: 02-02 (2min), 02-03 (3min), 03-01 (3min), 03-02 (2min), 04-01 (2min)
+- Trend: stable, trending faster
 
 *Updated after each plan completion*
 
@@ -67,6 +68,8 @@ Recent decisions affecting current work:
 - [03-02]: Auto-fit viewport on new concepts via setTimeout(50ms) + fitView with 300ms duration
 - [03-02]: ConversationPanel receives state as inline type (self-documenting prop interface)
 - [03-02]: Opening turn auto-send co-located with useConversation in ConversationShell
+- [04-01]: Type narrowing filter for assistant turns with non-null journalEntry in useMemo
+- [04-01]: Scroll sentinel div pattern (ref at bottom of list) for smooth auto-scroll
 
 ### Pending Todos
 
@@ -79,6 +82,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-15T07:07:06Z
-Stopped at: Completed 03-02-PLAN.md (concept map integration)
+Last session: 2026-02-15T08:00:16Z
+Stopped at: Completed 04-01-PLAN.md (learning journal component)
 Resume file: None
