@@ -14,12 +14,13 @@ const NODE_HEIGHT = 40;
 // ---------------------------------------------------------------------------
 
 /** Data payload for the custom ConceptNode component. */
-export interface ConceptNodeData {
+export type ConceptNodeData = {
   label: string;
   description: string;
   turnNumber: number;
   isNew: boolean;
-}
+  [key: string]: unknown;
+};
 
 // ---------------------------------------------------------------------------
 // Public API
