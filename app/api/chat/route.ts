@@ -4,6 +4,17 @@ import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
 import { TurnResponseSchema } from "@/lib/types";
 import { buildSystemPrompt } from "@/lib/system-prompt";
 
+/**
+ * Replace em dashes (U+2014) and en dashes (U+2013) with hyphens.
+ * Belt-and-suspenders: the system prompt prohibits em dashes, but
+ * Claude may occasionally produce them anyway.
+ */
+function sanitizeEmDashes(text: string): string {
+  return text
+    .replace(/\u2014/g, " - ")  // em dash -> space-hyphen-space
+    .replace(/\u2013/g, "-");   // en dash -> hyphen
+}
+
 export async function POST(request: Request) {
   // ---------------------------------------------------------------------------
   // 1. Parse request body (defensive)
@@ -99,6 +110,33 @@ export async function POST(request: Request) {
     }
 
     const turnData = JSON.parse(textBlock.text);
+
+    // Sanitize em/en dashes from all text fields
+    if (turnData.displayText) {
+      turnData.displayText = sanitizeEmDashes(turnData.displayText);
+    }
+    if (turnData.journalEntry) {
+      turnData.journalEntry = sanitizeEmDashes(turnData.journalEntry);
+    }
+    if (turnData.confidenceCheck) {
+      if (turnData.confidenceCheck.question) {
+        turnData.confidenceCheck.question = sanitizeEmDashes(turnData.confidenceCheck.question);
+      }
+      if (turnData.confidenceCheck.feedback) {
+        turnData.confidenceCheck.feedback = sanitizeEmDashes(turnData.confidenceCheck.feedback);
+      }
+    }
+    if (turnData.concepts) {
+      for (const concept of turnData.concepts) {
+        if (concept.label) {
+          concept.label = sanitizeEmDashes(concept.label);
+        }
+        if (concept.description) {
+          concept.description = sanitizeEmDashes(concept.description);
+        }
+      }
+    }
+
     return NextResponse.json(turnData);
   } catch (error: unknown) {
     // -------------------------------------------------------------------------
