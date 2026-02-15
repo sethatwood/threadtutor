@@ -11,7 +11,7 @@ See: .planning/PROJECT.md (updated 2026-02-15)
 
 Phase: v1.0 complete (8 phases, 15 plans)
 Status: Milestone v1.0 MVP shipped 2026-02-15
-Last activity: 2026-02-15 -- Quick task 1: fullscreen concept map toggle
+Last activity: 2026-02-15 - Completed quick task 1: Add fullscreen toggle to concept map
 
 Progress: [██████████] 100% (v1.0)
 
@@ -46,6 +46,12 @@ None.
 ### Blockers/Concerns
 
 None active. All v1.0 blockers resolved.
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 1 | Add fullscreen toggle to concept map | 2026-02-15 | 5a45516 | [1-add-fullscreen-toggle-to-concept-map](./quick/1-add-fullscreen-toggle-to-concept-map/) |
 
 ## Session Continuity
 
