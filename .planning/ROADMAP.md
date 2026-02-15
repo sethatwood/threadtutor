@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Concept Map** - React Flow directed graph that builds progressively as concepts are introduced
 - [x] **Phase 4: Learning Journal** - Right panel displaying running one-sentence summaries from each teaching turn
 - [x] **Phase 5: Session Persistence** - localStorage save/load/export so sessions survive refresh and can be shared as JSON
-- [ ] **Phase 6: Replay Mode** - Pre-recorded demo session with step-through controls for visitors without API keys
+- [x] **Phase 6: Replay Mode** - Pre-recorded demo session with step-through controls for visitors without API keys
 - [ ] **Phase 7: Landing Experience** - Visitor flow from replay demo to live mode with header branding and mode indicators
 - [ ] **Phase 8: Mobile & Design Polish** - Responsive mobile layout and design system enforcement for production readiness
 
@@ -111,8 +111,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 06-01-PLAN.md -- Replay hooks (useInterval, useReplayState) and UI components (ReplayConversation, ReplayControls, ReplayShell)
-- [ ] 06-02-PLAN.md -- Demo session data (demo.json) and TopicPicker integration for default visitor experience
+- [x] 06-01-PLAN.md -- Replay hooks (useInterval, useReplayState) and UI components (ReplayConversation, ReplayControls, ReplayShell)
+- [x] 06-02-PLAN.md -- Demo session data (demo.json) and TopicPicker integration for default visitor experience
 
 ### Phase 7: Landing Experience
 **Goal**: New visitors have a clear, guided path from watching the replay demo to starting their own live learning session
@@ -154,6 +154,6 @@ Note: Phases 3 and 4 both depend on Phase 2 and can execute in either order. Pha
 | 3. Concept Map | 2/2 | Complete | 2026-02-15 |
 | 4. Learning Journal | 1/1 | Complete | 2026-02-15 |
 | 5. Session Persistence | 2/2 | Complete | 2026-02-15 |
-| 6. Replay Mode | 0/TBD | Not started | - |
+| 6. Replay Mode | 2/2 | Complete | 2026-02-15 |
 | 7. Landing Experience | 0/TBD | Not started | - |
 | 8. Mobile & Design Polish | 0/TBD | Not started | - |
