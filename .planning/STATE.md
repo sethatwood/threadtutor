@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-14)
 
 **Core value:** The system prompt is the product. A well-prompted Claude that teaches through Socratic questioning, with a UI built around learning rather than chatting.
-**Current focus:** Phase 6 complete. Ready for Phase 7.
+**Current focus:** Phase 7 complete. Ready for Phase 8.
 
 ## Current Position
 
-Phase: 6 of 8 (Replay Mode) -- COMPLETE
-Plan: 2 of 2 in current phase -- COMPLETE
-Status: Phase 06-replay-mode complete, ready for phase 07
-Last activity: 2026-02-15 -- Completed 06-02-PLAN.md (demo data and replay integration)
+Phase: 7 of 8 (Landing Experience) -- COMPLETE
+Plan: 1 of 1 in current phase -- COMPLETE
+Status: Phase 07-landing-experience complete, ready for phase 08
+Last activity: 2026-02-15 -- Completed 07-01-PLAN.md (landing experience header)
 
-Progress: [████████░░] ~77%
+Progress: [█████████░] ~88%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 12
-- Average duration: 2.7min
-- Total execution time: 0.55 hours
+- Total plans completed: 13
+- Average duration: 2.6min
+- Total execution time: 0.58 hours
 
 **By Phase:**
 
@@ -33,9 +33,10 @@ Progress: [████████░░] ~77%
 | 04-learning-journal | 1/1 | 2min | 2.0min |
 | 05-session-persistence | 2/2 | 5min | 2.5min |
 | 06-replay-mode | 2/2 | 4min | 2.0min |
+| 07-landing-experience | 1/1 | 2min | 2.0min |
 
 **Recent Trend:**
-- Last 5 plans: 04-01 (2min), 05-01 (2min), 05-02 (3min), 06-01 (2min), 06-02 (2min)
+- Last 5 plans: 05-01 (2min), 05-02 (3min), 06-01 (2min), 06-02 (2min), 07-01 (2min)
 - Trend: stable, consistently fast
 
 *Updated after each plan completion*
@@ -86,6 +87,9 @@ Recent decisions affecting current work:
 - [06-02]: Auto-load demo for keyless visitors via useEffect after apiKeyLoaded confirms no stored key
 - [06-02]: Watch demo button available to all users (not just keyless) for discoverability
 - [06-02]: Demo fetch reusable via useCallback shared between auto-load effect and button click
+- [07-01]: AppHeader is pure presentational (no "use client", no hooks) for simplicity and reusability
+- [07-01]: "Try it live" and "Exit" both call onBack -- TopicPicker already handles API key entry and topic selection
+- [07-01]: "Try it live" uses filled indigo-600 style to visually distinguish from subtle action buttons
 
 ### Pending Todos
 
@@ -98,6 +102,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-15T17:13:04Z
-Stopped at: Completed 06-02-PLAN.md (demo data and replay integration)
+Last session: 2026-02-15T17:52:30Z
+Stopped at: Completed 07-01-PLAN.md (landing experience header)
 Resume file: None
