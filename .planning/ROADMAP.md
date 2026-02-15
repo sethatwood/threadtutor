@@ -122,10 +122,10 @@ Plans:
   1. New visitors land on the replay demo with a visible, clear path to "Try it live" that guides them to enter an API key and topic
   2. A mode indicator in the header shows whether the user is in Live or Replay mode
   3. The header displays "ThreadTutor" branding, a tagline, and the current topic name
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 07-01: TBD
+- [ ] 07-01-PLAN.md -- Shared AppHeader component with branding, tagline, mode badges, and "Try it live" CTA
 
 ### Phase 8: Mobile & Design Polish
 **Goal**: The app is production-ready with responsive mobile layout and consistent, clean educational design
@@ -155,5 +155,5 @@ Note: Phases 3 and 4 both depend on Phase 2 and can execute in either order. Pha
 | 4. Learning Journal | 1/1 | Complete | 2026-02-15 |
 | 5. Session Persistence | 2/2 | Complete | 2026-02-15 |
 | 6. Replay Mode | 2/2 | Complete | 2026-02-15 |
-| 7. Landing Experience | 0/TBD | Not started | - |
+| 7. Landing Experience | 0/1 | Not started | - |
 | 8. Mobile & Design Polish | 0/TBD | Not started | - |
