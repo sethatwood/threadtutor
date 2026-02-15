@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-14)
 
 **Core value:** The system prompt is the product. A well-prompted Claude that teaches through Socratic questioning, with a UI built around learning rather than chatting.
-**Current focus:** Phase 4: Learning Journal
+**Current focus:** Phase 5: Session Persistence
 
 ## Current Position
 
-Phase: 4 of 8 (Learning Journal) -- COMPLETE
-Plan: 1 of 1 in current phase -- COMPLETE
-Status: Phase 04 complete, ready for Phase 05
-Last activity: 2026-02-15 -- Completed 04-01-PLAN.md (learning journal component)
+Phase: 5 of 8 (Session Persistence)
+Plan: 1 of 2 in current phase -- COMPLETE
+Status: Executing Phase 05, Plan 01 complete
+Last activity: 2026-02-15 -- Completed 05-01-PLAN.md (session persistence infrastructure)
 
-Progress: [█████░░░░░] ~50%
+Progress: [██████░░░░] ~56%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
-- Average duration: 3.0min
-- Total execution time: 0.40 hours
+- Total plans completed: 9
+- Average duration: 2.9min
+- Total execution time: 0.43 hours
 
 **By Phase:**
 
@@ -31,10 +31,11 @@ Progress: [█████░░░░░] ~50%
 | 02-app-shell-live-conversation | 3/3 | 8min | 2.7min |
 | 03-concept-map | 2/2 | 5min | 2.5min |
 | 04-learning-journal | 1/1 | 2min | 2.0min |
+| 05-session-persistence | 1/2 | 2min | 2.0min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (2min), 02-03 (3min), 03-01 (3min), 03-02 (2min), 04-01 (2min)
-- Trend: stable, trending faster
+- Last 5 plans: 02-03 (3min), 03-01 (3min), 03-02 (2min), 04-01 (2min), 05-01 (2min)
+- Trend: stable, consistently fast
 
 *Updated after each plan completion*
 
@@ -70,6 +71,10 @@ Recent decisions affecting current work:
 - [03-02]: Opening turn auto-send co-located with useConversation in ConversationShell
 - [04-01]: Type narrowing filter for assistant turns with non-null journalEntry in useMemo
 - [04-01]: Scroll sentinel div pattern (ref at bottom of list) for smooth auto-scroll
+- [05-01]: Sessions index in separate localStorage key for O(1) listing without parsing full session JSON
+- [05-01]: QuotaExceededError caught with console.warn (non-throwing) to prevent auto-save from breaking conversation flow
+- [05-01]: Session ID via crypto.randomUUID() in useRef for stability across re-renders
+- [05-01]: Dev-mode disk writes are fire-and-forget (localStorage is source of truth)
 
 ### Pending Todos
 
@@ -82,6 +87,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-15T08:00:16Z
-Stopped at: Completed 04-01-PLAN.md (learning journal component)
+Last session: 2026-02-15T08:46:48Z
+Stopped at: Completed 05-01-PLAN.md (session persistence infrastructure)
 Resume file: None
