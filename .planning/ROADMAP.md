@@ -108,11 +108,11 @@ Plans:
   2. Next and Back buttons step through the conversation one turn at a time, with the concept map building and un-building accordingly
   3. Auto-play mode advances turns automatically with a 2-3 second delay between turns
   4. Confidence checks during replay show the original user's response and Claude's assessment
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 06-01: TBD
-- [ ] 06-02: TBD
+- [ ] 06-01-PLAN.md -- Replay hooks (useInterval, useReplayState) and UI components (ReplayConversation, ReplayControls, ReplayShell)
+- [ ] 06-02-PLAN.md -- Demo session data (demo.json) and TopicPicker integration for default visitor experience
 
 ### Phase 7: Landing Experience
 **Goal**: New visitors have a clear, guided path from watching the replay demo to starting their own live learning session
