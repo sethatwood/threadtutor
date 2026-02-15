@@ -1,0 +1,21 @@
+# Milestones
+
+## v1.0 MVP (Shipped: 2026-02-15)
+
+**Phases:** 1-8 (15 plans) | **LOC:** 2,514 TypeScript | **Timeline:** 2 days
+**Git range:** `749e307..e6c6d0d` (28 feat commits, 107 files changed)
+
+**Delivered:** AI-assisted Socratic learning app where Claude teaches any topic through guided questioning while building a real-time concept map. Three modes (Replay, Live, Local Dev) share the same UI components.
+
+**Key accomplishments:**
+1. Structured JSON API with Socratic teaching system prompt and BYOK key management
+2. Three-panel desktop layout with live conversation, confidence checks, and dark theme
+3. Real-time concept map (React Flow + dagre) building progressively as Claude teaches
+4. Session persistence with localStorage auto-save, past sessions browsing, and JSON export
+5. Replay mode with Bitcoin proof-of-work demo for keyless visitors
+6. Responsive mobile layout with stacked panels and em dash sanitization
+
+**Archives:** [v1.0-ROADMAP.md](milestones/v1.0-ROADMAP.md) | [v1.0-REQUIREMENTS.md](milestones/v1.0-REQUIREMENTS.md) | [v1.0-MILESTONE-AUDIT.md](milestones/v1.0-MILESTONE-AUDIT.md)
+
+---
+
