@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-14)
 
 **Core value:** The system prompt is the product. A well-prompted Claude that teaches through Socratic questioning, with a UI built around learning rather than chatting.
-**Current focus:** Phase 7 complete. Ready for Phase 8.
+**Current focus:** Phase 8 in progress. Plan 02 complete, plan 01 pending.
 
 ## Current Position
 
-Phase: 7 of 8 (Landing Experience) -- COMPLETE
-Plan: 1 of 1 in current phase -- COMPLETE
-Status: Phase 07-landing-experience complete, ready for phase 08
-Last activity: 2026-02-15 -- Completed 07-01-PLAN.md (landing experience header)
+Phase: 8 of 8 (Mobile and Design Polish)
+Plan: 2 of 2 in current phase (08-02 complete, 08-01 pending)
+Status: Executing phase 08-mobile-design-polish
+Last activity: 2026-02-15 -- Completed 08-02-PLAN.md (typography and em dash sanitization)
 
-Progress: [█████████░] ~88%
+Progress: [█████████░] ~94%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 13
-- Average duration: 2.6min
-- Total execution time: 0.58 hours
+- Total plans completed: 14
+- Average duration: 2.5min
+- Total execution time: 0.61 hours
 
 **By Phase:**
 
@@ -34,9 +34,10 @@ Progress: [█████████░] ~88%
 | 05-session-persistence | 2/2 | 5min | 2.5min |
 | 06-replay-mode | 2/2 | 4min | 2.0min |
 | 07-landing-experience | 1/1 | 2min | 2.0min |
+| 08-mobile-design-polish | 1/2 | 2min | 2.0min |
 
 **Recent Trend:**
-- Last 5 plans: 05-01 (2min), 05-02 (3min), 06-01 (2min), 06-02 (2min), 07-01 (2min)
+- Last 5 plans: 05-02 (3min), 06-01 (2min), 06-02 (2min), 07-01 (2min), 08-02 (2min)
 - Trend: stable, consistently fast
 
 *Updated after each plan completion*
@@ -90,6 +91,9 @@ Recent decisions affecting current work:
 - [07-01]: AppHeader is pure presentational (no "use client", no hooks) for simplicity and reusability
 - [07-01]: "Try it live" and "Exit" both call onBack -- TopicPicker already handles API key entry and topic selection
 - [07-01]: "Try it live" uses filled indigo-600 style to visually distinguish from subtle action buttons
+- [08-02]: Font stack uses var(--font-sans) with system-ui fallback, not hardcoded font names
+- [08-02]: Em dash sanitization at API boundary (server-side) for single enforcement point
+- [08-02]: Em dashes replaced with space-hyphen-space; en dashes replaced with plain hyphen
 
 ### Pending Todos
 
@@ -102,6 +106,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-15T17:52:30Z
-Stopped at: Completed 07-01-PLAN.md (landing experience header)
+Last session: 2026-02-15T18:50:23Z
+Stopped at: Completed 08-02-PLAN.md (typography and em dash sanitization)
 Resume file: None
