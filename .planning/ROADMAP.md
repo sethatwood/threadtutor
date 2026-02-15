@@ -19,7 +19,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 5: Session Persistence** - localStorage save/load/export so sessions survive refresh and can be shared as JSON
 - [x] **Phase 6: Replay Mode** - Pre-recorded demo session with step-through controls for visitors without API keys
 - [x] **Phase 7: Landing Experience** - Visitor flow from replay demo to live mode with header branding and mode indicators
-- [ ] **Phase 8: Mobile & Design Polish** - Responsive mobile layout and design system enforcement for production readiness
+- [x] **Phase 8: Mobile & Design Polish** - Responsive mobile layout and design system enforcement for production readiness
 
 ## Phase Details
 
@@ -138,8 +138,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 08-01-PLAN.md -- Responsive mobile layout with stacked panels, compact header, collapsible journal, and touch targets
-- [ ] 08-02-PLAN.md -- Font stack fix, typography/spacing polish, and em dash sanitization
+- [x] 08-01-PLAN.md -- Responsive mobile layout with stacked panels, compact header, collapsible journal, and touch targets
+- [x] 08-02-PLAN.md -- Font stack fix, typography/spacing polish, and em dash sanitization
 
 ## Progress
 
@@ -157,4 +157,4 @@ Note: Phases 3 and 4 both depend on Phase 2 and can execute in either order. Pha
 | 5. Session Persistence | 2/2 | Complete | 2026-02-15 |
 | 6. Replay Mode | 2/2 | Complete | 2026-02-15 |
 | 7. Landing Experience | 1/1 | Complete | 2026-02-15 |
-| 8. Mobile & Design Polish | 0/2 | Not started | - |
+| 8. Mobile & Design Polish | 2/2 | Complete | 2026-02-15 |
