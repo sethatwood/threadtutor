@@ -162,12 +162,33 @@ export function TopicPicker() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center">
+    <div className="flex min-h-screen items-center justify-center py-12">
       <div className="w-full max-w-lg px-6">
-        <div className="mb-12 text-center">
+        <div className="mb-12 flex flex-col items-center text-center">
+          <svg
+            width="56"
+            height="56"
+            viewBox="0 0 512 512"
+            fill="none"
+            aria-hidden="true"
+            className="mb-2"
+          >
+            <path
+              d="M164 128 L336 256 L164 384"
+              stroke="#6366f1"
+              strokeWidth="40"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+              opacity="0.5"
+            />
+            <circle cx="164" cy="128" r="68" fill="#a5b4fc"/>
+            <circle cx="336" cy="256" r="58" fill="#818cf8"/>
+            <circle cx="164" cy="384" r="52" fill="#34d399"/>
+          </svg>
           <h1 className="text-3xl font-semibold text-zinc-100">ThreadTutor</h1>
           <p className="mt-2 text-sm text-zinc-500">
-            Socratic learning with AI
+            Follow the thread. Build the understanding.
           </p>
         </div>
 
