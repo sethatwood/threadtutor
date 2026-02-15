@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: App Shell & Live Conversation** - Three-panel layout with working conversation panel, topic picker, and API key input
 - [x] **Phase 3: Concept Map** - React Flow directed graph that builds progressively as concepts are introduced
 - [x] **Phase 4: Learning Journal** - Right panel displaying running one-sentence summaries from each teaching turn
-- [ ] **Phase 5: Session Persistence** - localStorage save/load/export so sessions survive refresh and can be shared as JSON
+- [x] **Phase 5: Session Persistence** - localStorage save/load/export so sessions survive refresh and can be shared as JSON
 - [ ] **Phase 6: Replay Mode** - Pre-recorded demo session with step-through controls for visitors without API keys
 - [ ] **Phase 7: Landing Experience** - Visitor flow from replay demo to live mode with header branding and mode indicators
 - [ ] **Phase 8: Mobile & Design Polish** - Responsive mobile layout and design system enforcement for production readiness
@@ -96,8 +96,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 05-01-PLAN.md -- Session storage module, dev-mode API route, auto-save integration
-- [ ] 05-02-PLAN.md -- Session list UI, topic picker integration, export button
+- [x] 05-01-PLAN.md -- Session storage module, dev-mode API route, auto-save integration
+- [x] 05-02-PLAN.md -- Session list UI, topic picker integration, export button
 
 ### Phase 6: Replay Mode
 **Goal**: Visitors without API keys can step through a pre-recorded demo session and watch the concept map build progressively
@@ -153,7 +153,7 @@ Note: Phases 3 and 4 both depend on Phase 2 and can execute in either order. Pha
 | 2. App Shell & Live Conversation | 3/3 | Complete | 2026-02-15 |
 | 3. Concept Map | 2/2 | Complete | 2026-02-15 |
 | 4. Learning Journal | 1/1 | Complete | 2026-02-15 |
-| 5. Session Persistence | 0/TBD | Not started | - |
+| 5. Session Persistence | 2/2 | Complete | 2026-02-15 |
 | 6. Replay Mode | 0/TBD | Not started | - |
 | 7. Landing Experience | 0/TBD | Not started | - |
 | 8. Mobile & Design Polish | 0/TBD | Not started | - |

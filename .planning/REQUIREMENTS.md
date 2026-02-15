@@ -25,12 +25,12 @@
 
 ### Session Management
 
-- [ ] **SESS-01**: Sessions are recorded in React state during live conversation
-- [ ] **SESS-02**: Completed sessions saved to localStorage (key: threadtutor:session:{id})
-- [ ] **SESS-03**: User can export session as JSON via download button
-- [ ] **SESS-04**: Past sessions list shows previously saved sessions
-- [ ] **SESS-05**: User can replay any past session from localStorage
-- [ ] **SESS-06**: In dev mode, sessions also written to /public/sessions/ on disk
+- [x] **SESS-01**: Sessions are recorded in React state during live conversation
+- [x] **SESS-02**: Completed sessions saved to localStorage (key: threadtutor:session:{id})
+- [x] **SESS-03**: User can export session as JSON via download button
+- [x] **SESS-04**: Past sessions list shows previously saved sessions
+- [x] **SESS-05**: User can replay any past session from localStorage
+- [x] **SESS-06**: In dev mode, sessions also written to /public/sessions/ on disk
 
 ### Concept Map
 
@@ -119,12 +119,12 @@
 | MAP-06 | Phase 3: Concept Map | Pending |
 | JOUR-01 | Phase 4: Learning Journal | Pending |
 | JOUR-02 | Phase 4: Learning Journal | Pending |
-| SESS-01 | Phase 5: Session Persistence | Pending |
-| SESS-02 | Phase 5: Session Persistence | Pending |
-| SESS-03 | Phase 5: Session Persistence | Pending |
-| SESS-04 | Phase 5: Session Persistence | Pending |
-| SESS-05 | Phase 5: Session Persistence | Pending |
-| SESS-06 | Phase 5: Session Persistence | Pending |
+| SESS-01 | Phase 5: Session Persistence | Complete |
+| SESS-02 | Phase 5: Session Persistence | Complete |
+| SESS-03 | Phase 5: Session Persistence | Complete |
+| SESS-04 | Phase 5: Session Persistence | Complete |
+| SESS-05 | Phase 5: Session Persistence | Complete |
+| SESS-06 | Phase 5: Session Persistence | Complete |
 | REPL-01 | Phase 6: Replay Mode | Pending |
 | REPL-02 | Phase 6: Replay Mode | Pending |
 | REPL-03 | Phase 6: Replay Mode | Pending |
