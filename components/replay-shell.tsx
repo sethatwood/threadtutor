@@ -70,7 +70,7 @@ export function ReplayShell({ session, onBack }: ReplayShellProps) {
         </div>
 
         {/* Learning Journal (top-right, golden narrow) */}
-        <div className="order-3 border-t border-zinc-800 md:order-0 md:border-t-0 md:border-l">
+        <div className="order-3 min-h-0 border-t border-zinc-800 md:order-0 md:border-t-0 md:border-l">
           {/* Mobile: collapsible */}
           <details className="group md:hidden">
             <summary className="flex cursor-pointer items-center justify-between px-4 py-3 text-sm font-semibold text-zinc-300">
