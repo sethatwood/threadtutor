@@ -17,11 +17,11 @@
 
 ### Conversation
 
-- [ ] **CONV-01**: User can have a live Socratic conversation with Claude about any topic
-- [ ] **CONV-02**: Conversation panel renders teaching exchanges with markdown formatting
-- [ ] **CONV-03**: Confidence checks display the question, user's response, and assessment (tracking/partial/confused) with feedback
-- [ ] **CONV-04**: User can type responses to confidence checks and general conversation
-- [ ] **CONV-05**: Loading indicator shown while waiting for Claude's response
+- [x] **CONV-01**: User can have a live Socratic conversation with Claude about any topic
+- [x] **CONV-02**: Conversation panel renders teaching exchanges with markdown formatting
+- [x] **CONV-03**: Confidence checks display the question, user's response, and assessment (tracking/partial/confused) with feedback
+- [x] **CONV-04**: User can type responses to confidence checks and general conversation
+- [x] **CONV-05**: Loading indicator shown while waiting for Claude's response
 
 ### Session Management
 
@@ -57,14 +57,14 @@
 ### Landing & User Flow
 
 - [ ] **LAND-01**: New visitors see replay mode with clear path to "Try it live"
-- [ ] **LAND-02**: Topic picker screen for live mode where user enters what they want to learn
-- [ ] **LAND-03**: API key input with localStorage persistence
+- [x] **LAND-02**: Topic picker screen for live mode where user enters what they want to learn
+- [x] **LAND-03**: API key input with localStorage persistence
 - [ ] **LAND-04**: Mode indicator showing Live or Replay in header
 - [ ] **LAND-05**: Header with "ThreadTutor" branding, tagline, and topic name
 
 ### Layout & Design
 
-- [ ] **UI-01**: Three-panel desktop layout: ConceptMap (left) | Conversation (center) | LearningJournal (right)
+- [x] **UI-01**: Three-panel desktop layout: ConceptMap (left) | Conversation (center) | LearningJournal (right)
 - [ ] **UI-02**: Mobile layout: stack vertically with conversation on top, concept map below, journal collapsible
 - [ ] **UI-03**: Clean, minimal, educational design direction (Notion-like: muted colors, good typography, generous whitespace)
 - [ ] **UI-04**: No em dashes anywhere in the project
@@ -103,14 +103,14 @@
 | API-05 | Phase 1: Foundation & API | Complete |
 | API-06 | Phase 1: Foundation & API | Complete |
 | API-07 | Phase 1: Foundation & API | Complete |
-| CONV-01 | Phase 2: App Shell & Live Conversation | Pending |
-| CONV-02 | Phase 2: App Shell & Live Conversation | Pending |
-| CONV-03 | Phase 2: App Shell & Live Conversation | Pending |
-| CONV-04 | Phase 2: App Shell & Live Conversation | Pending |
-| CONV-05 | Phase 2: App Shell & Live Conversation | Pending |
-| UI-01 | Phase 2: App Shell & Live Conversation | Pending |
-| LAND-02 | Phase 2: App Shell & Live Conversation | Pending |
-| LAND-03 | Phase 2: App Shell & Live Conversation | Pending |
+| CONV-01 | Phase 2: App Shell & Live Conversation | Complete |
+| CONV-02 | Phase 2: App Shell & Live Conversation | Complete |
+| CONV-03 | Phase 2: App Shell & Live Conversation | Complete |
+| CONV-04 | Phase 2: App Shell & Live Conversation | Complete |
+| CONV-05 | Phase 2: App Shell & Live Conversation | Complete |
+| UI-01 | Phase 2: App Shell & Live Conversation | Complete |
+| LAND-02 | Phase 2: App Shell & Live Conversation | Complete |
+| LAND-03 | Phase 2: App Shell & Live Conversation | Complete |
 | MAP-01 | Phase 3: Concept Map | Pending |
 | MAP-02 | Phase 3: Concept Map | Pending |
 | MAP-03 | Phase 3: Concept Map | Pending |

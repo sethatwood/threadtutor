@@ -13,7 +13,7 @@ ThreadTutor delivers an AI-assisted Socratic learning app where Claude teaches a
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation & API** - System prompt, structured outputs, and API route that reliably returns Socratic teaching JSON
-- [ ] **Phase 2: App Shell & Live Conversation** - Three-panel layout with working conversation panel, topic picker, and API key input
+- [x] **Phase 2: App Shell & Live Conversation** - Three-panel layout with working conversation panel, topic picker, and API key input
 - [ ] **Phase 3: Concept Map** - React Flow directed graph that builds progressively as concepts are introduced
 - [ ] **Phase 4: Learning Journal** - Right panel displaying running one-sentence summaries from each teaching turn
 - [ ] **Phase 5: Session Persistence** - localStorage save/load/export so sessions survive refresh and can be shared as JSON
@@ -52,9 +52,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 02-01-PLAN.md -- Dependencies, CSS setup, API key helpers, and conversation state hook
-- [ ] 02-02-PLAN.md -- Leaf UI components (message, confidence check, skeleton, placeholders)
-- [ ] 02-03-PLAN.md -- Assembly: conversation panel, three-panel shell, topic picker, page entry
+- [x] 02-01-PLAN.md -- Dependencies, CSS setup, API key helpers, and conversation state hook
+- [x] 02-02-PLAN.md -- Leaf UI components (message, confidence check, skeleton, placeholders)
+- [x] 02-03-PLAN.md -- Assembly: conversation panel, three-panel shell, topic picker, page entry
 
 ### Phase 3: Concept Map
 **Goal**: User sees a directed graph of concepts building in real time as Claude introduces new ideas during the conversation
@@ -150,7 +150,7 @@ Note: Phases 3 and 4 both depend on Phase 2 and can execute in either order. Pha
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & API | 2/2 | Complete | 2026-02-15 |
-| 2. App Shell & Live Conversation | 0/3 | Not started | - |
+| 2. App Shell & Live Conversation | 3/3 | Complete | 2026-02-15 |
 | 3. Concept Map | 0/TBD | Not started | - |
 | 4. Learning Journal | 0/TBD | Not started | - |
 | 5. Session Persistence | 0/TBD | Not started | - |
