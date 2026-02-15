@@ -1,7 +1,7 @@
 "use client";
 
 import { useReducer, useCallback, useRef, useEffect } from "react";
-import type { Turn, TurnResponse, Concept } from "@/lib/types";
+import type { Turn, TurnResponse } from "@/lib/types";
 import type { MessageParam } from "@anthropic-ai/sdk/resources/messages";
 
 // ---------------------------------------------------------------------------
@@ -212,5 +212,9 @@ export function useConversation(topic: string, apiKey: string) {
     dispatch({ type: "CLEAR_ERROR" });
   }, []);
 
-  return { state, sendMessage, clearError };
+  const restoreSession = useCallback((turns: Turn[], turnNumber: number) => {
+    dispatch({ type: "LOAD_SESSION", payload: { turns, turnNumber } });
+  }, []);
+
+  return { state, sendMessage, clearError, restoreSession };
 }

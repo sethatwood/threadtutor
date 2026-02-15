@@ -3,6 +3,8 @@
 import { useState, useEffect, type KeyboardEvent } from "react";
 import { getApiKey, setApiKey } from "@/lib/api-key";
 import { ConversationShell } from "@/components/conversation-shell";
+import { SessionList } from "@/components/session-list";
+import type { Session } from "@/lib/types";
 
 const EXAMPLE_TOPICS = [
   "Bitcoin mining",
@@ -18,6 +20,7 @@ export function TopicPicker() {
   const [apiKeyLoaded, setApiKeyLoaded] = useState(false);
   const [started, setStarted] = useState(false);
   const [showApiKeyInput, setShowApiKeyInput] = useState(false);
+  const [loadedSession, setLoadedSession] = useState<Session | null>(null);
 
   // ---------------------------------------------------------------------------
   // On mount: read API key from localStorage
@@ -55,6 +58,7 @@ export function TopicPicker() {
 
   const handleBack = () => {
     setStarted(false);
+    setLoadedSession(null);
     setTopic("");
   };
 
@@ -71,8 +75,19 @@ export function TopicPicker() {
   };
 
   // ---------------------------------------------------------------------------
-  // Render: conversation shell (after started)
+  // Render: conversation shell (after started or loading a past session)
   // ---------------------------------------------------------------------------
+  if (loadedSession) {
+    return (
+      <ConversationShell
+        topic={loadedSession.topic}
+        apiKey={apiKey}
+        onBack={handleBack}
+        initialSession={loadedSession}
+      />
+    );
+  }
+
   if (started) {
     return (
       <ConversationShell
@@ -146,6 +161,11 @@ export function TopicPicker() {
             >
               Start learning
             </button>
+          )}
+
+          {/* Past sessions list */}
+          {apiKeyLoaded && (
+            <SessionList onLoadSession={setLoadedSession} />
           )}
 
           {/* API key entry (shown inline after clicking "Start learning" when no stored key) */}
