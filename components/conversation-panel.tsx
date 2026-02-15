@@ -41,6 +41,15 @@ export function ConversationPanel({
   }, [state.turns, state.isLoading]);
 
   // ---------------------------------------------------------------------------
+  // Auto-focus textarea when it becomes the user's turn to type
+  // ---------------------------------------------------------------------------
+  useEffect(() => {
+    if (!state.isLoading && !state.pendingConfidenceCheck) {
+      textareaRef.current?.focus();
+    }
+  }, [state.isLoading, state.pendingConfidenceCheck]);
+
+  // ---------------------------------------------------------------------------
   // Auto-growing textarea
   // ---------------------------------------------------------------------------
   const adjustHeight = useCallback(() => {
