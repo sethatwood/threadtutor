@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-14)
 
 **Core value:** The system prompt is the product. A well-prompted Claude that teaches through Socratic questioning, with a UI built around learning rather than chatting.
-**Current focus:** Phase 2: App Shell & Live Conversation
+**Current focus:** Phase 3: Concept Map
 
 ## Current Position
 
-Phase: 2 of 8 (App Shell & Live Conversation) -- COMPLETE
-Plan: 3 of 3 in current phase
-Status: Phase complete, pending verification
-Last activity: 2026-02-15 -- Completed 02-03-PLAN.md (assembly: conversation panel, shell, topic picker, page)
+Phase: 3 of 8 (Concept Map)
+Plan: 1 of 2 in current phase
+Status: Plan 03-01 complete, continuing to 03-02
+Last activity: 2026-02-15 -- Completed 03-01-PLAN.md (concept map building blocks: graph layout, node component, CSS)
 
-Progress: [███░░░░░░░] ~25%
+Progress: [████░░░░░░] ~31%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
-- Average duration: 3.4min
-- Total execution time: 0.28 hours
+- Total plans completed: 6
+- Average duration: 3.3min
+- Total execution time: 0.33 hours
 
 **By Phase:**
 
@@ -29,10 +29,11 @@ Progress: [███░░░░░░░] ~25%
 |-------|-------|-------|----------|
 | 01-foundation-api | 2/2 | 9min | 4.5min |
 | 02-app-shell-live-conversation | 3/3 | 8min | 2.7min |
+| 03-concept-map | 1/2 | 3min | 3min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (4min), 01-02 (5min), 02-01 (3min), 02-02 (2min), 02-03 (3min)
-- Trend: improving
+- Last 5 plans: 01-02 (5min), 02-01 (3min), 02-02 (2min), 02-03 (3min), 03-01 (3min)
+- Trend: stable
 
 *Updated after each plan completion*
 
@@ -60,6 +61,9 @@ Recent decisions affecting current work:
 - [02-03]: Unified always-dark theme (#1a1a1e background), no light/dark toggle
 - [02-03]: prose-invert with custom overrides for dark mode markdown rendering
 - [02-03]: Opening turn auto-sends to trigger Claude's first Socratic response
+- [03-01]: ConceptNodeData uses type alias with index signature for React Flow Record<string, unknown> compatibility
+- [03-01]: Top-to-bottom (TB) default layout direction for concept graph
+- [03-01]: Bezier (default) edge type for smooth curved connections
 
 ### Pending Todos
 
@@ -72,6 +76,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-15T06:15:00Z
-Stopped at: Completed 02-03-PLAN.md (Phase 2 assembly complete)
+Last session: 2026-02-15T07:02:07Z
+Stopped at: Completed 03-01-PLAN.md (concept map building blocks)
 Resume file: None
