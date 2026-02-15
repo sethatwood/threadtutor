@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation & API** - System prompt, structured outputs, and API route that reliably returns Socratic teaching JSON
 - [x] **Phase 2: App Shell & Live Conversation** - Three-panel layout with working conversation panel, topic picker, and API key input
 - [x] **Phase 3: Concept Map** - React Flow directed graph that builds progressively as concepts are introduced
-- [ ] **Phase 4: Learning Journal** - Right panel displaying running one-sentence summaries from each teaching turn
+- [x] **Phase 4: Learning Journal** - Right panel displaying running one-sentence summaries from each teaching turn
 - [ ] **Phase 5: Session Persistence** - localStorage save/load/export so sessions survive refresh and can be shared as JSON
 - [ ] **Phase 6: Replay Mode** - Pre-recorded demo session with step-through controls for visitors without API keys
 - [ ] **Phase 7: Landing Experience** - Visitor flow from replay demo to live mode with header branding and mode indicators
@@ -81,7 +81,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 04-01-PLAN.md -- LearningJournal component, CSS animation, and ConversationShell integration
+- [x] 04-01-PLAN.md -- LearningJournal component, CSS animation, and ConversationShell integration
 
 ### Phase 5: Session Persistence
 **Goal**: User's learning sessions survive browser refresh, can be exported as JSON, and past sessions are browsable
@@ -152,7 +152,7 @@ Note: Phases 3 and 4 both depend on Phase 2 and can execute in either order. Pha
 | 1. Foundation & API | 2/2 | Complete | 2026-02-15 |
 | 2. App Shell & Live Conversation | 3/3 | Complete | 2026-02-15 |
 | 3. Concept Map | 2/2 | Complete | 2026-02-15 |
-| 4. Learning Journal | 0/TBD | Not started | - |
+| 4. Learning Journal | 1/1 | Complete | 2026-02-15 |
 | 5. Session Persistence | 0/TBD | Not started | - |
 | 6. Replay Mode | 0/TBD | Not started | - |
 | 7. Landing Experience | 0/TBD | Not started | - |
