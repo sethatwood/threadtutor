@@ -49,11 +49,12 @@ Plans:
   3. User can type and submit responses to both regular conversation and confidence check prompts
   4. A loading indicator appears while waiting for Claude's response, and the send button is disabled during loading
   5. The three-panel desktop layout is present with ConceptMap (left), Conversation (center), and LearningJournal (right) placeholders
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
+- [ ] 02-01-PLAN.md -- Dependencies, CSS setup, API key helpers, and conversation state hook
+- [ ] 02-02-PLAN.md -- Leaf UI components (message, confidence check, skeleton, placeholders)
+- [ ] 02-03-PLAN.md -- Assembly: conversation panel, three-panel shell, topic picker, page entry
 
 ### Phase 3: Concept Map
 **Goal**: User sees a directed graph of concepts building in real time as Claude introduces new ideas during the conversation
@@ -149,7 +150,7 @@ Note: Phases 3 and 4 both depend on Phase 2 and can execute in either order. Pha
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & API | 2/2 | Complete | 2026-02-15 |
-| 2. App Shell & Live Conversation | 0/TBD | Not started | - |
+| 2. App Shell & Live Conversation | 0/3 | Not started | - |
 | 3. Concept Map | 0/TBD | Not started | - |
 | 4. Learning Journal | 0/TBD | Not started | - |
 | 5. Session Persistence | 0/TBD | Not started | - |
