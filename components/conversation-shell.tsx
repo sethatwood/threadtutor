@@ -18,20 +18,20 @@ export function ConversationShell({
   return (
     <div className="flex h-screen flex-col">
       {/* Header */}
-      <header className="flex items-center justify-between border-b border-zinc-200 px-6 py-3">
+      <header className="flex items-center justify-between border-b border-zinc-800 px-6 py-3">
         <div className="flex items-center gap-3">
-          <span className="text-base font-semibold text-zinc-900">
+          <span className="text-base font-semibold text-zinc-100">
             ThreadTutor
           </span>
-          <span className="text-zinc-300">/</span>
-          <span className="text-sm text-zinc-500">{topic}</span>
+          <span className="text-zinc-600">/</span>
+          <span className="text-sm text-zinc-400">{topic}</span>
         </div>
 
         {onBack && (
           <button
             type="button"
             onClick={onBack}
-            className="rounded-md px-3 py-1.5 text-sm text-zinc-500 hover:bg-zinc-100 hover:text-zinc-700"
+            className="rounded-md px-3 py-1.5 text-sm text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200 transition-colors"
           >
             New topic
           </button>
@@ -41,7 +41,7 @@ export function ConversationShell({
       {/* Three-panel body */}
       <div className="flex flex-1 overflow-hidden">
         {/* Left panel: Concept Map */}
-        <div className="w-1/4 border-r border-zinc-200">
+        <div className="w-1/4 border-r border-zinc-800">
           <ConceptMapPlaceholder />
         </div>
 
@@ -51,7 +51,7 @@ export function ConversationShell({
         </div>
 
         {/* Right panel: Learning Journal */}
-        <div className="w-1/4 border-l border-zinc-200">
+        <div className="w-1/4 border-l border-zinc-800">
           <JournalPlaceholder />
         </div>
       </div>

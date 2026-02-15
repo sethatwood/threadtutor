@@ -10,9 +10,9 @@ interface ConfidenceCheckCardProps {
 }
 
 const assessmentStyles: Record<string, string> = {
-  tracking: "text-emerald-700 bg-emerald-50",
-  partial: "text-amber-700 bg-amber-50",
-  confused: "text-rose-700 bg-rose-50",
+  tracking: "text-emerald-300 bg-emerald-500/15",
+  partial: "text-amber-300 bg-amber-500/15",
+  confused: "text-rose-300 bg-rose-500/15",
 };
 
 export function ConfidenceCheckCard({
@@ -54,8 +54,8 @@ export function ConfidenceCheckCard({
   };
 
   return (
-    <div className="mt-3 rounded-lg border-l-4 border-indigo-300 bg-indigo-50/50 p-4">
-      <p className="text-sm font-medium text-zinc-700">{check.question}</p>
+    <div className="mt-4 rounded-lg border-l-4 border-indigo-500/50 bg-indigo-500/10 p-4">
+      <p className="text-base font-medium text-zinc-200">{check.question}</p>
 
       {/* Assessment result */}
       {check.assessment && (
@@ -66,7 +66,7 @@ export function ConfidenceCheckCard({
             {check.assessment}
           </span>
           {check.feedback && (
-            <p className="mt-1.5 text-sm text-zinc-600">{check.feedback}</p>
+            <p className="mt-1.5 text-sm text-zinc-400">{check.feedback}</p>
           )}
         </div>
       )}
@@ -81,16 +81,16 @@ export function ConfidenceCheckCard({
             onKeyDown={handleKeyDown}
             placeholder="Type your answer..."
             rows={1}
-            className="flex-1 resize-none overflow-hidden rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm
-                       placeholder:text-zinc-400
-                       focus:outline-none focus:ring-2 focus:ring-indigo-200"
+            className="flex-1 resize-none overflow-hidden rounded-md border border-zinc-700 bg-zinc-800 px-3 py-2 text-base text-zinc-100
+                       placeholder:text-zinc-500
+                       focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500/60"
           />
           <button
             type="button"
             onClick={handleSubmit}
             disabled={!answer.trim()}
-            className="self-end rounded-md bg-indigo-500 px-3 py-2 text-sm font-medium text-white
-                       hover:bg-indigo-600
+            className="self-end rounded-md bg-indigo-600 px-3 py-2 text-sm font-medium text-white
+                       hover:bg-indigo-500
                        disabled:cursor-not-allowed disabled:opacity-40"
           >
             Send

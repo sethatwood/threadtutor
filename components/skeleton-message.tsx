@@ -2,7 +2,7 @@
 
 export function SkeletonMessage() {
   const barClass =
-    "h-4 rounded bg-gradient-to-r from-zinc-200 via-zinc-100 to-zinc-200 bg-[length:200%_100%] animate-shimmer";
+    "h-4 rounded bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-800 bg-[length:200%_100%] animate-shimmer";
 
   return (
     <div className="space-y-3 py-5">

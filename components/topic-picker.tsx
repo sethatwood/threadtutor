@@ -90,18 +90,18 @@ export function TopicPicker() {
   if (!apiKeyLoaded) return null;
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-white">
+    <div className="flex min-h-screen items-center justify-center">
       <div className="w-full max-w-lg px-6">
-        <div className="mb-10 text-center">
-          <h1 className="text-2xl font-semibold text-zinc-900">ThreadTutor</h1>
-          <p className="mt-1 text-sm text-zinc-400">
+        <div className="mb-12 text-center">
+          <h1 className="text-3xl font-semibold text-zinc-100">ThreadTutor</h1>
+          <p className="mt-2 text-sm text-zinc-500">
             Socratic learning with AI
           </p>
         </div>
 
         <div className="space-y-6">
           {/* Topic heading */}
-          <h2 className="text-center text-lg font-medium text-zinc-700">
+          <h2 className="text-center text-lg font-medium text-zinc-300">
             What would you like to learn about?
           </h2>
 
@@ -112,9 +112,9 @@ export function TopicPicker() {
             onChange={(e) => setTopic(e.target.value)}
             onKeyDown={handleTopicKeyDown}
             placeholder="Enter any topic..."
-            className="w-full rounded-lg border border-zinc-200 bg-white px-4 py-3 text-base
-                       placeholder:text-zinc-400
-                       focus:outline-none focus:ring-2 focus:ring-indigo-200"
+            className="w-full rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-3 text-base text-zinc-100
+                       placeholder:text-zinc-500
+                       focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500/60"
           />
 
           {/* Example topic chips */}
@@ -124,8 +124,8 @@ export function TopicPicker() {
                 key={t}
                 type="button"
                 onClick={() => setTopic(t)}
-                className="rounded-full border border-zinc-200 bg-zinc-50 px-3.5 py-1.5 text-sm text-zinc-600
-                           hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-600
+                className="rounded-full border border-zinc-700 bg-zinc-800/60 px-3.5 py-1.5 text-sm text-zinc-300
+                           hover:border-indigo-500/50 hover:bg-indigo-500/10 hover:text-indigo-300
                            transition-colors"
               >
                 {t}
@@ -139,8 +139,8 @@ export function TopicPicker() {
               type="button"
               onClick={handleStartLearning}
               disabled={!topic.trim()}
-              className="w-full rounded-lg bg-indigo-500 px-4 py-3 text-sm font-medium text-white
-                         hover:bg-indigo-600
+              className="w-full rounded-lg bg-indigo-600 px-4 py-3 text-base font-medium text-white
+                         hover:bg-indigo-500
                          disabled:cursor-not-allowed disabled:opacity-40
                          transition-colors"
             >
@@ -150,8 +150,8 @@ export function TopicPicker() {
 
           {/* API key entry (shown inline after clicking "Start learning" when no stored key) */}
           {showApiKeyInput && (
-            <div className="space-y-3 rounded-lg border border-zinc-200 bg-zinc-50 p-5">
-              <label className="block text-sm font-medium text-zinc-700">
+            <div className="space-y-3 rounded-lg border border-zinc-700 bg-zinc-800/50 p-5">
+              <label className="block text-sm font-medium text-zinc-300">
                 Enter your Anthropic API key to begin
               </label>
               <input
@@ -160,11 +160,11 @@ export function TopicPicker() {
                 onChange={(e) => setApiKeyState(e.target.value)}
                 onKeyDown={handleApiKeyKeyDown}
                 placeholder="sk-ant-..."
-                className="w-full rounded-lg border border-zinc-200 bg-white px-4 py-2.5 text-sm
-                           placeholder:text-zinc-400
-                           focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                className="w-full rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-base text-zinc-100
+                           placeholder:text-zinc-500
+                           focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500/60"
               />
-              <p className="text-xs text-zinc-400">
+              <p className="text-xs text-zinc-500">
                 Your key is stored in your browser only and sent directly to
                 Anthropic.
               </p>
@@ -172,8 +172,8 @@ export function TopicPicker() {
                 type="button"
                 onClick={handleBeginConversation}
                 disabled={!apiKey.trim()}
-                className="w-full rounded-lg bg-indigo-500 px-4 py-2.5 text-sm font-medium text-white
-                           hover:bg-indigo-600
+                className="w-full rounded-lg bg-indigo-600 px-4 py-2.5 text-base font-medium text-white
+                           hover:bg-indigo-500
                            disabled:cursor-not-allowed disabled:opacity-40
                            transition-colors"
               >

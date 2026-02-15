@@ -137,12 +137,12 @@ export function ConversationPanel({ topic, apiKey }: ConversationPanelProps) {
 
       {/* Error banner */}
       {state.error && (
-        <div className="mx-6 mb-2 flex items-center justify-between rounded-lg border border-rose-200 bg-rose-50 px-4 py-3">
-          <p className="text-sm text-rose-700">{state.error}</p>
+        <div className="mx-6 mb-2 flex items-center justify-between rounded-lg border border-rose-500/30 bg-rose-500/10 px-4 py-3">
+          <p className="text-sm text-rose-300">{state.error}</p>
           <button
             type="button"
             onClick={clearError}
-            className="ml-4 text-sm font-medium text-rose-600 hover:text-rose-800"
+            className="ml-4 text-sm font-medium text-rose-400 hover:text-rose-200"
           >
             Dismiss
           </button>
@@ -150,7 +150,7 @@ export function ConversationPanel({ topic, apiKey }: ConversationPanelProps) {
       )}
 
       {/* Input area */}
-      <div className="border-t border-zinc-200 px-6 py-4">
+      <div className="border-t border-zinc-800 px-6 py-4">
         <div className="flex gap-2">
           <textarea
             ref={textareaRef}
@@ -164,17 +164,17 @@ export function ConversationPanel({ topic, apiKey }: ConversationPanelProps) {
             }
             disabled={inputDisabled}
             rows={1}
-            className="flex-1 resize-none overflow-hidden rounded-lg border border-zinc-200 bg-white px-4 py-2.5 text-sm
-                       placeholder:text-zinc-400
-                       focus:outline-none focus:ring-2 focus:ring-indigo-200
+            className="flex-1 resize-none overflow-hidden rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-base text-zinc-100
+                       placeholder:text-zinc-500
+                       focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500/60
                        disabled:cursor-not-allowed disabled:opacity-50"
           />
           <button
             type="button"
             onClick={handleSend}
             disabled={!input.trim() || inputDisabled}
-            className="self-end rounded-lg bg-indigo-500 px-4 py-2.5 text-sm font-medium text-white
-                       hover:bg-indigo-600
+            className="self-end rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-medium text-white
+                       hover:bg-indigo-500
                        disabled:cursor-not-allowed disabled:opacity-40"
           >
             Send
