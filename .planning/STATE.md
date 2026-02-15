@@ -58,7 +58,7 @@ None.
 ### Blockers/Concerns
 
 - [Research]: System prompt effectiveness for Socratic teaching is inherently iterative -- budget time for prompt iteration with 15+ turn test conversations
-- [Research]: max_tokens set to 1024 per CLAUDE.md -- monitor stop_reason in live testing to confirm sufficiency
+- [Resolved]: max_tokens updated to 2048 (research confirmed 1024 too tight for structured JSON envelope)
 
 ## Session Continuity
 

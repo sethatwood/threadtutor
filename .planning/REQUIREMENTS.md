@@ -7,13 +7,13 @@
 
 ### API & System Prompt
 
-- [ ] **API-01**: API route proxies Claude calls via Edge Runtime to avoid Vercel Hobby 10s timeout
-- [ ] **API-02**: System prompt enforces Socratic teaching: progressive concepts, confidence checks every 2-3 turns, warm assessment feedback
-- [ ] **API-03**: Claude returns structured JSON via Anthropic structured outputs (output_config.format) with guaranteed schema compliance
-- [ ] **API-04**: API route accepts user-provided API key from request body (BYOK model)
-- [ ] **API-05**: API route falls back to ANTHROPIC_API_KEY env var when no key in request (local dev)
-- [ ] **API-06**: max_tokens set to 2048 with stop_reason validation on every response
-- [ ] **API-07**: Running concept list passed back to Claude each turn for parentId consistency
+- [x] **API-01**: API route proxies Claude calls via Node.js runtime (Vercel Fluid Compute 300s timeout)
+- [x] **API-02**: System prompt enforces Socratic teaching: progressive concepts, confidence checks every 2-3 turns, warm assessment feedback
+- [x] **API-03**: Claude returns structured JSON via Anthropic structured outputs (output_config.format) with guaranteed schema compliance
+- [x] **API-04**: API route accepts user-provided API key from request body (BYOK model)
+- [x] **API-05**: API route falls back to ANTHROPIC_API_KEY env var when no key in request (local dev)
+- [x] **API-06**: max_tokens set to 2048 with stop_reason validation on every response
+- [x] **API-07**: Running concept list passed back to Claude each turn for parentId consistency
 
 ### Conversation
 
@@ -96,13 +96,13 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| API-01 | Phase 1: Foundation & API | Pending |
-| API-02 | Phase 1: Foundation & API | Pending |
-| API-03 | Phase 1: Foundation & API | Pending |
-| API-04 | Phase 1: Foundation & API | Pending |
-| API-05 | Phase 1: Foundation & API | Pending |
-| API-06 | Phase 1: Foundation & API | Pending |
-| API-07 | Phase 1: Foundation & API | Pending |
+| API-01 | Phase 1: Foundation & API | Complete |
+| API-02 | Phase 1: Foundation & API | Complete |
+| API-03 | Phase 1: Foundation & API | Complete |
+| API-04 | Phase 1: Foundation & API | Complete |
+| API-05 | Phase 1: Foundation & API | Complete |
+| API-06 | Phase 1: Foundation & API | Complete |
+| API-07 | Phase 1: Foundation & API | Complete |
 | CONV-01 | Phase 2: App Shell & Live Conversation | Pending |
 | CONV-02 | Phase 2: App Shell & Live Conversation | Pending |
 | CONV-03 | Phase 2: App Shell & Live Conversation | Pending |
