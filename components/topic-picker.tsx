@@ -162,9 +162,9 @@ export function TopicPicker() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center py-12">
+    <div className="flex min-h-screen items-center justify-center py-8 md:py-12">
       <div className="w-full max-w-lg px-6">
-        <div className="mb-12 flex flex-col items-center text-center">
+        <div className="mb-8 md:mb-12 flex flex-col items-center text-center">
           <svg
             width="56"
             height="56"

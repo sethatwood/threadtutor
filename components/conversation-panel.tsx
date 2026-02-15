@@ -95,7 +95,7 @@ export function ConversationPanel({
   return (
     <div className="flex h-full flex-col">
       {/* Message list */}
-      <div className="flex-1 overflow-y-auto px-6">
+      <div className="flex-1 overflow-y-auto px-4 md:px-6">
         {state.turns.map((turn, i) => {
           // For assistant turns with a confidence check, determine card state
           let checkCard: React.ReactNode = null;
@@ -136,7 +136,7 @@ export function ConversationPanel({
 
       {/* Error banner */}
       {state.error && (
-        <div className="mx-6 mb-2 flex items-center justify-between rounded-lg border border-rose-500/30 bg-rose-500/10 px-4 py-3">
+        <div className="mx-4 md:mx-6 mb-2 flex items-center justify-between rounded-lg border border-rose-500/30 bg-rose-500/10 px-4 py-3">
           <p className="text-sm text-rose-300">{state.error}</p>
           <button
             type="button"
@@ -149,7 +149,7 @@ export function ConversationPanel({
       )}
 
       {/* Input area */}
-      <div className="border-t border-zinc-800 px-6 py-4">
+      <div className="border-t border-zinc-800 px-4 md:px-6 py-3 md:py-4">
         <div className="flex gap-2">
           <textarea
             ref={textareaRef}

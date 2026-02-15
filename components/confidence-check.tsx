@@ -54,7 +54,7 @@ export function ConfidenceCheckCard({
   };
 
   return (
-    <div className="mt-4 rounded-lg border-l-4 border-indigo-500/50 bg-indigo-500/10 p-4">
+    <div className="mt-4 rounded-lg border-l-4 border-indigo-500/50 bg-indigo-500/10 p-3 md:p-4">
       <p className="text-base font-medium text-zinc-200">{check.question}</p>
 
       {/* Assessment result */}
