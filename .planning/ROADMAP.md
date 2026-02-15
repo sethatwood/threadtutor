@@ -33,11 +33,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Sending a request without an API key in the body falls back to the ANTHROPIC_API_KEY environment variable
   4. Every response has stop_reason validated -- no truncated JSON from hitting the token limit
   5. The running concept list is sent back to Claude each turn, and subsequent responses reference consistent parentIds
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md -- Project setup, Zod schemas, and system prompt
+- [ ] 01-02-PLAN.md -- API route with BYOK, structured outputs, and error handling
 
 ### Phase 2: App Shell & Live Conversation
 **Goal**: User can open the app, enter an API key and topic, and have a live Socratic conversation with Claude in a three-panel desktop layout
@@ -148,7 +148,7 @@ Note: Phases 3 and 4 both depend on Phase 2 and can execute in either order. Pha
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & API | 0/TBD | Not started | - |
+| 1. Foundation & API | 0/2 | Planned | - |
 | 2. App Shell & Live Conversation | 0/TBD | Not started | - |
 | 3. Concept Map | 0/TBD | Not started | - |
 | 4. Learning Journal | 0/TBD | Not started | - |
