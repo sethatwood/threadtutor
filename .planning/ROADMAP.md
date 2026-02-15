@@ -78,10 +78,10 @@ Plans:
 **Success Criteria** (what must be TRUE):
   1. The right panel displays a running list of one-sentence summaries, one per assistant turn
   2. The journal grows progressively as the conversation advances -- new entries appear after each Claude response
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 04-01: TBD
+- [ ] 04-01-PLAN.md -- LearningJournal component, CSS animation, and ConversationShell integration
 
 ### Phase 5: Session Persistence
 **Goal**: User's learning sessions survive browser refresh, can be exported as JSON, and past sessions are browsable
