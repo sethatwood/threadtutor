@@ -122,18 +122,10 @@ export function ConversationShell({
         )}
       </AppHeader>
 
-      {/* Three-panel body */}
-      <div className="flex flex-1 flex-col overflow-hidden md:flex-row">
-        {/* Concept Map */}
-        <div className="order-2 h-[250px] shrink-0 border-t border-zinc-800 md:order-first md:h-auto md:w-1/4 md:border-r md:border-t-0">
-          <ConceptMap
-            turns={state.turns}
-            onConceptClick={handleConceptClick}
-          />
-        </div>
-
-        {/* Conversation */}
-        <div className="order-1 flex min-h-0 flex-1 flex-col md:order-2 md:w-1/2">
+      {/* Golden-ratio body: chat + journal on top, concept map full-width below */}
+      <div className="flex flex-1 flex-col overflow-hidden md:grid md:grid-cols-[1.618fr_1fr] md:grid-rows-[1.618fr_1fr]">
+        {/* Conversation (top-left, golden wide) */}
+        <div className="order-1 flex min-h-0 flex-1 flex-col md:order-0">
           <ConversationPanel
             state={state}
             sendMessage={sendMessage}
@@ -141,8 +133,8 @@ export function ConversationShell({
           />
         </div>
 
-        {/* Learning Journal */}
-        <div className="order-3 border-t border-zinc-800 md:w-1/4 md:border-l md:border-t-0">
+        {/* Learning Journal (top-right, golden narrow) */}
+        <div className="order-3 border-t border-zinc-800 md:order-0 md:border-t-0 md:border-l">
           {/* Mobile: collapsible */}
           <details className="group md:hidden">
             <summary className="flex cursor-pointer items-center justify-between px-4 py-3 text-sm font-semibold text-zinc-300">
@@ -159,6 +151,14 @@ export function ConversationShell({
           <div className="hidden md:flex md:h-full md:flex-col">
             <LearningJournal turns={state.turns} />
           </div>
+        </div>
+
+        {/* Concept Map (bottom, full width) */}
+        <div className="order-2 h-[250px] shrink-0 border-t border-zinc-800 md:order-0 md:h-auto md:col-span-2">
+          <ConceptMap
+            turns={state.turns}
+            onConceptClick={handleConceptClick}
+          />
         </div>
       </div>
     </div>

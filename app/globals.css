@@ -58,9 +58,12 @@ body {
 }
 
 .concept-node--new {
-  border-color: #6366f180;
-  box-shadow: 0 0 12px #6366f130;
-  animation: concept-enter 300ms ease-out, concept-glow-fade 3s ease-out 300ms forwards;
+  border-color: #818cf8;
+  box-shadow: 0 0 16px #6366f160, 0 0 4px #818cf880;
+  animation:
+    concept-enter 300ms ease-out,
+    concept-pulse 700ms ease-in-out 300ms 2,
+    concept-glow-fade 3s ease-out 1.7s forwards;
 }
 
 /* ---------------------------------------------------------------------------
@@ -78,10 +81,21 @@ body {
   }
 }
 
+@keyframes concept-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 16px #6366f160, 0 0 4px #818cf880;
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 28px #818cf880, 0 0 8px #a5b4fc90;
+  }
+}
+
 @keyframes concept-glow-fade {
   from {
-    border-color: #6366f180;
-    box-shadow: 0 0 12px #6366f130;
+    border-color: #818cf8;
+    box-shadow: 0 0 16px #6366f160, 0 0 4px #818cf880;
   }
   to {
     border-color: #4338ca40;

@@ -50,18 +50,10 @@ export function ReplayShell({ session, onBack }: ReplayShellProps) {
         </button>
       </AppHeader>
 
-      {/* Three-panel body */}
-      <div className="flex flex-1 flex-col overflow-hidden md:flex-row">
-        {/* Concept Map */}
-        <div className="order-2 h-[250px] shrink-0 border-t border-zinc-800 md:order-first md:h-auto md:w-1/4 md:border-r md:border-t-0">
-          <ConceptMap
-            turns={replay.visibleTurns}
-            onConceptClick={handleConceptClick}
-          />
-        </div>
-
-        {/* Replay Conversation + Controls */}
-        <div className="relative order-1 flex min-h-0 flex-1 flex-col md:order-2 md:w-1/2">
+      {/* Golden-ratio body: chat + journal on top, concept map full-width below */}
+      <div className="flex flex-1 flex-col overflow-hidden md:grid md:grid-cols-[1.618fr_1fr] md:grid-rows-[1.618fr_1fr]">
+        {/* Replay Conversation + Controls (top-left, golden wide) */}
+        <div className="relative order-1 flex min-h-0 flex-1 flex-col md:order-0">
           <div className="flex-1 overflow-y-auto pb-16">
             <ReplayConversation turns={replay.visibleTurns} />
           </div>
@@ -77,8 +69,8 @@ export function ReplayShell({ session, onBack }: ReplayShellProps) {
           />
         </div>
 
-        {/* Learning Journal */}
-        <div className="order-3 border-t border-zinc-800 md:w-1/4 md:border-l md:border-t-0">
+        {/* Learning Journal (top-right, golden narrow) */}
+        <div className="order-3 border-t border-zinc-800 md:order-0 md:border-t-0 md:border-l">
           {/* Mobile: collapsible */}
           <details className="group md:hidden">
             <summary className="flex cursor-pointer items-center justify-between px-4 py-3 text-sm font-semibold text-zinc-300">
@@ -95,6 +87,14 @@ export function ReplayShell({ session, onBack }: ReplayShellProps) {
           <div className="hidden md:flex md:h-full md:flex-col">
             <LearningJournal turns={replay.visibleTurns} />
           </div>
+        </div>
+
+        {/* Concept Map (bottom, full width) */}
+        <div className="order-2 h-[250px] shrink-0 border-t border-zinc-800 md:order-0 md:h-auto md:col-span-2">
+          <ConceptMap
+            turns={replay.visibleTurns}
+            onConceptClick={handleConceptClick}
+          />
         </div>
       </div>
     </div>

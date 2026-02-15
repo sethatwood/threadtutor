@@ -6,8 +6,8 @@ import type { Concept, Turn } from "@/lib/types";
 // Constants
 // ---------------------------------------------------------------------------
 
-const NODE_WIDTH = 160;
-const NODE_HEIGHT = 40;
+export const NODE_WIDTH = 240;
+export const NODE_HEIGHT = 48;
 
 // ---------------------------------------------------------------------------
 // Types
@@ -67,7 +67,7 @@ export function buildGraphElements(
 
   // Fresh graph each call -- anti-pattern to reuse across renders
   const g = new dagre.graphlib.Graph().setDefaultEdgeLabel(() => ({}));
-  g.setGraph({ rankdir: direction, nodesep: 40, ranksep: 60 });
+  g.setGraph({ rankdir: direction, nodesep: 56, ranksep: 72 });
 
   const edges: Edge[] = [];
 

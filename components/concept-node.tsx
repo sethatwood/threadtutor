@@ -27,7 +27,7 @@ const ConceptNode = memo(({ data }: NodeProps<ConceptNodeType>) => {
           position={Position.Top}
           className="!bg-transparent !border-0 !w-0 !h-0"
         />
-        <span className="text-xs font-medium text-zinc-200 px-3 py-2">
+        <span className="text-base font-medium text-zinc-200 px-4 py-3">
           {data.label}
         </span>
         <Handle
