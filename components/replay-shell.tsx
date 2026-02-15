@@ -51,17 +51,17 @@ export function ReplayShell({ session, onBack }: ReplayShellProps) {
       </AppHeader>
 
       {/* Three-panel body */}
-      <div className="flex flex-1 overflow-hidden">
-        {/* Left panel: Concept Map */}
-        <div className="w-1/4 border-r border-zinc-800">
+      <div className="flex flex-1 flex-col overflow-hidden md:flex-row">
+        {/* Concept Map */}
+        <div className="order-2 h-[250px] shrink-0 border-t border-zinc-800 md:order-first md:h-auto md:w-1/4 md:border-r md:border-t-0">
           <ConceptMap
             turns={replay.visibleTurns}
             onConceptClick={handleConceptClick}
           />
         </div>
 
-        {/* Center panel: Replay Conversation + Controls */}
-        <div className="flex w-1/2 flex-col">
+        {/* Replay Conversation + Controls */}
+        <div className="order-1 flex min-h-0 flex-1 flex-col md:order-2 md:w-1/2">
           <div className="flex-1 overflow-hidden">
             <ReplayConversation turns={replay.visibleTurns} />
           </div>
@@ -77,9 +77,24 @@ export function ReplayShell({ session, onBack }: ReplayShellProps) {
           />
         </div>
 
-        {/* Right panel: Learning Journal */}
-        <div className="w-1/4 border-l border-zinc-800">
-          <LearningJournal turns={replay.visibleTurns} />
+        {/* Learning Journal */}
+        <div className="order-3 border-t border-zinc-800 md:w-1/4 md:border-l md:border-t-0">
+          {/* Mobile: collapsible */}
+          <details className="group md:hidden">
+            <summary className="flex cursor-pointer items-center justify-between px-4 py-3 text-sm font-semibold text-zinc-300">
+              Learning Journal
+              <svg className="h-4 w-4 text-zinc-500 transition-transform group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+              </svg>
+            </summary>
+            <div className="max-h-[250px] overflow-y-auto">
+              <LearningJournal turns={replay.visibleTurns} />
+            </div>
+          </details>
+          {/* Desktop: always visible */}
+          <div className="hidden md:flex md:h-full md:flex-col">
+            <LearningJournal turns={replay.visibleTurns} />
+          </div>
         </div>
       </div>
     </div>
