@@ -56,17 +56,14 @@ export function TopicPicker() {
   }, []);
 
   // ---------------------------------------------------------------------------
-  // Auto-load demo for visitors without an API key
+  // Mark demo loading as done once API key status is known
+  // (Demo is loaded on-demand via "Watch demo" button, not auto-loaded)
   // ---------------------------------------------------------------------------
   useEffect(() => {
-    if (!apiKeyLoaded) return;
-    if (apiKey) {
-      // User has an API key; skip auto-load
+    if (apiKeyLoaded) {
       setDemoLoading(false);
-      return;
     }
-    fetchDemo();
-  }, [apiKeyLoaded, apiKey, fetchDemo]);
+  }, [apiKeyLoaded]);
 
   // ---------------------------------------------------------------------------
   // Handlers
