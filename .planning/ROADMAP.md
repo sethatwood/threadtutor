@@ -29,7 +29,7 @@ Full details: [milestones/v1.0-ROADMAP.md](milestones/v1.0-ROADMAP.md)
 
 - [x] **Phase 9: Typography Foundation** -- Libre Baskerville + Courier Prime with responsive scaling (completed 2026-02-15)
 - [x] **Phase 10: Theme System** -- CSS custom properties, dark/light toggle, persistence, palettes (completed 2026-02-15)
-- [ ] **Phase 11: Component Theme Parity** -- Every component renders correctly in both themes
+- [x] **Phase 11: Component Theme Parity** -- Every component renders correctly in both themes (completed 2026-02-15)
 - [ ] **Phase 12: Design Polish** -- Spacing, borders, hover states, transitions, finishing touches
 - [ ] **Phase 13: Animation & Branding** -- Concentric ring pulse on concept map nodes, logo refinement
 
@@ -79,8 +79,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 11-01-PLAN.md -- Concept map theme parity (React Flow dynamic colorMode, light-mode CSS overrides, theme-aware node animations)
-- [ ] 11-02-PLAN.md -- Status colors, interactive element hover/focus states, and COMP-03/04/05 verification (assessment badges, error banner, session list delete, full interactive audit)
+- [x] 11-01-PLAN.md -- Concept map theme parity (React Flow dynamic colorMode, light-mode CSS overrides, theme-aware node animations)
+- [x] 11-02-PLAN.md -- Status colors, interactive element hover/focus states, and COMP-03/04/05 verification (assessment badges, error banner, session list delete, full interactive audit)
 
 ### Phase 12: Design Polish
 **Goal**: The app feels refined and intentional, with consistent spacing, smooth interactions, and attention to small details that elevate perceived quality
@@ -126,6 +126,6 @@ Phases execute in numeric order: 9 -> 10 -> 11 -> 12 -> 13
 | 8. Mobile & Design Polish | v1.0 | 2/2 | Complete | 2026-02-15 |
 | 9. Typography Foundation | v1.1 | 2/2 | Complete | 2026-02-15 |
 | 10. Theme System | v1.1 | 2/2 | Complete | 2026-02-15 |
-| 11. Component Theme Parity | v1.1 | 0/0 | Not started | - |
+| 11. Component Theme Parity | v1.1 | 2/2 | Complete | 2026-02-15 |
 | 12. Design Polish | v1.1 | 0/0 | Not started | - |
 | 13. Animation & Branding | v1.1 | 0/0 | Not started | - |
