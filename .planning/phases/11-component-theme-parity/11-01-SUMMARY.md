@@ -60,7 +60,7 @@ Each task was committed atomically:
 
 1. **Task 1: Dynamic React Flow colorMode and light-mode CSS overrides** - `c099071` (feat)
 
-**Plan metadata:** [pending final commit]
+**Plan metadata:** `085ff0e` (docs: complete plan)
 
 ## Files Created/Modified
 - `components/concept-map.tsx` - Added useTheme import, theme prop to inner components, dynamic colorMode on both ReactFlow instances

@@ -2,19 +2,19 @@
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-02-15)
+See: .planning/PROJECT.md (updated 2026-02-16)
 
 **Core value:** The system prompt is the product. A well-prompted Claude that teaches through Socratic questioning, with a UI built around learning rather than chatting.
-**Current focus:** Phase 13 -- Animation and Branding complete (v1.1 Design Overhaul COMPLETE)
+**Current focus:** Planning next milestone
 
 ## Current Position
 
-Phase: 13 of 13 (Animation and Branding)
-Plan: 1 of 1 in current phase (complete)
-Status: Milestone Complete (v1.1 Design Overhaul)
-Last activity: 2026-02-16 -- Completed Phase 13 Animation and Branding
+Phase: All complete (v1.0 + v1.1 shipped)
+Plan: N/A
+Status: Between milestones
+Last activity: 2026-02-16 -- Archived v1.1 Design Overhaul milestone
 
-Progress: [██████████████████████████████] 100% (24/24 plans)
+Progress: v1.0 (15 plans) + v1.1 (9 plans) = 24 plans shipped
 
 ## Performance Metrics
 
@@ -22,6 +22,10 @@ Progress: [███████████████████████
 - Total plans completed: 15
 - Average duration: 2.5min
 - Total execution time: 0.64 hours
+
+**v1.1 Design Overhaul:**
+- Total plans completed: 9
+- Tasks: 17
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
@@ -43,33 +47,7 @@ Progress: [███████████████████████
 
 ### Decisions
 
-See PROJECT.md Key Decisions table for full v1.0 decision log.
-
-v1.1 design decisions:
-- Typography: Libre Baskerville (serif) + Courier Prime (mono) from Bitcoin Echo
-- Theme: CSS variable-based dark/light with data-theme attribute on html element
-- Colors: Bitcoin Echo neutrals (#0a0a0a / #f8f6f3) + existing indigo/emerald accents
-- Reference: bitcoinecho-org/ folder included at project root for design extraction
-- Animation: Concentric expanding rings on concept map nodes (echo-ring pattern from Bitcoin Echo)
-- Type scale: clamp()-based fluid headings with restrained ranges for three-panel layout
-- Heading hierarchy: mixed weights (h1 bold, h2 regular, h3 bold, h4 mono/uppercase label)
-- Component typography: serif for reading content, mono for UI chrome/identifiers/badges
-- Theme infrastructure: [data-theme] attribute selectors with CSS custom properties, inline script for flash prevention
-- Theme toggle: useTheme() hook from ThemeProvider context, sun/moon button in AppHeader
-- color-mix(): used for semi-transparent accent colors in React Flow overrides and concept-node borders
-- Component migration: all Tailwind zinc color classes replaced with var(--color-*) arbitrary values
-- Prose rendering: explicit prose modifier overrides with CSS variables instead of prose-invert
-- Status colors: semantic --color-status-{success,warning,error} variables with separate *-bg variants for backgrounds
-- Status color contrast: dark theme uses 300-level (bright on dark), light theme uses 700-level (dark on light) for WCAG compliance
-- color-mix() for one-off opacity variants where Tailwind arbitrary value syntax does not support opacity modifiers on CSS variables
-- React Flow colorMode derived dynamically from useTheme() hook rather than hardcoded to dark
-- Hover micro-interactions: 150ms duration for micro-interactions, 300ms for global theme transitions
-- Three-tier scale on hover: 1.03 for chips, 1.02 for primary buttons, 1.01 for secondary buttons
-- transition-all instead of transition-colors for smooth animation of transform, ring, and border alongside color
-- Echo-ring animation: 3s duration, 3 rings with 0.6s staggered delays, asymmetric expansion (280%/400%), forwards fill mode
-- Echo-ring border-radius: 12px to match rounded-rectangle node shape (not circular)
-- Echo-ring theme colors: --color-echo-ring variable (white 18% opacity dark, black 15% opacity light)
-- Wordmark typography: font-serif tracking-tight for "ThreadTutor", font-mono uppercase tracking-widest for tagline
+See PROJECT.md Key Decisions table for full decision log (v1.0 + v1.1).
 
 ### Pending Todos
 
@@ -88,5 +66,5 @@ None active.
 ## Session Continuity
 
 Last session: 2026-02-16
-Stopped at: Completed 13-01-PLAN.md -- Phase 13 Animation and Branding complete. v1.1 Design Overhaul milestone finished.
+Stopped at: Archived v1.1 Design Overhaul milestone. Ready for /gsd:new-milestone.
 Resume file: None

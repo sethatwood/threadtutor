@@ -19,17 +19,22 @@
 
 ---
 
-## v1.1 Design Overhaul (In Progress)
+## v1.1 Design Overhaul (Shipped: 2026-02-16)
 
-**Phases:** 9-13 | **Requirements:** 27 across 6 categories
+**Phases:** 9-13 (9 plans, 17 tasks) | **LOC:** 3,193 TypeScript/CSS | **Timeline:** 2 days
+**Git range:** `c1c6cbe..c47411f` (17 feat commits, 42 files changed)
 
-**Goal:** Transform ThreadTutor's visual identity from stock Next.js defaults to a distinctive, polished design inspired by the Bitcoin Echo project typography and theme system.
+**Delivered:** Complete visual redesign with distinctive Libre Baskerville + Courier Prime typography, CSS variable dark/light theme system, full component theme parity, micro-interaction polish, and concentric echo-ring animations on concept map nodes.
 
-**Phase structure:**
-1. Phase 9: Typography Foundation (5 reqs) -- Libre Baskerville + Courier Prime
-2. Phase 10: Theme System (7 reqs) -- CSS variables, dark/light toggle, persistence
-3. Phase 11: Component Theme Parity (7 reqs) -- every component in both themes
-4. Phase 12: Design Polish (5 reqs) -- spacing, borders, hover states, transitions
-5. Phase 13: Animation & Branding (3 reqs) -- concentric ring pulse, logo refinement
+**Key accomplishments:**
+1. Libre Baskerville + Courier Prime typographic identity with fluid clamp() heading scale
+2. CSS custom property dark/light theme system with flash-prevention and localStorage persistence
+3. Full component theme parity across all 14 components (zero hardcoded color classes)
+4. Design polish pass with selection styling, border rhythm, hover micro-interactions
+5. Concentric echo-ring animation on concept map nodes with theme-aware colors
+6. Serif/mono logo wordmark reflecting new typographic identity
+
+**Archives:** [v1.1-ROADMAP.md](milestones/v1.1-ROADMAP.md) | [v1.1-REQUIREMENTS.md](milestones/v1.1-REQUIREMENTS.md) | [v1.1-MILESTONE-AUDIT.md](milestones/v1.1-MILESTONE-AUDIT.md)
 
 ---
+
