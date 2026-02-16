@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-02-15)
 ## Current Position
 
 Phase: 9 of 13 (Typography Foundation)
-Plan: 0 of TBD in current phase
-Status: Ready to plan
-Last activity: 2026-02-15 -- Roadmap created for v1.1 Design Overhaul (phases 9-13)
+Plan: 1 of 2 in current phase
+Status: Executing
+Last activity: 2026-02-15 -- Completed 09-01 Font Foundation
 
-Progress: [████████████████░░░░░░░░░░░░░░] 53% (15/~28 plans, v1.0 complete)
+Progress: [█████████████████░░░░░░░░░░░░░] 57% (16/~28 plans)
 
 ## Performance Metrics
 
@@ -33,6 +33,7 @@ Progress: [████████████████░░░░░░░
 | 06-replay-mode | 2/2 | 4min | 2.0min |
 | 07-landing-experience | 1/1 | 2min | 2.0min |
 | 08-mobile-design-polish | 2/2 | 4min | 2.0min |
+| 09-typography-foundation | 1/2 | 2min | 2.0min |
 
 ## Accumulated Context
 
@@ -46,6 +47,8 @@ v1.1 design decisions:
 - Colors: Bitcoin Echo neutrals (#0a0a0a / #f8f6f3) + existing indigo/emerald accents
 - Reference: bitcoinecho-org/ folder included at project root for design extraction
 - Animation: Concentric expanding rings on concept map nodes (echo-ring pattern from Bitcoin Echo)
+- Type scale: clamp()-based fluid headings with restrained ranges for three-panel layout
+- Heading hierarchy: mixed weights (h1 bold, h2 regular, h3 bold, h4 mono/uppercase label)
 
 ### Pending Todos
 
@@ -64,5 +67,5 @@ None active.
 ## Session Continuity
 
 Last session: 2026-02-15
-Stopped at: Roadmap created for v1.1 Design Overhaul -- ready to plan Phase 9
+Stopped at: Completed 09-01-PLAN.md (Font Foundation)
 Resume file: None
