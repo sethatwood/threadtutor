@@ -69,7 +69,7 @@ export function AppHeader({ topic, mode, children }: AppHeaderProps) {
           type="button"
           onClick={toggleTheme}
           aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-text-muted)] hover:border-[var(--color-text-dim)] hover:text-[var(--color-text)] transition-colors"
+          className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-text-muted)] hover:border-[var(--color-text-dim)] hover:text-[var(--color-text)] transition-all duration-150"
         >
           {theme === "dark" ? (
             <svg className="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

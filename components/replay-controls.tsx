@@ -28,7 +28,7 @@ export function ReplayControls({
   toggleAutoPlay,
 }: ReplayControlsProps) {
   const buttonBase =
-    "rounded-full min-h-[36px] px-3 py-1.5 text-sm font-medium text-[var(--color-text-muted)] hover:bg-[var(--color-border)]/60 hover:text-[var(--color-text)] disabled:opacity-30 disabled:cursor-not-allowed transition-colors";
+    "rounded-full min-h-[36px] px-3 py-1.5 text-sm font-medium text-[var(--color-text-muted)] hover:bg-[var(--color-border)]/60 hover:text-[var(--color-text)] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-150";
 
   return (
     <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center pb-4 md:pb-5">

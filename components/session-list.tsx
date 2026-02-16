@@ -79,7 +79,7 @@ export function SessionList({ onLoadSession }: SessionListProps) {
         {sessions.map((meta) => (
           <div
             key={meta.id}
-            className="flex items-center justify-between px-4 py-3"
+            className="flex items-center justify-between px-4 py-3 hover:bg-[var(--color-surface)]/50 transition-colors duration-150 rounded-md"
           >
             {/* Session info */}
             <div className="min-w-0 flex-1">
@@ -97,21 +97,21 @@ export function SessionList({ onLoadSession }: SessionListProps) {
               <button
                 type="button"
                 onClick={() => handleLoad(meta.id)}
-                className="rounded-md px-2.5 py-1 text-xs text-[var(--color-accent-indigo)] hover:bg-[var(--color-accent-indigo)]/10 hover:text-[var(--color-accent-indigo-hover)] transition-colors"
+                className="rounded-md px-2.5 py-1 text-xs text-[var(--color-accent-indigo)] hover:bg-[var(--color-accent-indigo)]/10 hover:text-[var(--color-accent-indigo-hover)] transition-all duration-150"
               >
                 Load
               </button>
               <button
                 type="button"
                 onClick={() => handleExport(meta.id)}
-                className="rounded-md px-2.5 py-1 text-xs text-[var(--color-text-muted)] hover:bg-[var(--color-border)] hover:text-[var(--color-text)] transition-colors"
+                className="rounded-md px-2.5 py-1 text-xs text-[var(--color-text-muted)] hover:bg-[var(--color-border)] hover:text-[var(--color-text)] transition-all duration-150"
               >
                 Export
               </button>
               <button
                 type="button"
                 onClick={() => handleDelete(meta.id)}
-                className="rounded-md px-2.5 py-1 text-xs text-[var(--color-text-dim)] hover:bg-[var(--color-status-error-bg)] hover:text-[var(--color-status-error)] transition-colors"
+                className="rounded-md px-2.5 py-1 text-xs text-[var(--color-text-dim)] hover:bg-[var(--color-status-error-bg)] hover:text-[var(--color-status-error)] transition-all duration-150"
               >
                 Delete
               </button>
