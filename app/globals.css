@@ -1,14 +1,45 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-:root {
-  --background: #1a1a1e;
-  --foreground: #e8e8ec;
+/* ---------------------------------------------------------------------------
+   Theme palette: dark and light modes via data-theme attribute
+   --------------------------------------------------------------------------- */
+
+[data-theme="dark"] {
+  --color-bg: #0a0a0a;
+  --color-bg-elevated: #111111;
+  --color-surface: #1a1a1a;
+  --color-border: #2a2a2a;
+  --color-text: #e8e8e8;
+  --color-text-muted: #888888;
+  --color-text-dim: #555555;
+  --color-accent-indigo: #818cf8;
+  --color-accent-indigo-hover: #a5b4fc;
+  --color-accent-emerald: #34d399;
+  --color-primary-bg: #4f46e5;
+  --color-primary-bg-hover: #6366f1;
+  --color-selection-bg: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="light"] {
+  --color-bg: #f8f6f3;
+  --color-bg-elevated: #ffffff;
+  --color-surface: #eeebe6;
+  --color-border: #d4d0c8;
+  --color-text: #1a1a1a;
+  --color-text-muted: #5a5a5a;
+  --color-text-dim: #8a8a8a;
+  --color-accent-indigo: #4f46e5;
+  --color-accent-indigo-hover: #4338ca;
+  --color-accent-emerald: #059669;
+  --color-primary-bg: #4f46e5;
+  --color-primary-bg-hover: #4338ca;
+  --color-selection-bg: rgba(0, 0, 0, 0.15);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-text);
   --font-serif: var(--font-serif);
   --font-mono: var(--font-mono);
 }
@@ -22,11 +53,32 @@
   100% { background-position: 200% 0; }
 }
 
+/* ---------------------------------------------------------------------------
+   Global theme transition for smooth switching
+   --------------------------------------------------------------------------- */
+
+*, *::before, *::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-bg);
+  color: var(--color-text);
   font-family: var(--font-serif), Georgia, serif;
   line-height: 1.7;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ---------------------------------------------------------------------------
+   Text selection styling
+   --------------------------------------------------------------------------- */
+
+[data-theme="dark"] ::selection {
+  background: var(--color-selection-bg);
+}
+
+[data-theme="light"] ::selection {
+  background: var(--color-selection-bg);
 }
 
 /* ---------------------------------------------------------------------------
@@ -92,24 +144,24 @@ h4 {
 }
 
 /* ---------------------------------------------------------------------------
-   React Flow dark mode overrides (match #1a1a1e theme)
+   React Flow overrides (theme-aware)
    --------------------------------------------------------------------------- */
 
 .react-flow.dark {
   --xy-background-color-default: transparent;
-  --xy-node-background-color-default: #2a2a30;
-  --xy-node-border-default: 1px solid #4338ca40;
-  --xy-node-color-default: #e8e8ec;
-  --xy-edge-stroke-default: #4338ca60;
+  --xy-node-background-color-default: var(--color-surface);
+  --xy-node-border-default: 1px solid var(--color-accent-indigo);
+  --xy-node-color-default: var(--color-text);
+  --xy-edge-stroke-default: color-mix(in srgb, var(--color-accent-indigo) 40%, transparent);
 }
 
 /* ---------------------------------------------------------------------------
-   Concept node styles
+   Concept node styles (theme-aware)
    --------------------------------------------------------------------------- */
 
 .concept-node {
-  background: #2a2a30;
-  border: 1px solid #4338ca40;
+  background: var(--color-surface);
+  border: 1px solid color-mix(in srgb, var(--color-accent-indigo) 25%, transparent);
   border-radius: 8px;
   transition: border-color 0.2s, box-shadow 0.2s;
   cursor: pointer;
@@ -161,7 +213,7 @@ h4 {
     box-shadow: 0 0 16px #6366f160, 0 0 4px #818cf880;
   }
   to {
-    border-color: #4338ca40;
+    border-color: color-mix(in srgb, var(--color-accent-indigo) 25%, transparent);
     box-shadow: none;
   }
 }
