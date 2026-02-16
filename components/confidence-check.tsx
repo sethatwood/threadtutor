@@ -61,7 +61,7 @@ export function ConfidenceCheckCard({
       {check.assessment && (
         <div className="mt-2">
           <span
-            className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-medium ${assessmentStyles[check.assessment]}`}
+            className={`inline-block rounded-full px-2.5 py-0.5 font-mono text-[0.6875rem] uppercase tracking-wider ${assessmentStyles[check.assessment]}`}
           >
             {check.assessment}
           </span>
@@ -89,7 +89,7 @@ export function ConfidenceCheckCard({
             type="button"
             onClick={handleSubmit}
             disabled={!answer.trim()}
-            className="self-end rounded-md bg-indigo-600 px-3 py-2 text-sm font-medium text-white
+            className="self-end rounded-md bg-indigo-600 px-3 py-2 font-mono text-xs uppercase tracking-wide text-white
                        hover:bg-indigo-500
                        disabled:cursor-not-allowed disabled:opacity-40"
           >

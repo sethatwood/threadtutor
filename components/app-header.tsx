@@ -37,7 +37,7 @@ export function AppHeader({ topic, mode, children }: AppHeaderProps) {
         <div className="flex items-center gap-2">
           <LogoMark />
           <div className="flex flex-col">
-            <span className="text-sm font-semibold text-zinc-100 md:text-base">
+            <span className="text-sm font-bold text-zinc-100 md:text-base">
               ThreadTutor
             </span>
             <span className="hidden text-xs text-zinc-500 md:block">
@@ -51,11 +51,11 @@ export function AppHeader({ topic, mode, children }: AppHeaderProps) {
 
       <div className="flex items-center gap-2">
         {mode === "replay" ? (
-          <span className="rounded-full border border-indigo-500/30 px-2.5 py-0.5 text-xs text-indigo-400">
+          <span className="rounded-full border border-indigo-500/30 px-2.5 py-0.5 font-mono text-[0.6875rem] uppercase tracking-widest text-indigo-400">
             Replay
           </span>
         ) : (
-          <span className="rounded-full border border-emerald-500/30 px-2.5 py-0.5 text-xs text-emerald-400">
+          <span className="rounded-full border border-emerald-500/30 px-2.5 py-0.5 font-mono text-[0.6875rem] uppercase tracking-widest text-emerald-400">
             Live
           </span>
         )}
