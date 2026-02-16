@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-15)
 
 **Core value:** The system prompt is the product. A well-prompted Claude that teaches through Socratic questioning, with a UI built around learning rather than chatting.
-**Current focus:** Phase 12 -- Design Polish complete (v1.1 Design Overhaul)
+**Current focus:** Phase 13 -- Animation and Branding complete (v1.1 Design Overhaul COMPLETE)
 
 ## Current Position
 
-Phase: 12 of 13 (Design Polish)
-Plan: 2 of 2 in current phase (complete)
-Status: Phase Complete
-Last activity: 2026-02-16 -- Completed Phase 12 Design Polish
+Phase: 13 of 13 (Animation and Branding)
+Plan: 1 of 1 in current phase (complete)
+Status: Milestone Complete (v1.1 Design Overhaul)
+Last activity: 2026-02-16 -- Completed Phase 13 Animation and Branding
 
-Progress: [███████████████████████░░░░░░░] 82% (23/~28 plans)
+Progress: [██████████████████████████████] 100% (24/24 plans)
 
 ## Performance Metrics
 
@@ -37,6 +37,7 @@ Progress: [███████████████████████
 | 10-theme-system | 2/2 | 7min | 3.5min |
 | 11-component-theme-parity | 2/2 | 4min | 2.0min |
 | 12-design-polish | 2/2 | 4min | 2.0min |
+| 13-animation-branding | 1/1 | 2min | 2.0min |
 
 ## Accumulated Context
 
@@ -65,6 +66,10 @@ v1.1 design decisions:
 - Hover micro-interactions: 150ms duration for micro-interactions, 300ms for global theme transitions
 - Three-tier scale on hover: 1.03 for chips, 1.02 for primary buttons, 1.01 for secondary buttons
 - transition-all instead of transition-colors for smooth animation of transform, ring, and border alongside color
+- Echo-ring animation: 3s duration, 3 rings with 0.6s staggered delays, asymmetric expansion (280%/400%), forwards fill mode
+- Echo-ring border-radius: 12px to match rounded-rectangle node shape (not circular)
+- Echo-ring theme colors: --color-echo-ring variable (white 18% opacity dark, black 15% opacity light)
+- Wordmark typography: font-serif tracking-tight for "ThreadTutor", font-mono uppercase tracking-widest for tagline
 
 ### Pending Todos
 
@@ -83,5 +88,5 @@ None active.
 ## Session Continuity
 
 Last session: 2026-02-16
-Stopped at: Completed Phase 12 (Design Polish) -- all 2 plans executed and verified
+Stopped at: Completed 13-01-PLAN.md -- Phase 13 Animation and Branding complete. v1.1 Design Overhaul milestone finished.
 Resume file: None
