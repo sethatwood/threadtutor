@@ -10,9 +10,9 @@ interface ConfidenceCheckCardProps {
 }
 
 const assessmentStyles: Record<string, string> = {
-  tracking: "text-emerald-300 bg-emerald-500/15",
-  partial: "text-amber-300 bg-amber-500/15",
-  confused: "text-rose-300 bg-rose-500/15",
+  tracking: "text-[var(--color-status-success)] bg-[var(--color-status-success-bg)]",
+  partial: "text-[var(--color-status-warning)] bg-[var(--color-status-warning-bg)]",
+  confused: "text-[var(--color-status-error)] bg-[var(--color-status-error-bg)]",
 };
 
 export function ConfidenceCheckCard({

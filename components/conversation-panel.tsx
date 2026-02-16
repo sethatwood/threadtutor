@@ -145,12 +145,12 @@ export function ConversationPanel({
 
       {/* Error banner */}
       {state.error && (
-        <div className="mx-4 md:mx-6 mb-2 flex items-center justify-between rounded-lg border border-rose-500/30 bg-rose-500/10 px-4 py-3">
-          <p className="text-sm text-rose-300">{state.error}</p>
+        <div className="mx-4 md:mx-6 mb-2 flex items-center justify-between rounded-lg border border-[color-mix(in_srgb,var(--color-status-error)_30%,transparent)] bg-[var(--color-status-error-bg)] px-4 py-3">
+          <p className="text-sm text-[var(--color-status-error)]">{state.error}</p>
           <button
             type="button"
             onClick={clearError}
-            className="ml-4 text-sm font-medium text-rose-400 hover:text-rose-200"
+            className="ml-4 text-sm font-medium text-[var(--color-status-error)] hover:opacity-70"
           >
             Dismiss
           </button>

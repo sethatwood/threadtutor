@@ -19,6 +19,12 @@
   --color-primary-bg: #4f46e5;
   --color-primary-bg-hover: #6366f1;
   --color-selection-bg: rgba(255, 255, 255, 0.2);
+  --color-status-success: #6ee7b7;
+  --color-status-success-bg: rgba(16, 185, 129, 0.15);
+  --color-status-warning: #fcd34d;
+  --color-status-warning-bg: rgba(245, 158, 11, 0.15);
+  --color-status-error: #fda4af;
+  --color-status-error-bg: rgba(244, 63, 94, 0.15);
 }
 
 [data-theme="light"] {
@@ -35,6 +41,12 @@
   --color-primary-bg: #4f46e5;
   --color-primary-bg-hover: #4338ca;
   --color-selection-bg: rgba(0, 0, 0, 0.15);
+  --color-status-success: #047857;
+  --color-status-success-bg: rgba(4, 120, 87, 0.12);
+  --color-status-warning: #b45309;
+  --color-status-warning-bg: rgba(180, 83, 9, 0.12);
+  --color-status-error: #be123c;
+  --color-status-error-bg: rgba(190, 18, 60, 0.12);
 }
 
 @theme inline {
