@@ -91,10 +91,11 @@ Plans:
   2. Borders between panels and around elements use subtle, theme-appropriate colors (not harsh default gray)
   3. Hovering over interactive elements (buttons, links, cards) triggers smooth visual feedback (transform, opacity, or border-color transitions)
   4. Selecting text shows a theme-aware highlight color, and all text renders with font smoothing (antialiased, no fuzzy edges)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 12-01: TBD
+- [ ] 12-01-PLAN.md -- Global polish (selection styling, font smoothing, spacing rhythm, border refinement)
+- [ ] 12-02-PLAN.md -- Interactive element polish (hover/focus transitions, micro-interactions on all buttons and controls)
 
 ### Phase 13: Animation & Branding
 **Goal**: New concept map nodes announce themselves with an expanding concentric ring animation, and the logo reflects the app's new typographic identity
