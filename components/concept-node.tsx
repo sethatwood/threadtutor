@@ -35,6 +35,13 @@ const ConceptNode = memo(({ data }: NodeProps<ConceptNodeType>) => {
           position={Position.Bottom}
           className="!bg-transparent !border-0 !w-0 !h-0"
         />
+        {data.isNew && (
+          <div className="echo-rings">
+            <div className="echo-ring" />
+            <div className="echo-ring" />
+            <div className="echo-ring" />
+          </div>
+        )}
       </div>
     </>
   );
