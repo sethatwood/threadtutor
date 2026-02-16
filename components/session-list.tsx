@@ -111,7 +111,7 @@ export function SessionList({ onLoadSession }: SessionListProps) {
               <button
                 type="button"
                 onClick={() => handleDelete(meta.id)}
-                className="rounded-md px-2.5 py-1 text-xs text-[var(--color-text-dim)] hover:bg-red-500/10 hover:text-red-400 transition-colors"
+                className="rounded-md px-2.5 py-1 text-xs text-[var(--color-text-dim)] hover:bg-[var(--color-status-error-bg)] hover:text-[var(--color-status-error)] transition-colors"
               >
                 Delete
               </button>
