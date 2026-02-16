@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-15)
 
 **Core value:** The system prompt is the product. A well-prompted Claude that teaches through Socratic questioning, with a UI built around learning rather than chatting.
-**Current focus:** Phase 9 -- Typography Foundation (v1.1 Design Overhaul)
+**Current focus:** Phase 10 -- Theme System (v1.1 Design Overhaul)
 
 ## Current Position
 
-Phase: 9 of 13 (Typography Foundation) -- COMPLETE
-Plan: 2 of 2 in current phase
-Status: Phase Complete
-Last activity: 2026-02-15 -- Completed 09-02 Component Type Integration
+Phase: 10 of 13 (Theme System)
+Plan: 1 of 2 in current phase
+Status: Executing
+Last activity: 2026-02-15 -- Completed 10-01 Theme Infrastructure
 
-Progress: [██████████████████░░░░░░░░░░░░] 61% (17/~28 plans)
+Progress: [███████████████████░░░░░░░░░░░] 64% (18/~28 plans)
 
 ## Performance Metrics
 
@@ -34,6 +34,7 @@ Progress: [██████████████████░░░░░
 | 07-landing-experience | 1/1 | 2min | 2.0min |
 | 08-mobile-design-polish | 2/2 | 4min | 2.0min |
 | 09-typography-foundation | 2/2 | 4min | 2.0min |
+| 10-theme-system | 1/2 | 2min | 2.0min |
 
 ## Accumulated Context
 
@@ -50,6 +51,9 @@ v1.1 design decisions:
 - Type scale: clamp()-based fluid headings with restrained ranges for three-panel layout
 - Heading hierarchy: mixed weights (h1 bold, h2 regular, h3 bold, h4 mono/uppercase label)
 - Component typography: serif for reading content, mono for UI chrome/identifiers/badges
+- Theme infrastructure: [data-theme] attribute selectors with CSS custom properties, inline script for flash prevention
+- Theme toggle: useTheme() hook from ThemeProvider context, sun/moon button in AppHeader
+- color-mix(): used for semi-transparent accent colors in React Flow overrides and concept-node borders
 
 ### Pending Todos
 
@@ -68,5 +72,5 @@ None active.
 ## Session Continuity
 
 Last session: 2026-02-15
-Stopped at: Completed 09-02-PLAN.md (Component Type Integration) -- Phase 9 complete
+Stopped at: Completed 10-01-PLAN.md (Theme Infrastructure)
 Resume file: None
