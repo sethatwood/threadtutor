@@ -30,7 +30,7 @@ export function LearningJournal({ turns }: LearningJournalProps) {
   if (entries.length === 0) {
     return (
       <div className="flex h-full items-center justify-center">
-        <span className="text-sm text-zinc-600">
+        <span className="text-sm text-[var(--color-text-dim)]">
           Your learning journal will appear here
         </span>
       </div>
@@ -39,8 +39,8 @@ export function LearningJournal({ turns }: LearningJournalProps) {
 
   return (
     <div className="flex h-full flex-col">
-      <div className="border-b border-zinc-800 px-4 py-3">
-        <h2 className="type-label text-zinc-300">
+      <div className="border-b border-[var(--color-border)] px-4 py-3">
+        <h2 className="type-label text-[var(--color-text-muted)]">
           Learning Journal
         </h2>
       </div>
@@ -50,9 +50,9 @@ export function LearningJournal({ turns }: LearningJournalProps) {
           {entries.map((entry) => (
             <li
               key={entry.turnNumber}
-              className="journal-entry text-sm text-zinc-400"
+              className="journal-entry text-sm text-[var(--color-text-muted)]"
             >
-              <span className="mr-2 font-mono text-xs text-indigo-400/60">
+              <span className="mr-2 font-mono text-xs text-[var(--color-accent-indigo)]/60">
                 {entry.number}.
               </span>
               {entry.text}

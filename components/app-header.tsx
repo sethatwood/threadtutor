@@ -38,30 +38,30 @@ export function AppHeader({ topic, mode, children }: AppHeaderProps) {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="flex items-center justify-between border-b border-zinc-800 px-4 py-2 md:px-6 md:py-3">
+    <header className="flex items-center justify-between border-b border-[var(--color-border)] px-4 py-2 md:px-6 md:py-3">
       <div className="flex items-center gap-2 md:gap-3">
         <div className="flex items-center gap-2">
           <LogoMark />
           <div className="flex flex-col">
-            <span className="text-sm font-bold text-zinc-100 md:text-base">
+            <span className="text-sm font-bold text-[var(--color-text)] md:text-base">
               ThreadTutor
             </span>
-            <span className="hidden text-xs text-zinc-500 md:block">
+            <span className="hidden text-xs text-[var(--color-text-dim)] md:block">
               Socratic learning with AI
             </span>
           </div>
         </div>
-        <span className="hidden text-zinc-600 md:inline">/</span>
-        <span className="hidden text-sm text-zinc-400 md:inline">{topic}</span>
+        <span className="hidden text-[var(--color-text-dim)] md:inline">/</span>
+        <span className="hidden text-sm text-[var(--color-text-muted)] md:inline">{topic}</span>
       </div>
 
       <div className="flex items-center gap-2">
         {mode === "replay" ? (
-          <span className="rounded-full border border-indigo-500/30 px-2.5 py-0.5 font-mono text-[0.6875rem] uppercase tracking-widest text-indigo-400">
+          <span className="rounded-full border border-[var(--color-accent-indigo)]/30 px-2.5 py-0.5 font-mono text-[0.6875rem] uppercase tracking-widest text-[var(--color-accent-indigo)]">
             Replay
           </span>
         ) : (
-          <span className="rounded-full border border-emerald-500/30 px-2.5 py-0.5 font-mono text-[0.6875rem] uppercase tracking-widest text-emerald-400">
+          <span className="rounded-full border border-[var(--color-accent-emerald)]/30 px-2.5 py-0.5 font-mono text-[0.6875rem] uppercase tracking-widest text-[var(--color-accent-emerald)]">
             Live
           </span>
         )}

@@ -129,7 +129,7 @@ function InlineMapInner({
           type="button"
           onClick={onExpand}
           title="Expand concept map"
-          className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md bg-zinc-800 border border-zinc-700 p-2 md:p-1.5 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-700 transition-colors"
+          className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md bg-[var(--color-surface)] border border-[var(--color-border)] p-2 md:p-1.5 text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-border)] transition-colors"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -247,7 +247,7 @@ export function ConceptMap({ turns, onConceptClick }: ConceptMapProps) {
   if (concepts.length === 0) {
     return (
       <div className="flex h-full items-center justify-center">
-        <span className="text-sm text-zinc-600">
+        <span className="text-sm text-[var(--color-text-dim)]">
           Concepts will appear here as you learn
         </span>
       </div>
@@ -269,13 +269,13 @@ export function ConceptMap({ turns, onConceptClick }: ConceptMapProps) {
       {/* Fullscreen overlay (portal to document.body) */}
       {fullscreen &&
         createPortal(
-          <div className="fixed inset-0 z-50 bg-zinc-950/95">
+          <div className="fixed inset-0 z-50 bg-[var(--color-bg)]/95">
             {/* Close button (bottom-right, mirrors expand button position) */}
             <button
               type="button"
               onClick={closeFullscreen}
               title="Close fullscreen"
-              className="absolute bottom-4 right-4 z-10 flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md bg-zinc-800 border border-zinc-700 p-2 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-700 transition-colors"
+              className="absolute bottom-4 right-4 z-10 flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md bg-[var(--color-surface)] border border-[var(--color-border)] p-2 text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-border)] transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -13,7 +13,7 @@ const ConceptNode = memo(({ data }: NodeProps<ConceptNodeType>) => {
   return (
     <>
       <NodeToolbar isVisible={hovered} position={Position.Top} offset={8}>
-        <div className="rounded-lg bg-zinc-800 border border-zinc-700 px-3 py-2 text-xs text-zinc-300 max-w-[200px] shadow-lg">
+        <div className="rounded-lg bg-[var(--color-bg-elevated)] border border-[var(--color-border)] px-3 py-2 text-xs text-[var(--color-text-muted)] max-w-[200px] shadow-lg">
           {data.description}
         </div>
       </NodeToolbar>
@@ -27,7 +27,7 @@ const ConceptNode = memo(({ data }: NodeProps<ConceptNodeType>) => {
           position={Position.Top}
           className="!bg-transparent !border-0 !w-0 !h-0"
         />
-        <span className="font-mono text-sm tracking-wide text-zinc-200 px-4 py-3">
+        <span className="font-mono text-sm tracking-wide text-[var(--color-text)] px-4 py-3">
           {data.label}
         </span>
         <Handle

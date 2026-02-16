@@ -37,14 +37,14 @@ export function ReplayShell({ session, onBack }: ReplayShellProps) {
         <button
           type="button"
           onClick={onBack}
-          className="min-h-[44px] rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-indigo-500 transition-colors"
+          className="min-h-[44px] rounded-md bg-[var(--color-primary-bg)] px-3 py-1.5 text-sm font-medium text-white hover:bg-[var(--color-primary-bg-hover)] transition-colors"
         >
           Try it live
         </button>
         <button
           type="button"
           onClick={onBack}
-          className="min-h-[44px] rounded-md px-3 py-1.5 text-sm text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200 transition-colors"
+          className="min-h-[44px] rounded-md px-3 py-1.5 text-sm text-[var(--color-text-muted)] hover:bg-[var(--color-surface)] hover:text-[var(--color-text)] transition-colors"
         >
           Exit
         </button>
@@ -70,12 +70,12 @@ export function ReplayShell({ session, onBack }: ReplayShellProps) {
         </div>
 
         {/* Learning Journal (top-right, golden narrow) */}
-        <div className="order-3 min-h-0 border-t border-zinc-800 md:order-0 md:border-t-0 md:border-l">
+        <div className="order-3 min-h-0 border-t border-[var(--color-border)] md:order-0 md:border-t-0 md:border-l">
           {/* Mobile: collapsible */}
           <details className="group md:hidden">
-            <summary className="flex cursor-pointer items-center justify-between px-4 py-3 text-sm font-semibold text-zinc-300">
+            <summary className="flex cursor-pointer items-center justify-between px-4 py-3 text-sm font-semibold text-[var(--color-text)]">
               Learning Journal
-              <svg className="h-4 w-4 text-zinc-500 transition-transform group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <svg className="h-4 w-4 text-[var(--color-text-dim)] transition-transform group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
               </svg>
             </summary>
@@ -90,7 +90,7 @@ export function ReplayShell({ session, onBack }: ReplayShellProps) {
         </div>
 
         {/* Concept Map (bottom, full width) */}
-        <div className="order-2 h-[250px] shrink-0 border-t border-zinc-800 md:order-0 md:h-auto md:col-span-2">
+        <div className="order-2 h-[250px] shrink-0 border-t border-[var(--color-border)] md:order-0 md:h-auto md:col-span-2">
           <ConceptMap
             turns={replay.visibleTurns}
             onConceptClick={handleConceptClick}
