@@ -158,7 +158,7 @@ export function ConversationPanel({
       )}
 
       {/* Input area */}
-      <div className="border-t border-zinc-800 px-4 md:px-6 py-3 md:py-4">
+      <div className="border-t border-[var(--color-border)] px-4 md:px-6 py-3 md:py-4">
         <div className="flex gap-2">
           <textarea
             ref={textareaRef}
@@ -172,17 +172,17 @@ export function ConversationPanel({
             }
             disabled={inputDisabled}
             rows={1}
-            className="flex-1 resize-none overflow-hidden rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-base text-zinc-100
-                       placeholder:text-zinc-500
-                       focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500/60
+            className="flex-1 resize-none overflow-hidden rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2.5 text-base text-[var(--color-text)]
+                       placeholder:text-[var(--color-text-dim)]
+                       focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-indigo)]/40 focus:border-[var(--color-accent-indigo)]/60
                        disabled:cursor-not-allowed disabled:opacity-50"
           />
           <button
             type="button"
             onClick={handleSend}
             disabled={!input.trim() || inputDisabled}
-            className="self-end rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-medium text-white
-                       hover:bg-indigo-500
+            className="self-end rounded-lg bg-[var(--color-primary-bg)] px-4 py-2.5 text-sm font-medium text-white
+                       hover:bg-[var(--color-primary-bg-hover)]
                        disabled:cursor-not-allowed disabled:opacity-40"
           >
             Send

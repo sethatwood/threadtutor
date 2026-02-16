@@ -147,7 +147,7 @@ export function TopicPicker() {
   if (demoLoading && !apiKey) {
     return (
       <div className="flex min-h-screen items-center justify-center">
-        <p className="text-sm text-zinc-500">Loading demo...</p>
+        <p className="text-sm text-[var(--color-text-dim)]">Loading demo...</p>
       </div>
     );
   }
@@ -177,15 +177,15 @@ export function TopicPicker() {
             <circle cx="336" cy="256" r="58" fill="#818cf8"/>
             <circle cx="164" cy="384" r="52" fill="#34d399"/>
           </svg>
-          <h1 className="text-3xl font-semibold text-zinc-100">ThreadTutor</h1>
-          <p className="mt-2 text-sm text-zinc-500">
+          <h1 className="text-3xl font-semibold text-[var(--color-text)]">ThreadTutor</h1>
+          <p className="mt-2 text-sm text-[var(--color-text-dim)]">
             Follow the thread. Build the understanding.
           </p>
         </div>
 
         <div className="space-y-6">
           {/* Topic heading */}
-          <h2 className="text-center text-lg font-medium text-zinc-300">
+          <h2 className="text-center text-lg font-medium text-[var(--color-text-muted)]">
             What would you like to learn about?
           </h2>
 
@@ -196,9 +196,9 @@ export function TopicPicker() {
             onChange={(e) => setTopic(e.target.value)}
             onKeyDown={handleTopicKeyDown}
             placeholder="Enter any topic..."
-            className="w-full rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-3 text-base text-zinc-100
-                       placeholder:text-zinc-500
-                       focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500/60"
+            className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3 text-base text-[var(--color-text)]
+                       placeholder:text-[var(--color-text-dim)]
+                       focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-indigo)]/40 focus:border-[var(--color-accent-indigo)]/60"
           />
 
           {/* Example topic chips */}
@@ -208,8 +208,8 @@ export function TopicPicker() {
                 key={t}
                 type="button"
                 onClick={() => setTopic(t)}
-                className="rounded-full border border-zinc-700 bg-zinc-800/60 px-3.5 py-1.5 text-sm text-zinc-300
-                           hover:border-indigo-500/50 hover:bg-indigo-500/10 hover:text-indigo-300
+                className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface)]/60 px-3.5 py-1.5 text-sm text-[var(--color-text-muted)]
+                           hover:border-[var(--color-accent-indigo)]/50 hover:bg-[var(--color-accent-indigo)]/10 hover:text-[var(--color-accent-indigo-hover)]
                            transition-colors"
               >
                 {t}
@@ -224,8 +224,8 @@ export function TopicPicker() {
                 type="button"
                 onClick={handleStartLearning}
                 disabled={!topic.trim()}
-                className="w-full rounded-lg bg-indigo-600 px-4 py-3 text-base font-medium text-white
-                           hover:bg-indigo-500
+                className="w-full rounded-lg bg-[var(--color-primary-bg)] px-4 py-3 text-base font-medium text-white
+                           hover:bg-[var(--color-primary-bg-hover)]
                            disabled:cursor-not-allowed disabled:opacity-40
                            transition-colors"
               >
@@ -238,13 +238,13 @@ export function TopicPicker() {
                   type="button"
                   onClick={fetchDemo}
                   disabled={demoLoading}
-                  className="w-full rounded-lg border border-zinc-700 bg-zinc-800/60 px-4 py-3 text-base font-medium text-zinc-300
-                             hover:border-indigo-500/50 hover:bg-indigo-500/10 hover:text-indigo-300
+                  className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]/60 px-4 py-3 text-base font-medium text-[var(--color-text-muted)]
+                             hover:border-[var(--color-accent-indigo)]/50 hover:bg-[var(--color-accent-indigo)]/10 hover:text-[var(--color-accent-indigo-hover)]
                              disabled:cursor-not-allowed disabled:opacity-40
                              transition-colors"
                 >
                   <span>Watch demo</span>
-                  <span className="mt-0.5 block text-xs font-normal text-zinc-500">
+                  <span className="mt-0.5 block text-xs font-normal text-[var(--color-text-dim)]">
                     See how ThreadTutor works
                   </span>
                 </button>
@@ -259,8 +259,8 @@ export function TopicPicker() {
 
           {/* API key entry (shown inline after clicking "Start learning" when no stored key) */}
           {showApiKeyInput && (
-            <div className="space-y-3 rounded-lg border border-zinc-700 bg-zinc-800/50 p-5">
-              <label className="block text-sm font-medium text-zinc-300">
+            <div className="space-y-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]/50 p-5">
+              <label className="block text-sm font-medium text-[var(--color-text-muted)]">
                 Enter your Anthropic API key to begin
               </label>
               <input
@@ -269,11 +269,11 @@ export function TopicPicker() {
                 onChange={(e) => setApiKeyState(e.target.value)}
                 onKeyDown={handleApiKeyKeyDown}
                 placeholder="sk-ant-..."
-                className="w-full rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-base text-zinc-100
-                           placeholder:text-zinc-500
-                           focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500/60"
+                className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2.5 text-base text-[var(--color-text)]
+                           placeholder:text-[var(--color-text-dim)]
+                           focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-indigo)]/40 focus:border-[var(--color-accent-indigo)]/60"
               />
-              <p className="text-xs text-zinc-500">
+              <p className="text-xs text-[var(--color-text-dim)]">
                 Your key is stored in your browser only and sent directly to
                 Anthropic.
               </p>
@@ -281,8 +281,8 @@ export function TopicPicker() {
                 type="button"
                 onClick={handleBeginConversation}
                 disabled={!apiKey.trim()}
-                className="w-full rounded-lg bg-indigo-600 px-4 py-2.5 text-base font-medium text-white
-                           hover:bg-indigo-500
+                className="w-full rounded-lg bg-[var(--color-primary-bg)] px-4 py-2.5 text-base font-medium text-white
+                           hover:bg-[var(--color-primary-bg-hover)]
                            disabled:cursor-not-allowed disabled:opacity-40
                            transition-colors"
               >

@@ -54,8 +54,8 @@ export function ConfidenceCheckCard({
   };
 
   return (
-    <div className="mt-4 rounded-lg border-l-4 border-indigo-500/50 bg-indigo-500/10 p-3 md:p-4">
-      <p className="text-base font-medium text-zinc-200">{check.question}</p>
+    <div className="mt-4 rounded-lg border-l-4 border-l-[var(--color-accent-indigo)]/50 bg-[var(--color-accent-indigo)]/10 p-3 md:p-4">
+      <p className="text-base font-medium text-[var(--color-text)]">{check.question}</p>
 
       {/* Assessment result */}
       {check.assessment && (
@@ -66,7 +66,7 @@ export function ConfidenceCheckCard({
             {check.assessment}
           </span>
           {check.feedback && (
-            <p className="mt-1.5 text-sm text-zinc-400">{check.feedback}</p>
+            <p className="mt-1.5 text-sm text-[var(--color-text-muted)]">{check.feedback}</p>
           )}
         </div>
       )}
@@ -81,16 +81,16 @@ export function ConfidenceCheckCard({
             onKeyDown={handleKeyDown}
             placeholder="Type your answer..."
             rows={1}
-            className="flex-1 resize-none overflow-hidden rounded-md border border-zinc-700 bg-zinc-800 px-3 py-2 text-base text-zinc-100
-                       placeholder:text-zinc-500
-                       focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500/60"
+            className="flex-1 resize-none overflow-hidden rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-base text-[var(--color-text)]
+                       placeholder:text-[var(--color-text-dim)]
+                       focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-indigo)]/40 focus:border-[var(--color-accent-indigo)]/60"
           />
           <button
             type="button"
             onClick={handleSubmit}
             disabled={!answer.trim()}
-            className="self-end rounded-md bg-indigo-600 px-3 py-2 font-mono text-xs uppercase tracking-wide text-white
-                       hover:bg-indigo-500
+            className="self-end rounded-md bg-[var(--color-primary-bg)] px-3 py-2 font-mono text-xs uppercase tracking-wide text-white
+                       hover:bg-[var(--color-primary-bg-hover)]
                        disabled:cursor-not-allowed disabled:opacity-40"
           >
             Send

@@ -11,17 +11,17 @@ interface MessageProps {
 export function Message({ turn, children }: MessageProps) {
   if (turn.role === "user") {
     return (
-      <div data-turn-number={turn.turnNumber} className="border-b border-zinc-800 py-5 md:py-6">
-        <p className="type-label mb-1.5 text-zinc-500">You</p>
-        <p className="text-base text-zinc-300">{turn.displayText}</p>
+      <div data-turn-number={turn.turnNumber} className="border-b border-[var(--color-border)] py-5 md:py-6">
+        <p className="type-label mb-1.5 text-[var(--color-text-dim)]">You</p>
+        <p className="text-base text-[var(--color-text-muted)]">{turn.displayText}</p>
       </div>
     );
   }
 
   return (
-    <div data-turn-number={turn.turnNumber} className="border-b border-zinc-800 py-5 md:py-6">
-      <p className="type-label mb-1.5 text-indigo-400">Claude</p>
-      <div className="prose prose-invert prose-sm md:prose-base max-w-none prose-p:text-zinc-200 prose-p:leading-[1.7] prose-headings:text-zinc-100 prose-strong:text-zinc-100 prose-code:text-indigo-300 prose-code:bg-zinc-800 prose-pre:bg-zinc-800">
+    <div data-turn-number={turn.turnNumber} className="border-b border-[var(--color-border)] py-5 md:py-6">
+      <p className="type-label mb-1.5 text-[var(--color-accent-indigo)]">Claude</p>
+      <div className="prose prose-sm md:prose-base max-w-none prose-p:text-[var(--color-text)] prose-p:leading-[1.7] prose-headings:text-[var(--color-text)] prose-strong:text-[var(--color-text)] prose-code:text-[var(--color-accent-indigo)] prose-code:bg-[var(--color-surface)] prose-pre:bg-[var(--color-surface)]">
         <Markdown>{turn.displayText}</Markdown>
       </div>
       {children}

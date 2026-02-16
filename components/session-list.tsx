@@ -72,10 +72,10 @@ export function SessionList({ onLoadSession }: SessionListProps) {
 
   return (
     <section className="mt-10">
-      <h3 className="mb-3 text-sm font-medium uppercase tracking-wider text-zinc-400">
+      <h3 className="mb-3 text-sm font-medium uppercase tracking-wider text-[var(--color-text-muted)]">
         Past sessions
       </h3>
-      <div className="divide-y divide-zinc-700/50 rounded-lg border border-zinc-700 bg-zinc-800/50">
+      <div className="divide-y divide-[var(--color-border)]/50 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]/50">
         {sessions.map((meta) => (
           <div
             key={meta.id}
@@ -83,10 +83,10 @@ export function SessionList({ onLoadSession }: SessionListProps) {
           >
             {/* Session info */}
             <div className="min-w-0 flex-1">
-              <p className="truncate font-medium text-zinc-200">
+              <p className="truncate font-medium text-[var(--color-text)]">
                 {meta.topic}
               </p>
-              <p className="mt-0.5 text-xs text-zinc-500">
+              <p className="mt-0.5 text-xs text-[var(--color-text-dim)]">
                 {formatDate(meta.createdAt)} &middot; {meta.turnCount}{" "}
                 {meta.turnCount === 1 ? "turn" : "turns"}
               </p>
@@ -97,21 +97,21 @@ export function SessionList({ onLoadSession }: SessionListProps) {
               <button
                 type="button"
                 onClick={() => handleLoad(meta.id)}
-                className="rounded-md px-2.5 py-1 text-xs text-indigo-400 hover:bg-indigo-500/10 hover:text-indigo-300 transition-colors"
+                className="rounded-md px-2.5 py-1 text-xs text-[var(--color-accent-indigo)] hover:bg-[var(--color-accent-indigo)]/10 hover:text-[var(--color-accent-indigo-hover)] transition-colors"
               >
                 Load
               </button>
               <button
                 type="button"
                 onClick={() => handleExport(meta.id)}
-                className="rounded-md px-2.5 py-1 text-xs text-zinc-400 hover:bg-zinc-700 hover:text-zinc-200 transition-colors"
+                className="rounded-md px-2.5 py-1 text-xs text-[var(--color-text-muted)] hover:bg-[var(--color-border)] hover:text-[var(--color-text)] transition-colors"
               >
                 Export
               </button>
               <button
                 type="button"
                 onClick={() => handleDelete(meta.id)}
-                className="rounded-md px-2.5 py-1 text-xs text-zinc-500 hover:bg-red-500/10 hover:text-red-400 transition-colors"
+                className="rounded-md px-2.5 py-1 text-xs text-[var(--color-text-dim)] hover:bg-red-500/10 hover:text-red-400 transition-colors"
               >
                 Delete
               </button>
