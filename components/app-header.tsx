@@ -43,10 +43,10 @@ export function AppHeader({ topic, mode, children }: AppHeaderProps) {
         <div className="flex items-center gap-2">
           <LogoMark />
           <div className="flex flex-col">
-            <span className="text-sm font-bold text-[var(--color-text)] md:text-base">
+            <span className="font-serif text-sm font-bold tracking-tight text-[var(--color-text)] md:text-base">
               ThreadTutor
             </span>
-            <span className="hidden text-xs text-[var(--color-text-dim)] md:block">
+            <span className="hidden font-mono text-[0.6875rem] uppercase tracking-widest text-[var(--color-text-dim)] md:block">
               Socratic learning with AI
             </span>
           </div>
