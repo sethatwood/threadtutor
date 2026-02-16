@@ -45,10 +45,11 @@ Full details: [milestones/v1.0-ROADMAP.md](milestones/v1.0-ROADMAP.md)
   3. Headings scale fluidly between mobile and desktop without breakpoint jumps
   4. Body text is comfortable to read: generous line-height, lines never stretch beyond ~65 characters
   5. Label elements use visible letter-spacing that matches the Bitcoin Echo typographic hierarchy
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 09-01: TBD
+- [ ] 09-01-PLAN.md -- Font loading (Libre Baskerville + Courier Prime) and type scale foundation
+- [ ] 09-02-PLAN.md -- Component typography application (serif/mono per element)
 
 ### Phase 10: Theme System
 **Goal**: Users can switch between dark and light themes, with their preference remembered and both palettes matching Bitcoin Echo's neutral tones
