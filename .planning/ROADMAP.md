@@ -3,7 +3,7 @@
 ## Milestones
 
 - ✅ **v1.0 MVP** -- Phases 1-8 (shipped 2026-02-15)
-- 🚧 **v1.1 Design Overhaul** -- Phases 9-13 (in progress)
+- ✅ **v1.1 Design Overhaul** -- Phases 9-13 (shipped 2026-02-16)
 
 ## Phases
 
@@ -23,7 +23,7 @@ Full details: [milestones/v1.0-ROADMAP.md](milestones/v1.0-ROADMAP.md)
 
 </details>
 
-### 🚧 v1.1 Design Overhaul (In Progress)
+### ✅ v1.1 Design Overhaul (Shipped 2026-02-16)
 
 **Milestone Goal:** Transform ThreadTutor from stock Next.js defaults to a distinctive, polished design matching Bitcoin Echo's typographic identity and theme system.
 
@@ -31,7 +31,7 @@ Full details: [milestones/v1.0-ROADMAP.md](milestones/v1.0-ROADMAP.md)
 - [x] **Phase 10: Theme System** -- CSS custom properties, dark/light toggle, persistence, palettes (completed 2026-02-15)
 - [x] **Phase 11: Component Theme Parity** -- Every component renders correctly in both themes (completed 2026-02-15)
 - [x] **Phase 12: Design Polish** -- Spacing, borders, hover states, transitions, finishing touches (completed 2026-02-16)
-- [ ] **Phase 13: Animation & Branding** -- Concentric ring pulse on concept map nodes, logo refinement
+- [x] **Phase 13: Animation & Branding** -- Concentric ring pulse on concept map nodes, logo refinement (completed 2026-02-16)
 
 ## Phase Details
 
@@ -108,7 +108,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 13-01-PLAN.md -- Echo-ring animation on new concept nodes + logo wordmark refinement
+- [x] 13-01-PLAN.md -- Echo-ring animation on new concept nodes + logo wordmark refinement
 
 ## Progress
 
@@ -129,4 +129,4 @@ Phases execute in numeric order: 9 -> 10 -> 11 -> 12 -> 13
 | 10. Theme System | v1.1 | 2/2 | Complete | 2026-02-15 |
 | 11. Component Theme Parity | v1.1 | 2/2 | Complete | 2026-02-15 |
 | 12. Design Polish | v1.1 | 2/2 | Complete | 2026-02-16 |
-| 13. Animation & Branding | v1.1 | 0/0 | Not started | - |
+| 13. Animation & Branding | v1.1 | 1/1 | Complete | 2026-02-16 |
