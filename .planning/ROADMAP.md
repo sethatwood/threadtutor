@@ -30,7 +30,7 @@ Full details: [milestones/v1.0-ROADMAP.md](milestones/v1.0-ROADMAP.md)
 - [x] **Phase 9: Typography Foundation** -- Libre Baskerville + Courier Prime with responsive scaling (completed 2026-02-15)
 - [x] **Phase 10: Theme System** -- CSS custom properties, dark/light toggle, persistence, palettes (completed 2026-02-15)
 - [x] **Phase 11: Component Theme Parity** -- Every component renders correctly in both themes (completed 2026-02-15)
-- [ ] **Phase 12: Design Polish** -- Spacing, borders, hover states, transitions, finishing touches
+- [x] **Phase 12: Design Polish** -- Spacing, borders, hover states, transitions, finishing touches (completed 2026-02-16)
 - [ ] **Phase 13: Animation & Branding** -- Concentric ring pulse on concept map nodes, logo refinement
 
 ## Phase Details
@@ -94,8 +94,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 12-01-PLAN.md -- Global polish (selection styling, font smoothing, spacing rhythm, border refinement)
-- [ ] 12-02-PLAN.md -- Interactive element polish (hover/focus transitions, micro-interactions on all buttons and controls)
+- [x] 12-01-PLAN.md -- Global polish (selection styling, font smoothing, spacing rhythm, border refinement)
+- [x] 12-02-PLAN.md -- Interactive element polish (hover/focus transitions, micro-interactions on all buttons and controls)
 
 ### Phase 13: Animation & Branding
 **Goal**: New concept map nodes announce themselves with an expanding concentric ring animation, and the logo reflects the app's new typographic identity
@@ -128,5 +128,5 @@ Phases execute in numeric order: 9 -> 10 -> 11 -> 12 -> 13
 | 9. Typography Foundation | v1.1 | 2/2 | Complete | 2026-02-15 |
 | 10. Theme System | v1.1 | 2/2 | Complete | 2026-02-15 |
 | 11. Component Theme Parity | v1.1 | 2/2 | Complete | 2026-02-15 |
-| 12. Design Polish | v1.1 | 0/0 | Not started | - |
+| 12. Design Polish | v1.1 | 2/2 | Complete | 2026-02-16 |
 | 13. Animation & Branding | v1.1 | 0/0 | Not started | - |
