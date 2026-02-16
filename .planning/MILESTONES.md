@@ -19,3 +19,17 @@
 
 ---
 
+## v1.1 Design Overhaul (In Progress)
+
+**Phases:** 9-13 | **Requirements:** 27 across 6 categories
+
+**Goal:** Transform ThreadTutor's visual identity from stock Next.js defaults to a distinctive, polished design inspired by the Bitcoin Echo project typography and theme system.
+
+**Phase structure:**
+1. Phase 9: Typography Foundation (5 reqs) -- Libre Baskerville + Courier Prime
+2. Phase 10: Theme System (7 reqs) -- CSS variables, dark/light toggle, persistence
+3. Phase 11: Component Theme Parity (7 reqs) -- every component in both themes
+4. Phase 12: Design Polish (5 reqs) -- spacing, borders, hover states, transitions
+5. Phase 13: Animation & Branding (3 reqs) -- concentric ring pulse, logo refinement
+
+---
