@@ -39,14 +39,14 @@ export function LearningJournal({ turns }: LearningJournalProps) {
 
   return (
     <div className="flex h-full flex-col">
-      <div className="border-b border-[var(--color-border)] px-4 py-3">
+      <div className="border-b border-[var(--color-border)]/60 px-4 py-3">
         <h2 className="type-label text-[var(--color-text-muted)]">
           Learning Journal
         </h2>
       </div>
 
       <div className="flex-1 overflow-y-auto px-4 py-3">
-        <ol className="space-y-3">
+        <ol className="space-y-4">
           {entries.map((entry) => (
             <li
               key={entry.turnNumber}

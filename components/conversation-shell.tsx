@@ -106,7 +106,7 @@ export function ConversationShell({
           <button
             type="button"
             onClick={handleExport}
-            className="min-h-[44px] rounded-md px-3 py-1.5 text-sm text-[var(--color-text-muted)] hover:bg-[var(--color-surface)] hover:text-[var(--color-text)] transition-colors"
+            className="min-h-[44px] rounded-md px-3 py-1.5 text-sm text-[var(--color-text-muted)] hover:bg-[var(--color-surface)] hover:text-[var(--color-text)] transition-all duration-150"
           >
             Export
           </button>
@@ -115,7 +115,7 @@ export function ConversationShell({
           <button
             type="button"
             onClick={onBack}
-            className="min-h-[44px] rounded-md px-3 py-1.5 text-sm text-[var(--color-text-muted)] hover:bg-[var(--color-surface)] hover:text-[var(--color-text)] transition-colors"
+            className="min-h-[44px] rounded-md px-3 py-1.5 text-sm text-[var(--color-text-muted)] hover:bg-[var(--color-surface)] hover:text-[var(--color-text)] transition-all duration-150"
           >
             New topic
           </button>
@@ -134,7 +134,7 @@ export function ConversationShell({
         </div>
 
         {/* Learning Journal (top-right, golden narrow) */}
-        <div className="order-3 min-h-0 border-t border-[var(--color-border)] md:order-0 md:border-t-0 md:border-l">
+        <div className="order-3 min-h-0 border-t border-[var(--color-border)]/50 md:order-0 md:border-t-0 md:border-l md:border-[var(--color-border)]/50">
           {/* Mobile: collapsible */}
           <details className="group md:hidden">
             <summary className="flex cursor-pointer items-center justify-between px-4 py-3 text-sm font-semibold text-[var(--color-text)]">
@@ -154,7 +154,7 @@ export function ConversationShell({
         </div>
 
         {/* Concept Map (bottom, full width) */}
-        <div className="order-2 h-[250px] shrink-0 border-t border-[var(--color-border)] md:order-0 md:h-auto md:col-span-2">
+        <div className="order-2 h-[250px] shrink-0 border-t border-[var(--color-border)]/50 md:order-0 md:h-auto md:col-span-2">
           <ConceptMap
             turns={state.turns}
             onConceptClick={handleConceptClick}
