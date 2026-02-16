@@ -76,10 +76,11 @@ Plans:
   2. The concept map (nodes, edges, background grid) adapts to the current theme, including the fullscreen modal view
   3. The learning journal entries, header (logo, title, badges, buttons), and topic picker/landing page all render with appropriate contrast and colors in both themes
   4. All buttons and inputs have visible hover and focus states that match the current theme
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 11-01: TBD
+- [ ] 11-01-PLAN.md -- Concept map theme parity (React Flow dynamic colorMode, light-mode CSS overrides, theme-aware node animations)
+- [ ] 11-02-PLAN.md -- Conversation component theme parity (assessment badge colors, error banner, status color variables)
 
 ### Phase 12: Design Polish
 **Goal**: The app feels refined and intentional, with consistent spacing, smooth interactions, and attention to small details that elevate perceived quality
