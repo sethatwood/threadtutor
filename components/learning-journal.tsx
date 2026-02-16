@@ -40,7 +40,7 @@ export function LearningJournal({ turns }: LearningJournalProps) {
   return (
     <div className="flex h-full flex-col">
       <div className="border-b border-zinc-800 px-4 py-3">
-        <h2 className="text-sm font-semibold text-zinc-300">
+        <h2 className="type-label text-zinc-300">
           Learning Journal
         </h2>
       </div>
@@ -52,7 +52,7 @@ export function LearningJournal({ turns }: LearningJournalProps) {
               key={entry.turnNumber}
               className="journal-entry text-sm text-zinc-400"
             >
-              <span className="mr-2 text-xs font-medium text-indigo-400/60">
+              <span className="mr-2 font-mono text-xs text-indigo-400/60">
                 {entry.number}.
               </span>
               {entry.text}
