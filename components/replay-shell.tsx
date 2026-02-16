@@ -31,7 +31,7 @@ export function ReplayShell({ session, onBack }: ReplayShellProps) {
   }, []);
 
   return (
-    <div className="flex h-screen flex-col">
+    <div className="flex h-screen max-w-[1800px] mx-auto flex-col">
       {/* Header */}
       <AppHeader topic={session.topic} mode="replay">
         <button

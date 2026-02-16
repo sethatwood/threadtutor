@@ -99,7 +99,7 @@ export function ConversationShell({
   }, []);
 
   return (
-    <div className="flex h-screen flex-col">
+    <div className="flex h-screen max-w-[1800px] mx-auto flex-col">
       {/* Header */}
       <AppHeader topic={topic} mode="live">
         {state.turns.length > 0 && (

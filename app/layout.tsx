@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Libre_Baskerville, Courier_Prime } from "next/font/google";
+import { Literata, Courier_Prime } from "next/font/google";
 import { ThemeProvider } from "@/lib/theme";
 import "./globals.css";
 
-const libreBaskerville = Libre_Baskerville({
+const literata = Literata({
   variable: "--font-serif",
   subsets: ["latin"],
-  weight: ["400", "700"],
   style: ["normal", "italic"],
 });
 
@@ -36,7 +35,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${libreBaskerville.variable} ${courierPrime.variable} antialiased`}
+        className={`${literata.variable} ${courierPrime.variable} antialiased`}
       >
         <ThemeProvider>{children}</ThemeProvider>
       </body>
