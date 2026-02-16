@@ -105,10 +105,10 @@ Plans:
   1. When a new concept appears on the map, concentric rings expand outward from the node with staggered timing and fading opacity
   2. The ring animation colors adapt to the current theme (light rings on dark, dark rings on light)
   3. The app logo/wordmark uses the new serif/mono typography rather than default styling
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 13-01: TBD
+- [ ] 13-01-PLAN.md -- Echo-ring animation on new concept nodes + logo wordmark refinement
 
 ## Progress
 
