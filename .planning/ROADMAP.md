@@ -80,7 +80,7 @@ Plans:
 
 Plans:
 - [ ] 11-01-PLAN.md -- Concept map theme parity (React Flow dynamic colorMode, light-mode CSS overrides, theme-aware node animations)
-- [ ] 11-02-PLAN.md -- Conversation component theme parity (assessment badge colors, error banner, status color variables)
+- [ ] 11-02-PLAN.md -- Status colors, interactive element hover/focus states, and COMP-03/04/05 verification (assessment badges, error banner, session list delete, full interactive audit)
 
 ### Phase 12: Design Polish
 **Goal**: The app feels refined and intentional, with consistent spacing, smooth interactions, and attention to small details that elevate perceived quality
