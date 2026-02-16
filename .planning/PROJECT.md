@@ -29,7 +29,18 @@ The system prompt is the product. A well-prompted Claude that teaches through So
 
 ### Active
 
-(No active requirements -- define next milestone with `/gsd:new-milestone`)
+#### Current Milestone: v1.1 Design Overhaul
+
+**Goal:** Transform ThreadTutor's visual identity from stock Next.js defaults to a distinctive, polished design inspired by the Bitcoin Echo project typography and theme system.
+
+**Target features:**
+- Libre Baskerville + Courier Prime typography (matching Bitcoin Echo)
+- Dark/light theme toggle with CSS variables, localStorage persistence, system preference fallback
+- Full theme parity across all components (conversation, concept map, confidence checks, journal, inputs, buttons)
+- Bitcoin Echo neutral palette (#0a0a0a dark / #f8f6f3 warm light) as base, retaining indigo + emerald accents
+- Design polish pass (spacing, borders, hover states, transitions, micro-interactions)
+- Concentric circles pulse animation for concept map node additions
+- Logo refinement to align with new typography
 
 ### Out of Scope
 
@@ -52,13 +63,15 @@ Bitcoin proof-of-work is the demo topic: technical enough to showcase real teach
 
 Known tech debt: one orphaned placeholder file (concept-map-placeholder.tsx, replaced in Phase 3). System prompt effectiveness is iterative -- budget time for prompt iteration with real 15+ turn conversations.
 
+Design reference: Bitcoin Echo (bitcoinecho.org) uses Libre Baskerville + Courier Prime with a CSS variable-based dark/light theme system. The author's goal is a consistent typographic identity across hobby projects.
+
 ## Constraints
 
 - **Tech stack**: Next.js 16 (App Router), TypeScript, Tailwind CSS 4, React Flow, Anthropic SDK (@anthropic-ai/sdk)
 - **Model**: claude-sonnet-4-5-20250929 (Sonnet -- faster, cheaper, sufficient for tutoring)
 - **Token limit**: max_tokens 2048 per response (structured JSON envelope needs headroom beyond concise displayText)
 - **Deployment**: Vercel, auto-deploy on push
-- **Style**: No em dashes anywhere in the project. Design direction: clean, minimal, educational ("Notion" not "Discord"). Muted colors, good typography, generous whitespace. Always-dark theme (#1a1a1e background).
+- **Style**: No em dashes anywhere in the project. Design direction: clean, minimal, educational ("Notion" not "Discord"). Muted colors, good typography, generous whitespace. Dark/light theme with Bitcoin Echo-inspired neutrals.
 - **Security**: User API keys never logged or stored server-side. Sent per-request only.
 
 ## Key Decisions
@@ -74,9 +87,9 @@ Known tech debt: one orphaned placeholder file (concept-map-placeholder.tsx, rep
 | Structured outputs over code fence stripping | Anthropic SDK zodOutputFormat guarantees schema compliance | ✓ Good -- replaced original "strip fences" approach |
 | max_tokens 2048 (not 1024) | Structured JSON envelope needs headroom | ✓ Good -- 1024 caused truncation |
 | Zod 4 (upgraded from 3) | toJSONSchema compatibility with Anthropic SDK helpers | ✓ Good -- required for zodOutputFormat |
-| Always-dark theme (no toggle) | Simpler, consistent design | ✓ Good -- educational content reads well on dark |
+| Always-dark theme (no toggle) | Simpler, consistent design | ⚠️ Revisit -- adding dark/light toggle in v1.1 |
 | Em dash sanitization at API boundary | Single enforcement point (server-side) | ✓ Good -- catches Claude's em dashes reliably |
 | Native details/summary for journal collapse | Zero JS, built-in a11y | ✓ Good -- simpler than state-managed toggle |
 
 ---
-*Last updated: 2026-02-15 after v1.0 milestone*
+*Last updated: 2026-02-15 after v1.1 milestone start*

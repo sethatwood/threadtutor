@@ -5,15 +5,14 @@
 See: .planning/PROJECT.md (updated 2026-02-15)
 
 **Core value:** The system prompt is the product. A well-prompted Claude that teaches through Socratic questioning, with a UI built around learning rather than chatting.
-**Current focus:** v1.0 MVP shipped. Planning next milestone.
+**Current focus:** v1.1 Design Overhaul -- typography, theme toggle, visual polish
 
 ## Current Position
 
-Phase: v1.0 complete (8 phases, 15 plans)
-Status: Milestone v1.0 MVP shipped 2026-02-15
-Last activity: 2026-02-15 - Completed quick task 1: Add fullscreen toggle to concept map
-
-Progress: [██████████] 100% (v1.0)
+Phase: Not started (defining requirements)
+Plan: --
+Status: Defining requirements
+Last activity: 2026-02-15 -- Milestone v1.1 started
 
 ## Performance Metrics
 
@@ -39,13 +38,19 @@ Progress: [██████████] 100% (v1.0)
 
 See PROJECT.md Key Decisions table for full v1.0 decision log.
 
+v1.1 design decisions:
+- Typography: Libre Baskerville (serif) + Courier Prime (mono) from Bitcoin Echo
+- Theme: CSS variable-based dark/light with data-theme attribute
+- Colors: Bitcoin Echo neutrals (#0a0a0a / #f8f6f3) + existing indigo/emerald accents
+- Reference: bitcoinecho-org/ folder included at project root for design extraction
+
 ### Pending Todos
 
 None.
 
 ### Blockers/Concerns
 
-None active. All v1.0 blockers resolved.
+None active.
 
 ### Quick Tasks Completed
 
@@ -56,5 +61,5 @@ None active. All v1.0 blockers resolved.
 ## Session Continuity
 
 Last session: 2026-02-15
-Stopped at: Completed quick-1 plan: fullscreen concept map toggle
+Stopped at: Starting v1.1 Design Overhaul milestone
 Resume file: None
