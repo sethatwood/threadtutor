@@ -175,15 +175,17 @@ export function ConversationPanel({
             className="flex-1 resize-none overflow-hidden rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2.5 text-base text-[var(--color-text)]
                        placeholder:text-[var(--color-text-dim)]
                        focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-indigo)]/40 focus:border-[var(--color-accent-indigo)]/60
-                       disabled:cursor-not-allowed disabled:opacity-50"
+                       disabled:cursor-not-allowed disabled:opacity-50
+                       transition-all duration-150"
           />
           <button
             type="button"
             onClick={handleSend}
             disabled={!input.trim() || inputDisabled}
             className="self-end rounded-lg bg-[var(--color-primary-bg)] px-4 py-2.5 text-sm font-medium text-white
-                       hover:bg-[var(--color-primary-bg-hover)]
-                       disabled:cursor-not-allowed disabled:opacity-40"
+                       hover:bg-[var(--color-primary-bg-hover)] hover:scale-[1.02]
+                       disabled:cursor-not-allowed disabled:opacity-40
+                       transition-all duration-150"
           >
             Send
           </button>

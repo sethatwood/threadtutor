@@ -198,7 +198,8 @@ export function TopicPicker() {
             placeholder="Enter any topic..."
             className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3 text-base text-[var(--color-text)]
                        placeholder:text-[var(--color-text-dim)]
-                       focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-indigo)]/40 focus:border-[var(--color-accent-indigo)]/60"
+                       focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-indigo)]/40 focus:border-[var(--color-accent-indigo)]/60
+                       transition-all duration-150"
           />
 
           {/* Example topic chips */}
@@ -210,7 +211,8 @@ export function TopicPicker() {
                 onClick={() => setTopic(t)}
                 className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface)]/60 px-3.5 py-1.5 text-sm text-[var(--color-text-muted)]
                            hover:border-[var(--color-accent-indigo)]/50 hover:bg-[var(--color-accent-indigo)]/10 hover:text-[var(--color-accent-indigo-hover)]
-                           transition-colors"
+                           hover:scale-[1.03]
+                           transition-all duration-150"
               >
                 {t}
               </button>
@@ -225,9 +227,9 @@ export function TopicPicker() {
                 onClick={handleStartLearning}
                 disabled={!topic.trim()}
                 className="w-full rounded-lg bg-[var(--color-primary-bg)] px-4 py-3 text-base font-medium text-white
-                           hover:bg-[var(--color-primary-bg-hover)]
+                           hover:bg-[var(--color-primary-bg-hover)] hover:scale-[1.02]
                            disabled:cursor-not-allowed disabled:opacity-40
-                           transition-colors"
+                           transition-all duration-150"
               >
                 Start learning
               </button>
@@ -240,8 +242,9 @@ export function TopicPicker() {
                   disabled={demoLoading}
                   className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]/60 px-4 py-3 text-base font-medium text-[var(--color-text-muted)]
                              hover:border-[var(--color-accent-indigo)]/50 hover:bg-[var(--color-accent-indigo)]/10 hover:text-[var(--color-accent-indigo-hover)]
+                             hover:scale-[1.01]
                              disabled:cursor-not-allowed disabled:opacity-40
-                             transition-colors"
+                             transition-all duration-150"
                 >
                   <span>Watch demo</span>
                   <span className="mt-0.5 block text-xs font-normal text-[var(--color-text-dim)]">
@@ -271,7 +274,8 @@ export function TopicPicker() {
                 placeholder="sk-ant-..."
                 className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2.5 text-base text-[var(--color-text)]
                            placeholder:text-[var(--color-text-dim)]
-                           focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-indigo)]/40 focus:border-[var(--color-accent-indigo)]/60"
+                           focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-indigo)]/40 focus:border-[var(--color-accent-indigo)]/60
+                           transition-all duration-150"
               />
               <p className="text-xs text-[var(--color-text-dim)]">
                 Your key is stored in your browser only and sent directly to
@@ -282,9 +286,9 @@ export function TopicPicker() {
                 onClick={handleBeginConversation}
                 disabled={!apiKey.trim()}
                 className="w-full rounded-lg bg-[var(--color-primary-bg)] px-4 py-2.5 text-base font-medium text-white
-                           hover:bg-[var(--color-primary-bg-hover)]
+                           hover:bg-[var(--color-primary-bg-hover)] hover:scale-[1.02]
                            disabled:cursor-not-allowed disabled:opacity-40
-                           transition-colors"
+                           transition-all duration-150"
               >
                 Begin conversation
               </button>

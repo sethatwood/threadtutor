@@ -83,15 +83,17 @@ export function ConfidenceCheckCard({
             rows={1}
             className="flex-1 resize-none overflow-hidden rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-base text-[var(--color-text)]
                        placeholder:text-[var(--color-text-dim)]
-                       focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-indigo)]/40 focus:border-[var(--color-accent-indigo)]/60"
+                       focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-indigo)]/40 focus:border-[var(--color-accent-indigo)]/60
+                       transition-all duration-150"
           />
           <button
             type="button"
             onClick={handleSubmit}
             disabled={!answer.trim()}
             className="self-end rounded-md bg-[var(--color-primary-bg)] px-3 py-2 font-mono text-xs uppercase tracking-wide text-white
-                       hover:bg-[var(--color-primary-bg-hover)]
-                       disabled:cursor-not-allowed disabled:opacity-40"
+                       hover:bg-[var(--color-primary-bg-hover)] hover:scale-[1.02]
+                       disabled:cursor-not-allowed disabled:opacity-40
+                       transition-all duration-150"
           >
             Send
           </button>
