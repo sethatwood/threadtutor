@@ -61,10 +61,11 @@ Plans:
   3. A first-time visitor with system dark mode preference sees the dark theme; light mode preference sees light theme
   4. Dark theme background is near-black (#0a0a0a), light theme background is warm off-white (#f8f6f3), both with indigo/emerald accent colors preserved
   5. Switching themes produces a smooth color transition (no hard snap between palettes)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 10-01: TBD
+- [ ] 10-01-PLAN.md -- Theme infrastructure (CSS variable palette, ThemeProvider, flash prevention, header toggle)
+- [ ] 10-02-PLAN.md -- Color migration (convert all hardcoded Tailwind zinc colors to CSS variable references)
 
 ### Phase 11: Component Theme Parity
 **Goal**: Every UI component in the app looks intentionally designed in both dark and light themes, with no broken or unstyled elements
@@ -123,7 +124,7 @@ Phases execute in numeric order: 9 -> 10 -> 11 -> 12 -> 13
 | 7. Landing Experience | v1.0 | 1/1 | Complete | 2026-02-15 |
 | 8. Mobile & Design Polish | v1.0 | 2/2 | Complete | 2026-02-15 |
 | 9. Typography Foundation | v1.1 | 2/2 | Complete | 2026-02-15 |
-| 10. Theme System | v1.1 | 0/0 | Not started | - |
+| 10. Theme System | v1.1 | 0/2 | Planned | - |
 | 11. Component Theme Parity | v1.1 | 0/0 | Not started | - |
 | 12. Design Polish | v1.1 | 0/0 | Not started | - |
 | 13. Animation & Branding | v1.1 | 0/0 | Not started | - |
