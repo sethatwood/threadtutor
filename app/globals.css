@@ -167,6 +167,14 @@ h4 {
   --xy-edge-stroke-default: color-mix(in srgb, var(--color-accent-indigo) 40%, transparent);
 }
 
+.react-flow.light {
+  --xy-background-color-default: transparent;
+  --xy-node-background-color-default: var(--color-surface);
+  --xy-node-border-default: 1px solid var(--color-accent-indigo);
+  --xy-node-color-default: var(--color-text);
+  --xy-edge-stroke-default: color-mix(in srgb, var(--color-accent-indigo) 40%, transparent);
+}
+
 /* ---------------------------------------------------------------------------
    Concept node styles (theme-aware)
    --------------------------------------------------------------------------- */
@@ -181,12 +189,12 @@ h4 {
 }
 
 .concept-node:hover {
-  border-color: #6366f1;
+  border-color: var(--color-accent-indigo);
 }
 
 .concept-node--new {
-  border-color: #818cf8;
-  box-shadow: 0 0 16px #6366f160, 0 0 4px #818cf880;
+  border-color: var(--color-accent-indigo);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--color-accent-indigo-hover) 38%, transparent), 0 0 4px color-mix(in srgb, var(--color-accent-indigo) 50%, transparent);
   animation:
     concept-enter 300ms ease-out,
     concept-pulse 700ms ease-in-out 300ms 2,
@@ -211,18 +219,18 @@ h4 {
 @keyframes concept-pulse {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 16px #6366f160, 0 0 4px #818cf880;
+    box-shadow: 0 0 16px color-mix(in srgb, var(--color-accent-indigo-hover) 38%, transparent), 0 0 4px color-mix(in srgb, var(--color-accent-indigo) 50%, transparent);
   }
   50% {
     transform: scale(1.08);
-    box-shadow: 0 0 28px #818cf880, 0 0 8px #a5b4fc90;
+    box-shadow: 0 0 28px color-mix(in srgb, var(--color-accent-indigo) 50%, transparent), 0 0 8px color-mix(in srgb, var(--color-accent-indigo-hover) 56%, transparent);
   }
 }
 
 @keyframes concept-glow-fade {
   from {
-    border-color: #818cf8;
-    box-shadow: 0 0 16px #6366f160, 0 0 4px #818cf880;
+    border-color: var(--color-accent-indigo);
+    box-shadow: 0 0 16px color-mix(in srgb, var(--color-accent-indigo-hover) 38%, transparent), 0 0 4px color-mix(in srgb, var(--color-accent-indigo) 50%, transparent);
   }
   to {
     border-color: color-mix(in srgb, var(--color-accent-indigo) 25%, transparent);

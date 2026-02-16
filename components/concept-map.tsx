@@ -21,6 +21,7 @@ import {
   NODE_WIDTH,
   NODE_HEIGHT,
 } from "@/lib/graph-layout";
+import { useTheme } from "@/lib/theme";
 import type { Turn } from "@/lib/types";
 
 /** Fixed zoom for the inline panel -- large enough to read, small enough to show context. */
@@ -45,6 +46,7 @@ interface InnerMapProps {
   nodes: Node[];
   edges: Edge[];
   onNodeClick: NodeMouseHandler;
+  theme: "dark" | "light";
 }
 
 // ---------------------------------------------------------------------------
@@ -56,6 +58,7 @@ function InlineMapInner({
   edges,
   onNodeClick,
   onExpand,
+  theme,
 }: InnerMapProps & { onExpand: () => void }) {
   const { setViewport } = useReactFlow();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -118,7 +121,7 @@ function InlineMapInner({
         nodesConnectable={false}
         elementsSelectable={false}
         preventScrolling={true}
-        colorMode="dark"
+        colorMode={theme === "dark" ? "dark" : "light"}
         proOptions={{ hideAttribution: true }}
         minZoom={0.3}
         maxZoom={1.5}
@@ -158,7 +161,7 @@ function InlineMapInner({
 // Fullscreen map inner (Controls, draggable nodes)
 // ---------------------------------------------------------------------------
 
-function FullscreenMapInner({ nodes, edges, onNodeClick }: InnerMapProps) {
+function FullscreenMapInner({ nodes, edges, onNodeClick, theme }: InnerMapProps) {
   const { fitView } = useReactFlow();
 
   // On mount: small graphs fit entirely; large graphs focus on recent nodes
@@ -189,7 +192,7 @@ function FullscreenMapInner({ nodes, edges, onNodeClick }: InnerMapProps) {
       nodesConnectable={false}
       elementsSelectable={false}
       preventScrolling={true}
-      colorMode="dark"
+      colorMode={theme === "dark" ? "dark" : "light"}
       defaultViewport={{ x: 0, y: 0, zoom: 1 }}
       proOptions={{ hideAttribution: true }}
       minZoom={0.1}
@@ -205,6 +208,7 @@ function FullscreenMapInner({ nodes, edges, onNodeClick }: InnerMapProps) {
 // ---------------------------------------------------------------------------
 
 export function ConceptMap({ turns, onConceptClick }: ConceptMapProps) {
+  const { theme } = useTheme();
   const [fullscreen, setFullscreen] = useState(false);
 
   // Derive concepts and graph elements (shared between inline and fullscreen)
@@ -263,6 +267,7 @@ export function ConceptMap({ turns, onConceptClick }: ConceptMapProps) {
           edges={edges}
           onNodeClick={handleNodeClick}
           onExpand={openFullscreen}
+          theme={theme}
         />
       </ReactFlowProvider>
 
@@ -300,6 +305,7 @@ export function ConceptMap({ turns, onConceptClick }: ConceptMapProps) {
                 nodes={nodes}
                 edges={edges}
                 onNodeClick={handleNodeClick}
+                theme={theme}
               />
             </ReactFlowProvider>
           </div>,
