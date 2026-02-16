@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-15)
 
 **Core value:** The system prompt is the product. A well-prompted Claude that teaches through Socratic questioning, with a UI built around learning rather than chatting.
-**Current focus:** Phase 11 -- Component Theme Parity complete (v1.1 Design Overhaul)
+**Current focus:** Phase 12 -- Design Polish in progress (v1.1 Design Overhaul)
 
 ## Current Position
 
-Phase: 11 of 13 (Component Theme Parity)
-Plan: 2 of 2 in current phase (complete)
-Status: Phase Complete
-Last activity: 2026-02-15 -- Completed Phase 11 Component Theme Parity
+Phase: 12 of 13 (Design Polish)
+Plan: 2 of 2 in current phase
+Status: In Progress
+Last activity: 2026-02-16 -- Completed 12-02 Hover States and Micro-interactions
 
-Progress: [█████████████████████░░░░░░░░░] 75% (21/~28 plans)
+Progress: [███████████████████████░░░░░░░] 82% (23/~28 plans)
 
 ## Performance Metrics
 
@@ -36,6 +36,7 @@ Progress: [█████████████████████░░
 | 09-typography-foundation | 2/2 | 4min | 2.0min |
 | 10-theme-system | 2/2 | 7min | 3.5min |
 | 11-component-theme-parity | 2/2 | 4min | 2.0min |
+| 12-design-polish | 2/2 | 4min | 2.0min |
 
 ## Accumulated Context
 
@@ -61,6 +62,9 @@ v1.1 design decisions:
 - Status color contrast: dark theme uses 300-level (bright on dark), light theme uses 700-level (dark on light) for WCAG compliance
 - color-mix() for one-off opacity variants where Tailwind arbitrary value syntax does not support opacity modifiers on CSS variables
 - React Flow colorMode derived dynamically from useTheme() hook rather than hardcoded to dark
+- Hover micro-interactions: 150ms duration for micro-interactions, 300ms for global theme transitions
+- Three-tier scale on hover: 1.03 for chips, 1.02 for primary buttons, 1.01 for secondary buttons
+- transition-all instead of transition-colors for smooth animation of transform, ring, and border alongside color
 
 ### Pending Todos
 
@@ -78,6 +82,6 @@ None active.
 
 ## Session Continuity
 
-Last session: 2026-02-15
-Stopped at: Completed Phase 11 (Component Theme Parity) -- all 2 plans executed and verified
+Last session: 2026-02-16
+Stopped at: Completed 12-02 (Hover States and Micro-interactions)
 Resume file: None
