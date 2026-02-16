@@ -27,7 +27,7 @@ Full details: [milestones/v1.0-ROADMAP.md](milestones/v1.0-ROADMAP.md)
 
 **Milestone Goal:** Transform ThreadTutor from stock Next.js defaults to a distinctive, polished design matching Bitcoin Echo's typographic identity and theme system.
 
-- [ ] **Phase 9: Typography Foundation** -- Libre Baskerville + Courier Prime with responsive scaling
+- [x] **Phase 9: Typography Foundation** -- Libre Baskerville + Courier Prime with responsive scaling (completed 2026-02-15)
 - [ ] **Phase 10: Theme System** -- CSS custom properties, dark/light toggle, persistence, palettes
 - [ ] **Phase 11: Component Theme Parity** -- Every component renders correctly in both themes
 - [ ] **Phase 12: Design Polish** -- Spacing, borders, hover states, transitions, finishing touches
@@ -48,8 +48,8 @@ Full details: [milestones/v1.0-ROADMAP.md](milestones/v1.0-ROADMAP.md)
 **Plans**: 2 plans
 
 Plans:
-- [ ] 09-01-PLAN.md -- Font loading (Libre Baskerville + Courier Prime) and type scale foundation
-- [ ] 09-02-PLAN.md -- Component typography application (serif/mono per element)
+- [x] 09-01-PLAN.md -- Font loading (Libre Baskerville + Courier Prime) and type scale foundation
+- [x] 09-02-PLAN.md -- Component typography application (serif/mono per element)
 
 ### Phase 10: Theme System
 **Goal**: Users can switch between dark and light themes, with their preference remembered and both palettes matching Bitcoin Echo's neutral tones
@@ -122,7 +122,7 @@ Phases execute in numeric order: 9 -> 10 -> 11 -> 12 -> 13
 | 6. Replay Mode | v1.0 | 2/2 | Complete | 2026-02-15 |
 | 7. Landing Experience | v1.0 | 1/1 | Complete | 2026-02-15 |
 | 8. Mobile & Design Polish | v1.0 | 2/2 | Complete | 2026-02-15 |
-| 9. Typography Foundation | v1.1 | 0/0 | Not started | - |
+| 9. Typography Foundation | v1.1 | 2/2 | Complete | 2026-02-15 |
 | 10. Theme System | v1.1 | 0/0 | Not started | - |
 | 11. Component Theme Parity | v1.1 | 0/0 | Not started | - |
 | 12. Design Polish | v1.1 | 0/0 | Not started | - |
