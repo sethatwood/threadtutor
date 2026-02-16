@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-15)
 
 **Core value:** The system prompt is the product. A well-prompted Claude that teaches through Socratic questioning, with a UI built around learning rather than chatting.
-**Current focus:** Phase 11 -- Component Theme Parity complete (v1.1 Design Overhaul)
+**Current focus:** Phase 11 -- Component Theme Parity in progress (v1.1 Design Overhaul)
 
 ## Current Position
 
 Phase: 11 of 13 (Component Theme Parity)
-Plan: 2 of 2 in current phase (complete)
-Status: Phase Complete
-Last activity: 2026-02-16 -- Completed 11-02 Status Colors and Interactive State Theme Parity
+Plan: 1 of 2 in current phase
+Status: In Progress
+Last activity: 2026-02-16 -- Completed 11-01 Concept Map Theme Parity
 
-Progress: [█████████████████████░░░░░░░░░] 72% (21/~28 plans)
+Progress: [████████████████████░░░░░░░░░░] 71% (20/~28 plans)
 
 ## Performance Metrics
 
@@ -35,7 +35,7 @@ Progress: [█████████████████████░░
 | 08-mobile-design-polish | 2/2 | 4min | 2.0min |
 | 09-typography-foundation | 2/2 | 4min | 2.0min |
 | 10-theme-system | 2/2 | 7min | 3.5min |
-| 11-component-theme-parity | 2/2 | 4min | 2.0min |
+| 11-component-theme-parity | 1/2 | 2min | 2.0min |
 
 ## Accumulated Context
 
@@ -60,6 +60,7 @@ v1.1 design decisions:
 - Status colors: semantic --color-status-{success,warning,error} variables with separate *-bg variants for backgrounds
 - Status color contrast: dark theme uses 300-level (bright on dark), light theme uses 700-level (dark on light) for WCAG compliance
 - color-mix() for one-off opacity variants where Tailwind arbitrary value syntax does not support opacity modifiers on CSS variables
+- React Flow colorMode derived dynamically from useTheme() hook rather than hardcoded to dark
 
 ### Pending Todos
 
@@ -78,5 +79,5 @@ None active.
 ## Session Continuity
 
 Last session: 2026-02-16
-Stopped at: Completed 11-02-PLAN.md (Status Colors and Interactive State Theme Parity) -- Phase 11 complete
+Stopped at: Completed 11-01-PLAN.md (Concept Map Theme Parity)
 Resume file: None
