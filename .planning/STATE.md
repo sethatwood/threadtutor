@@ -62,9 +62,10 @@ None active.
 | # | Description | Date | Commit | Directory |
 |---|-------------|------|--------|-----------|
 | 1 | Add fullscreen toggle to concept map | 2026-02-15 | 5a45516 | [1-add-fullscreen-toggle-to-concept-map](./quick/1-add-fullscreen-toggle-to-concept-map/) |
+| 3 | Add server-side API key fallback for keyless visitor experience | 2026-02-18 | 4d9d42d | [3-add-server-side-api-key-fallback-so-user](./quick/3-add-server-side-api-key-fallback-so-user/) |
 
 ## Session Continuity
 
-Last session: 2026-02-16
-Stopped at: Archived v1.1 Design Overhaul milestone. Ready for /gsd:new-milestone.
+Last session: 2026-02-18
+Stopped at: Completed quick task 3 (server-side API key fallback). Need to set NEXT_PUBLIC_SERVER_KEY_AVAILABLE=true and ANTHROPIC_API_KEY on Vercel.
 Resume file: None
