@@ -61,26 +61,31 @@ export function ConfidenceCheckCard({
 
   return (
     <div className="mt-4 rounded-lg border-l-4 border-l-[var(--color-accent-indigo)]/50 bg-[var(--color-accent-indigo)]/10 p-3 md:p-4">
-      <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-accent-indigo)]">
-        Check your understanding
-      </p>
-      <p className="mt-1.5 text-base font-medium text-[var(--color-text)]">{check.question}</p>
-
-      {/* Assessment result */}
-      {check.assessment && (
-        <div className="mt-2">
-          <span
-            className={`inline-block rounded-full px-2.5 py-0.5 font-mono text-[0.6875rem] uppercase tracking-wider ${assessmentStyles[check.assessment]}`}
-          >
-            {assessmentLabels[check.assessment] ?? check.assessment}
-          </span>
+      {check.assessment ? (
+        <>
+          {/* Assessed state: heading + badge inline, question as context, feedback as elaboration */}
+          <div className="flex items-center gap-2.5">
+            <span className="text-xs font-semibold uppercase tracking-wide text-[var(--color-accent-indigo)]">
+              Understanding check
+            </span>
+            <span
+              className={`inline-flex items-center rounded-full px-2.5 pt-[5px] pb-[3px] font-mono text-xs leading-none uppercase tracking-wider ${assessmentStyles[check.assessment]}`}
+            >
+              {assessmentLabels[check.assessment] ?? check.assessment}
+            </span>
+          </div>
+          <p className="mt-1.5 text-sm text-(--color-text-muted)"><span className="font-semibold text-(--color-text-dim)">Q:</span> {check.question}</p>
           {check.feedback && (
-            <div className="mt-1.5">
-              <p className="text-xs font-medium text-[var(--color-text-dim)]">Tutor&apos;s note</p>
-              <p className="mt-0.5 text-sm text-[var(--color-text-muted)]">{check.feedback}</p>
-            </div>
+            <p className="mt-2 text-base text-foreground">{check.feedback}</p>
           )}
-        </div>
+        </>
+      ) : (
+        <>
+          <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-accent-indigo)]">
+            Check your understanding
+          </p>
+          <p className="mt-1.5 text-base font-medium text-foreground">{check.question}</p>
+        </>
       )}
 
       {/* Pending input */}
