@@ -15,6 +15,12 @@ const assessmentStyles: Record<string, string> = {
   confused: "text-[var(--color-status-error)] bg-[var(--color-status-error-bg)]",
 };
 
+const assessmentLabels: Record<string, string> = {
+  tracking: "On track",
+  partial: "Getting there",
+  confused: "Let's revisit",
+};
+
 export function ConfidenceCheckCard({
   check,
   onSubmit,
@@ -55,7 +61,10 @@ export function ConfidenceCheckCard({
 
   return (
     <div className="mt-4 rounded-lg border-l-4 border-l-[var(--color-accent-indigo)]/50 bg-[var(--color-accent-indigo)]/10 p-3 md:p-4">
-      <p className="text-base font-medium text-[var(--color-text)]">{check.question}</p>
+      <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-accent-indigo)]">
+        Check your understanding
+      </p>
+      <p className="mt-1.5 text-base font-medium text-[var(--color-text)]">{check.question}</p>
 
       {/* Assessment result */}
       {check.assessment && (
@@ -63,10 +72,13 @@ export function ConfidenceCheckCard({
           <span
             className={`inline-block rounded-full px-2.5 py-0.5 font-mono text-[0.6875rem] uppercase tracking-wider ${assessmentStyles[check.assessment]}`}
           >
-            {check.assessment}
+            {assessmentLabels[check.assessment] ?? check.assessment}
           </span>
           {check.feedback && (
-            <p className="mt-1.5 text-sm text-[var(--color-text-muted)]">{check.feedback}</p>
+            <div className="mt-1.5">
+              <p className="text-xs font-medium text-[var(--color-text-dim)]">Tutor&apos;s note</p>
+              <p className="mt-0.5 text-sm text-[var(--color-text-muted)]">{check.feedback}</p>
+            </div>
           )}
         </div>
       )}
