@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-02-16)
 Phase: All complete (v1.0 + v1.1 shipped)
 Plan: N/A
 Status: Between milestones
-Last activity: 2026-02-18 - Completed quick task 4: Redesign confidence check panel for clarity and delight
+Last activity: 2026-02-18 - Completed quick task 5: Add client-side progressive text reveal
 
 Progress: v1.0 (15 plans) + v1.1 (9 plans) = 24 plans shipped
 
@@ -64,9 +64,10 @@ None active.
 | 1 | Add fullscreen toggle to concept map | 2026-02-15 | 5a45516 | [1-add-fullscreen-toggle-to-concept-map](./quick/1-add-fullscreen-toggle-to-concept-map/) |
 | 3 | Add server-side API key fallback for keyless visitor experience | 2026-02-18 | 4d9d42d | [3-add-server-side-api-key-fallback-so-user](./quick/3-add-server-side-api-key-fallback-so-user/) |
 | 4 | Redesign confidence check panel for clarity and delight | 2026-02-18 | 4a83b6d | [4-redesign-confidence-check-panel-to-clear](./quick/4-redesign-confidence-check-panel-to-clear/) |
+| 5 | Add client-side progressive text reveal | 2026-02-18 | 714172d | [5-add-client-side-progressive-text-reveal-](./quick/5-add-client-side-progressive-text-reveal-/) |
 
 ## Session Continuity
 
 Last session: 2026-02-18
-Stopped at: Completed quick task 3 (server-side API key fallback). Need to set NEXT_PUBLIC_SERVER_KEY_AVAILABLE=true and ANTHROPIC_API_KEY on Vercel.
+Stopped at: Completed quick task 5 (progressive text reveal).
 Resume file: None
