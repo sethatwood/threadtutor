@@ -8,6 +8,9 @@ import { SessionList } from "@/components/session-list";
 import { pickRandomTopics } from "@/lib/topics";
 import type { Session } from "@/lib/types";
 
+const serverKeyAvailable =
+  process.env.NEXT_PUBLIC_SERVER_KEY_AVAILABLE === "true";
+
 export function TopicPicker() {
   const exampleTopics = useRef(pickRandomTopics(5));
   const [topic, setTopic] = useState("");
@@ -65,11 +68,11 @@ export function TopicPicker() {
   const handleStartLearning = () => {
     if (!topic.trim()) return;
 
-    if (apiKey) {
-      // Returning user with stored key: go straight to conversation
+    if (apiKey || serverKeyAvailable) {
+      // User has stored key OR server provides one: go straight to conversation
       setStarted(true);
     } else {
-      // First-time user: show API key input
+      // No key available at all: show API key input
       setShowApiKeyInput(true);
     }
   };
@@ -233,6 +236,11 @@ export function TopicPicker() {
               >
                 Start learning
               </button>
+              {serverKeyAvailable && !apiKey && (
+                <p className="text-center text-xs text-[var(--color-text-dim)]">
+                  No API key needed
+                </p>
+              )}
 
               {/* Watch demo button */}
               {!demoError && (
@@ -264,7 +272,7 @@ export function TopicPicker() {
           {showApiKeyInput && (
             <div className="space-y-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]/50 p-5">
               <label className="block text-sm font-medium text-[var(--color-text-muted)]">
-                Enter your Anthropic API key to begin
+                Optionally use your own Anthropic API key
               </label>
               <input
                 type="password"
@@ -291,6 +299,13 @@ export function TopicPicker() {
                            transition-all duration-150"
               >
                 Begin conversation
+              </button>
+              <button
+                type="button"
+                onClick={() => setStarted(true)}
+                className="w-full text-center text-sm text-[var(--color-text-dim)] hover:text-[var(--color-text-muted)] transition-colors duration-150"
+              >
+                Skip - use without API key
               </button>
             </div>
           )}
