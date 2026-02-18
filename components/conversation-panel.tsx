@@ -5,6 +5,7 @@ import {
   useRef,
   useState,
   useCallback,
+  useMemo,
   type KeyboardEvent,
   type ChangeEvent,
 } from "react";
@@ -32,6 +33,34 @@ export function ConversationPanel({
   const [input, setInput] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const messageListRef = useRef<HTMLDivElement>(null);
+  const lastSeenTurnRef = useRef(0);
+
+  // ---------------------------------------------------------------------------
+  // Determine which turn (if any) should animate with progressive reveal.
+  // A turn animates only when it first appears (assistant turn with a
+  // turnNumber we haven't seen yet).
+  // ---------------------------------------------------------------------------
+  const animatingTurnNumber = useMemo(() => {
+    const lastTurn = state.turns[state.turns.length - 1];
+    if (
+      lastTurn &&
+      lastTurn.role === "assistant" &&
+      lastTurn.turnNumber > lastSeenTurnRef.current
+    ) {
+      return lastTurn.turnNumber;
+    }
+    return null;
+  }, [state.turns]);
+
+  // Update the ref AFTER render so the comparison above works on the first
+  // render where the new turn appears.
+  useEffect(() => {
+    if (state.turns.length > 0) {
+      lastSeenTurnRef.current =
+        state.turns[state.turns.length - 1].turnNumber;
+    }
+  }, [state.turns]);
 
   // ---------------------------------------------------------------------------
   // Auto-scroll to bottom when messages change or loading state changes
@@ -39,6 +68,20 @@ export function ConversationPanel({
   useEffect(() => {
     scrollRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [state.turns, state.isLoading]);
+
+  // ---------------------------------------------------------------------------
+  // ResizeObserver: auto-scroll during progressive reveal as content grows
+  // ---------------------------------------------------------------------------
+  useEffect(() => {
+    const el = messageListRef.current;
+    if (!el) return;
+
+    const observer = new ResizeObserver(() => {
+      scrollRef.current?.scrollIntoView({ behavior: "smooth" });
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   // ---------------------------------------------------------------------------
   // Auto-focus textarea when it becomes the user's turn to type
@@ -104,7 +147,7 @@ export function ConversationPanel({
   return (
     <div className="flex h-full flex-col">
       {/* Message list */}
-      <div className="flex-1 overflow-y-auto px-4 md:px-6">
+      <div ref={messageListRef} className="flex-1 overflow-y-auto px-4 md:px-6">
         {state.turns.map((turn, i) => {
           // For assistant turns with a confidence check, determine card state
           let pendingCard: React.ReactNode = null;
@@ -132,7 +175,12 @@ export function ConversationPanel({
           }
 
           return (
-            <Message key={turn.turnNumber} turn={turn} beforeContent={assessedCard}>
+            <Message
+              key={turn.turnNumber}
+              turn={turn}
+              beforeContent={assessedCard}
+              animate={turn.turnNumber === animatingTurnNumber}
+            >
               {pendingCard}
             </Message>
           );
