@@ -34,6 +34,7 @@ export function ConversationPanel({
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const messageListRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
   const lastSeenTurnRef = useRef(0);
 
   // ---------------------------------------------------------------------------
@@ -70,16 +71,18 @@ export function ConversationPanel({
   }, [state.turns, state.isLoading]);
 
   // ---------------------------------------------------------------------------
-  // ResizeObserver: auto-scroll during progressive reveal as content grows
+  // ResizeObserver: auto-scroll during progressive reveal as content grows.
+  // Uses instant scroll (not smooth) so it keeps up with rapid word reveals.
   // ---------------------------------------------------------------------------
   useEffect(() => {
-    const el = messageListRef.current;
-    if (!el) return;
+    const scrollEl = messageListRef.current;
+    const contentEl = contentRef.current;
+    if (!scrollEl || !contentEl) return;
 
     const observer = new ResizeObserver(() => {
-      scrollRef.current?.scrollIntoView({ behavior: "smooth" });
+      scrollEl.scrollTop = scrollEl.scrollHeight;
     });
-    observer.observe(el);
+    observer.observe(contentEl);
     return () => observer.disconnect();
   }, []);
 
@@ -148,6 +151,7 @@ export function ConversationPanel({
     <div className="flex h-full flex-col">
       {/* Message list */}
       <div ref={messageListRef} className="flex-1 overflow-y-auto px-4 md:px-6">
+       <div ref={contentRef}>
         {state.turns.map((turn, i) => {
           // For assistant turns with a confidence check, determine card state
           let pendingCard: React.ReactNode = null;
@@ -190,6 +194,7 @@ export function ConversationPanel({
 
         {/* Scroll sentinel */}
         <div ref={scrollRef} />
+       </div>
       </div>
 
       {/* Error banner */}
