@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-02-16)
 Phase: All complete (v1.0 + v1.1 shipped)
 Plan: N/A
 Status: Between milestones
-Last activity: 2026-02-18 - Completed quick task 3: Add server-side API key fallback so users don't need to provide their own key for recruiter demos
+Last activity: 2026-02-18 - Completed quick task 4: Redesign confidence check panel for clarity and delight
 
 Progress: v1.0 (15 plans) + v1.1 (9 plans) = 24 plans shipped
 
@@ -63,6 +63,7 @@ None active.
 |---|-------------|------|--------|-----------|
 | 1 | Add fullscreen toggle to concept map | 2026-02-15 | 5a45516 | [1-add-fullscreen-toggle-to-concept-map](./quick/1-add-fullscreen-toggle-to-concept-map/) |
 | 3 | Add server-side API key fallback for keyless visitor experience | 2026-02-18 | 4d9d42d | [3-add-server-side-api-key-fallback-so-user](./quick/3-add-server-side-api-key-fallback-so-user/) |
+| 4 | Redesign confidence check panel for clarity and delight | 2026-02-18 | 4a83b6d | [4-redesign-confidence-check-panel-to-clear](./quick/4-redesign-confidence-check-panel-to-clear/) |
 
 ## Session Continuity
 
