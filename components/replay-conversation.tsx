@@ -28,14 +28,14 @@ export function ReplayConversation({ turns }: ReplayConversationProps) {
     <div className="flex h-full flex-col">
       <div className="flex-1 overflow-y-auto px-6">
         {turns.map((turn) => {
-          let checkCard: React.ReactNode = null;
+          let assessedCard: React.ReactNode = null;
 
           if (
             turn.role === "assistant" &&
             turn.confidenceCheck &&
             turn.confidenceCheck.assessment
           ) {
-            checkCard = (
+            assessedCard = (
               <ConfidenceCheckCard
                 check={turn.confidenceCheck}
                 isPending={false}
@@ -44,9 +44,7 @@ export function ReplayConversation({ turns }: ReplayConversationProps) {
           }
 
           return (
-            <Message key={turn.turnNumber} turn={turn}>
-              {checkCard}
-            </Message>
+            <Message key={turn.turnNumber} turn={turn} beforeContent={assessedCard} />
           );
         })}
 

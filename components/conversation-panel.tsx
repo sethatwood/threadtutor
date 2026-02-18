@@ -107,12 +107,13 @@ export function ConversationPanel({
       <div className="flex-1 overflow-y-auto px-4 md:px-6">
         {state.turns.map((turn, i) => {
           // For assistant turns with a confidence check, determine card state
-          let checkCard: React.ReactNode = null;
+          let pendingCard: React.ReactNode = null;
+          let assessedCard: React.ReactNode = null;
 
           if (turn.role === "assistant" && turn.confidenceCheck) {
             if (i === lastAssistantIndex && state.pendingConfidenceCheck) {
-              // Active confidence check: show pending input
-              checkCard = (
+              // Active confidence check: show pending input after teaching
+              pendingCard = (
                 <ConfidenceCheckCard
                   check={turn.confidenceCheck}
                   isPending={true}
@@ -120,8 +121,8 @@ export function ConversationPanel({
                 />
               );
             } else if (turn.confidenceCheck.assessment) {
-              // Already assessed
-              checkCard = (
+              // Already assessed: show before teaching (bridges from user's answer)
+              assessedCard = (
                 <ConfidenceCheckCard
                   check={turn.confidenceCheck}
                   isPending={false}
@@ -131,8 +132,8 @@ export function ConversationPanel({
           }
 
           return (
-            <Message key={turn.turnNumber} turn={turn}>
-              {checkCard}
+            <Message key={turn.turnNumber} turn={turn} beforeContent={assessedCard}>
+              {pendingCard}
             </Message>
           );
         })}
