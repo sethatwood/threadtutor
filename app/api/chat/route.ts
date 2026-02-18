@@ -52,13 +52,9 @@ export async function POST(request: Request) {
   }
 
   // ---------------------------------------------------------------------------
-  // 2. API key resolution (BYOK with development fallback)
+  // 2. API key resolution (BYOK with server-side fallback)
   // ---------------------------------------------------------------------------
-  const key =
-    apiKey ||
-    (process.env.NODE_ENV === "development"
-      ? process.env.ANTHROPIC_API_KEY
-      : null);
+  const key = apiKey || process.env.ANTHROPIC_API_KEY || null;
 
   if (!key) {
     return NextResponse.json(
