@@ -11,7 +11,7 @@ ThreadTutor is a Next.js app demonstrating AI-assisted Socratic learning. Claude
 - Next.js 16 (App Router), TypeScript, Tailwind CSS 4
 - Zod 4 (required by @anthropic-ai/sdk's zodOutputFormat helper for toJSONSchema)
 - React Flow (concept map visualization) with dagre layout
-- Anthropic SDK (@anthropic-ai/sdk), model: claude-sonnet-4-5-20250929
+- Anthropic SDK (@anthropic-ai/sdk), model: claude-sonnet-4-6
 - Deployed on Vercel
 
 ## Build & Dev Commands
