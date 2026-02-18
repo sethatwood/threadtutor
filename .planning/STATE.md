@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-02-16)
 Phase: All complete (v1.0 + v1.1 shipped)
 Plan: N/A
 Status: Between milestones
-Last activity: 2026-02-16 -- Archived v1.1 Design Overhaul milestone
+Last activity: 2026-02-18 - Completed quick task 3: Add server-side API key fallback so users don't need to provide their own key for recruiter demos
 
 Progress: v1.0 (15 plans) + v1.1 (9 plans) = 24 plans shipped
 
