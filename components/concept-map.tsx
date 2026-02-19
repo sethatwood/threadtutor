@@ -127,8 +127,8 @@ function InlineMapInner({
         minZoom={0.3}
         maxZoom={1.5}
       >
-      <Controls showInteractive={false} />
-      <Panel position="bottom-right">
+      <Controls showInteractive={false} position="top-left" />
+      <Panel position="top-right">
         <button
           type="button"
           onClick={onExpand}
@@ -199,7 +199,7 @@ function FullscreenMapInner({ nodes, edges, onNodeClick, theme }: InnerMapProps)
       minZoom={0.1}
       maxZoom={3}
     >
-      <Controls />
+      <Controls position="top-left" />
     </ReactFlow>
   );
 }
@@ -276,12 +276,12 @@ export function ConceptMap({ turns, onConceptClick }: ConceptMapProps) {
       {fullscreen &&
         createPortal(
           <div className="fixed inset-0 z-50 bg-[var(--color-bg)]/95">
-            {/* Close button (bottom-right, mirrors expand button position) */}
+            {/* Close button (top-right, mirrors expand button position) */}
             <button
               type="button"
               onClick={closeFullscreen}
               title="Close fullscreen"
-              className="absolute bottom-4 right-4 z-10 flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md bg-[var(--color-surface)] border border-[var(--color-border)] p-2 text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-border)] transition-colors"
+              className="absolute top-4 right-4 z-10 flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md bg-[var(--color-surface)] border border-[var(--color-border)] p-2 text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-border)] transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
