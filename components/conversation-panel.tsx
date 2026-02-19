@@ -32,7 +32,6 @@ export function ConversationPanel({
 }: ConversationPanelProps) {
   const [input, setInput] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const scrollRef = useRef<HTMLDivElement>(null);
   const messageListRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const lastSeenTurnRef = useRef(0);
@@ -67,7 +66,10 @@ export function ConversationPanel({
   // Auto-scroll to bottom when messages change or loading state changes
   // ---------------------------------------------------------------------------
   useEffect(() => {
-    scrollRef.current?.scrollIntoView({ behavior: "smooth" });
+    messageListRef.current?.scrollTo({
+      top: messageListRef.current.scrollHeight,
+      behavior: "smooth",
+    });
   }, [state.turns, state.isLoading]);
 
   // ---------------------------------------------------------------------------
@@ -150,8 +152,8 @@ export function ConversationPanel({
   return (
     <div className="flex h-full flex-col">
       {/* Message list */}
-      <div ref={messageListRef} className="flex-1 overflow-y-auto px-4 md:px-6">
-       <div ref={contentRef}>
+      <div ref={messageListRef} className="flex flex-1 flex-col overflow-y-auto px-4 md:px-6">
+       <div ref={contentRef} className="mt-auto">
         {state.turns.map((turn, i) => {
           // For assistant turns with a confidence check, determine card state
           let pendingCard: React.ReactNode = null;
@@ -191,9 +193,6 @@ export function ConversationPanel({
         })}
 
         {state.isLoading && <SkeletonMessage />}
-
-        {/* Scroll sentinel */}
-        <div ref={scrollRef} />
        </div>
       </div>
 
