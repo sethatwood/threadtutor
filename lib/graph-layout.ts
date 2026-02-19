@@ -6,8 +6,24 @@ import type { Concept, Turn } from "@/lib/types";
 // Constants
 // ---------------------------------------------------------------------------
 
-export const NODE_WIDTH = 240;
 export const NODE_HEIGHT = 48;
+
+/** Aesthetic floor so very short labels don't produce tiny nodes. */
+const NODE_MIN_WIDTH = 120;
+
+/**
+ * Estimate rendered node width from label text.
+ *
+ * The ConceptNode renders with `font-mono text-sm tracking-wide` inside
+ * `px-4` padding with a 1px border:
+ *   - monospace 14px + 0.025em tracking ~ 8.75px per character
+ *   - horizontal padding: 32px (px-4 each side) + 2px border = 34px
+ */
+export function estimateNodeWidth(label: string): number {
+  const CHAR_WIDTH = 8.75;
+  const H_PADDING = 34;
+  return Math.max(NODE_MIN_WIDTH, Math.ceil(CHAR_WIDTH * label.length + H_PADDING));
+}
 
 // ---------------------------------------------------------------------------
 // Types
@@ -70,9 +86,12 @@ export function buildGraphElements(
   g.setGraph({ rankdir: direction, nodesep: 56, ranksep: 72 });
 
   const edges: Edge[] = [];
+  const widths = new Map<string, number>();
 
   for (const concept of concepts) {
-    g.setNode(concept.id, { width: NODE_WIDTH, height: NODE_HEIGHT });
+    const w = estimateNodeWidth(concept.label);
+    widths.set(concept.id, w);
+    g.setNode(concept.id, { width: w, height: NODE_HEIGHT });
 
     // Validate parentId before creating edge (MAP-06: orphaned nodes become roots)
     if (concept.parentId && knownIds.has(concept.parentId)) {
@@ -89,10 +108,11 @@ export function buildGraphElements(
 
   const nodes: Node[] = concepts.map((concept) => {
     const pos = g.node(concept.id);
+    const w = widths.get(concept.id)!;
     return {
       id: concept.id,
       type: "concept",
-      position: { x: pos.x - NODE_WIDTH / 2, y: pos.y - NODE_HEIGHT / 2 },
+      position: { x: pos.x - w / 2, y: pos.y - NODE_HEIGHT / 2 },
       data: {
         label: concept.label,
         description: concept.description,

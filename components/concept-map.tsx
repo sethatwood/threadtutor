@@ -18,7 +18,7 @@ import { ConceptNode } from "@/components/concept-node";
 import {
   collectAllConcepts,
   buildGraphElements,
-  NODE_WIDTH,
+  estimateNodeWidth,
   NODE_HEIGHT,
 } from "@/lib/graph-layout";
 import { useTheme } from "@/lib/theme";
@@ -72,7 +72,8 @@ function InlineMapInner({
 
       const latest = nodes[nodes.length - 1];
       const { width, height } = el.getBoundingClientRect();
-      const cx = latest.position.x + NODE_WIDTH / 2;
+      const labelWidth = estimateNodeWidth(latest.data?.label as string ?? "");
+      const cx = latest.position.x + labelWidth / 2;
       const cy = latest.position.y + NODE_HEIGHT / 2;
 
       setViewport(
