@@ -4,6 +4,7 @@ import { useCallback } from "react";
 import { useReplayState } from "@/lib/use-replay-state";
 import { AppHeader } from "@/components/app-header";
 import { ConceptMap } from "@/components/concept-map";
+import { GraphDrawer } from "@/components/graph-drawer";
 import { ReplayConversation } from "@/components/replay-conversation";
 import { LearningJournal } from "@/components/learning-journal";
 import { ReplayControls } from "@/components/replay-controls";
@@ -51,51 +52,54 @@ export function ReplayShell({ session, onBack }: ReplayShellProps) {
       </AppHeader>
 
       {/* Golden-ratio body: chat + journal on top, concept map full-width below */}
-      <div className="flex flex-1 flex-col overflow-hidden md:grid md:grid-cols-[1.618fr_1fr] md:grid-rows-[1.618fr_1fr]">
-        {/* Replay Conversation + Controls (top-left, golden wide) */}
-        <div className="relative order-1 flex min-h-0 flex-1 flex-col md:order-0">
-          <div className="flex-1 overflow-y-auto pb-16">
-            <ReplayConversation turns={replay.visibleTurns} />
+      <div className="flex flex-1 flex-col overflow-hidden">
+        {/* Top panels: contents on mobile (preserves order-* siblings), grid on desktop */}
+        <div className="contents md:grid md:grid-cols-[1.618fr_1fr] md:flex-[1.618] md:min-h-0 md:overflow-hidden">
+          {/* Replay Conversation + Controls (top-left, golden wide) */}
+          <div className="relative order-1 flex min-h-0 flex-1 flex-col">
+            <div className="flex-1 overflow-y-auto pb-16">
+              <ReplayConversation turns={replay.visibleTurns} />
+            </div>
+            <ReplayControls
+              currentIndex={replay.currentIndex}
+              totalTurns={replay.totalTurns}
+              isPlaying={replay.isPlaying}
+              isAtStart={replay.isAtStart}
+              isAtEnd={replay.isAtEnd}
+              next={replay.next}
+              back={replay.back}
+              toggleAutoPlay={replay.toggleAutoPlay}
+            />
           </div>
-          <ReplayControls
-            currentIndex={replay.currentIndex}
-            totalTurns={replay.totalTurns}
-            isPlaying={replay.isPlaying}
-            isAtStart={replay.isAtStart}
-            isAtEnd={replay.isAtEnd}
-            next={replay.next}
-            back={replay.back}
-            toggleAutoPlay={replay.toggleAutoPlay}
-          />
-        </div>
 
-        {/* Learning Journal (top-right, golden narrow) */}
-        <div className="order-3 min-h-0 border-t border-[var(--color-border)]/50 md:order-0 md:border-t-0 md:border-l md:border-[var(--color-border)]/50">
-          {/* Mobile: collapsible */}
-          <details className="group md:hidden">
-            <summary className="flex cursor-pointer items-center justify-between px-4 py-3 text-sm font-semibold text-[var(--color-text)]">
-              Learning Journal
-              <svg className="h-4 w-4 text-[var(--color-text-dim)] transition-transform group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
-              </svg>
-            </summary>
-            <div className="max-h-[250px] overflow-y-auto">
+          {/* Learning Journal (top-right, golden narrow) */}
+          <div className="order-3 min-h-0 border-t border-[var(--color-border)]/50 md:border-t-0 md:border-l md:border-[var(--color-border)]/50">
+            {/* Mobile: collapsible */}
+            <details className="group md:hidden">
+              <summary className="flex cursor-pointer items-center justify-between px-4 py-3 text-sm font-semibold text-[var(--color-text)]">
+                Learning Journal
+                <svg className="h-4 w-4 text-[var(--color-text-dim)] transition-transform group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+                </svg>
+              </summary>
+              <div className="max-h-[250px] overflow-y-auto">
+                <LearningJournal turns={replay.visibleTurns} />
+              </div>
+            </details>
+            {/* Desktop: always visible */}
+            <div className="hidden md:flex md:h-full md:flex-col">
               <LearningJournal turns={replay.visibleTurns} />
             </div>
-          </details>
-          {/* Desktop: always visible */}
-          <div className="hidden md:flex md:h-full md:flex-col">
-            <LearningJournal turns={replay.visibleTurns} />
           </div>
         </div>
 
-        {/* Concept Map (bottom, full width) */}
-        <div className="order-2 h-[250px] shrink-0 border-t border-[var(--color-border)]/50 md:order-0 md:h-auto md:col-span-2">
+        {/* Concept Map (collapsible drawer) */}
+        <GraphDrawer>
           <ConceptMap
             turns={replay.visibleTurns}
             onConceptClick={handleConceptClick}
           />
-        </div>
+        </GraphDrawer>
       </div>
     </div>
   );
